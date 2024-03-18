@@ -8,6 +8,7 @@ import morgan from "morgan";
 import usersRouter from "./src/routes/users.routes.js";
 import restaurantsRouter from "./src/routes/restaurants.routes.js";
 import ordersRouter from "./src/routes/orders.routes.js";
+import menuItemsRouter from "./src/routes/menuItem.routes.js";
 
 
 // CONFIGURATION
@@ -28,6 +29,7 @@ app.get("/", (req, res) => res.send("hello"))
 app.use("/users", usersRouter)
 app.use("/restaurants", restaurantsRouter)
 app.use("/orders", ordersRouter)
+app.use("/orders", menuItemsRouter)
 
 //MONGOOSE SETUP
 const PORT = process.env.PORT || 6001

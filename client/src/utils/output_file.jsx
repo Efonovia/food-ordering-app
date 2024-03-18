@@ -12,9 +12,9 @@
 
     <div id="primary" class="content-area">
         <main id="main" class="site-main"><grammarly-extension data-grammarly-shadow-root="true"
-                style="position: absolute; top: 0px; left: 0px; pointer-events: none;"
+                style={{position: 'absolute', top: '0px', left: '0px', pointerEvents: 'none'}}
                 class="dnXmp"></grammarly-extension><grammarly-extension data-grammarly-shadow-root="true"
-                style="position: absolute; top: 0px; left: 0px; pointer-events: none;"
+                style={{position: 'absolute', top: '0px', left: '0px', pointerEvents: 'none'}}
                 class="dnXmp"></grammarly-extension>
 
 
@@ -33,7 +33,7 @@
                                 Have a coupon? <a href="#" class="showcoupon">Click here to enter your code</a> </div>
                         </div>
 
-                        <form class="checkout_coupon woocommerce-form-coupon" method="post" style="display:none">
+                        <form class="checkout_coupon woocommerce-form-coupon" method="post" style={{display: 'none'}}>
 
                             <p>If you have a coupon code, please apply it below.</p>
 

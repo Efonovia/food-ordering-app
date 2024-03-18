@@ -15,6 +15,9 @@ const OrderSchema = mongoose.Schema({
         type: Array,
         required: true
     },
+    note: {
+        type: String,
+    },
     dateMade: {
         type: Date,
         required: true

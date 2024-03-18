@@ -7,6 +7,7 @@ export const createNewOrder = async (req, res) => {
             restaurantId,
             userId,
             items,
+            note
         } = req.body;
 
         console.log(req.body);
@@ -16,6 +17,7 @@ export const createNewOrder = async (req, res) => {
             restaurantId,
             userId,
             items,
+            note: note || "",
             dateMade: new Date(),
             completed: false
         });

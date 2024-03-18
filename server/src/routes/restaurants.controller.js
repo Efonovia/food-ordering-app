@@ -90,47 +90,6 @@ export const getRestaurant = async (req, res) => {
     }
 }
 
-export const addToMenu = async (req, res) => {
-    try {
-        const { 
-            restaurantId, 
-            itemName, 
-            price, 
-            waitTime, 
-            picture, 
-            nutritionalContent 
-        } = req.body;
-        console.log(req.body)
-
-        if (!restaurantId || !itemName || !price || !waitTime) {
-            return res.status(400).json({ ok: false, error: 'Missing required parameters' });
-        }
-        const restaurant = await RestaurantDatabase.findById(restaurantId);
-        console.log(restaurant)
-        if (!restaurant) {
-            return res.status(404).json({ ok: false, error: 'Restaurant not found' });
-        }
-
-        const menuItem = {
-            id: nanoid(),
-            restaurantId, 
-            itemName, 
-            price, 
-            waitTime, 
-            picture, 
-            nutritionalContent 
-        }
-
-        restaurant.menu.push(menuItem);
-
-        await restaurant.save();
-
-        return res.status(201).json({ ok: true, body: menuItem });
-    } catch (error) {
-        return res.status(500).json({ ok: false, error: error.message });
-    }
-};
-
 export const addReviewToRestaurant = async (req, res) => {
     try {
         const { restaurantId, reviewer, content, rating } = req.body;
