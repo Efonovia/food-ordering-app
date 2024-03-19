@@ -58,7 +58,7 @@ export const loginRestaurant = async(req, res) => {
       //Check if the restaurant exists by using their email
       const restaurant = await RestaurantDatabase.findOne({ email: email })
       if(!restaurant) {
-        return res.status(400).json({ok: false, error: "No account exists with that email. Create a new account or type the email correctly" })
+        return res.status(400).json({ok: false, error: "No account exists with that email or you are not a registered restaurant. Create a new account or type the email correctly" })
       }
   
       //Check if password is correct

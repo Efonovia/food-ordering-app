@@ -11,11 +11,11 @@ function Home() {
         howDoesItWorkRef.current.scrollIntoView({ behaviour: "smooth" })
     }
 
-    return <div id="content" class="site-content">
-                <div id="primary" class="content-area">
-                    <main id="main" class="site-main">
-                        <article id="post-21" class="post-21 page type-page status-publish hentry">
-                            <div class="entry-content">
+    return <div id="content" className="site-content">
+                <div id="primary" className="content-area">
+                    <main id="main" className="site-main">
+                        <article id="post-21" className="post-21 page type-page status-publish hentry">
+                            <div className="entry-content">
                                 <IntroBanner scrollTo={scrollToHowDoesItWork}/>
                                 <HottestFoods />
                                 <div ref={howDoesItWorkRef}><HowDoesItWork/></div>

@@ -69,18 +69,18 @@ function RestaurantDetails() {
                                                     <ul className="wc-block-grid__products">
                                                         <li className="wc-block-grid__product wc-block-layout" aria-hidden="false">
                                                             <div className="wc-block-components-product-image wc-block-grid__product-image"><a
-                                                                    href="https://preview.ait-themes.club/citadela/fooddelivery/product/vegan-burger/"><img
+                                                                    href><img
                                                                         data-testid="product-image" alt="Vegan Burger"
                                                                         src="https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/burgers.jpg"
                                                                         srcSet="https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/burgers.jpg 800w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/burgers-300x225.jpg 300w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/burgers-768x576.jpg 768w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/burgers-640x480.jpg 640w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/burgers-480x360.jpg 480w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/burgers-600x450.jpg 600w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/burgers-150x113.jpg 150w"
                                                                         sizes="(max-width: 800px) 100vw, 800px"
                                                                         style={{objectFit: 'cover'}}/></a></div>
                                                             <h2 className="wc-block-components-product-title wc-block-grid__product-title">
-                                                                <a className="wc-block-components-product-name" href="https://preview.ait-themes.club/citadela/fooddelivery/product/vegan-burger/">
+                                                                <a className="wc-block-components-product-name" href>
                                                                 Vegan Burger</a>
                                                             </h2>
                                                             <h3 className="wc-block-components-product-title wc-block-grid__product-title">
-                                                                <a style={{ fontSize: "13px" }} className="wc-block-components-product-name" href="https://preview.ait-themes.club/citadela/fooddelivery/product/vegan-burger/">
+                                                                <a style={{ fontSize: "13px" }} className="wc-block-components-product-name" href>
                                                                 <span style={{color: "red"}}>Nutritional Contents:</span> protein, vitamin D, e-1240</a>
                                                             </h3>
                                                             <div className="wp-block-woocommerce-product-price"><span
@@ -95,7 +95,7 @@ function RestaurantDetails() {
                                                         </li>
                                                         <li className="wc-block-grid__product wc-block-layout" aria-hidden="false">
                                                             <div className="wc-block-components-product-image wc-block-grid__product-image"><a
-                                                                    href="https://preview.ait-themes.club/citadela/fooddelivery/product/smoothie/">
+                                                                    href>
                                                                     <div
                                                                         className="wc-block-components-product-sale-badge wc-block-components-product-sale-badge--align-right wc-block-grid__product-onsale">
                                                                         <span aria-hidden="true">Sale</span><span
@@ -107,7 +107,7 @@ function RestaurantDetails() {
                                                                 </a></div>
                                                             <h2 className="wc-block-components-product-title wc-block-grid__product-title"><a
                                                                     className="wc-block-components-product-name"
-                                                                    href="https://preview.ait-themes.club/citadela/fooddelivery/product/smoothie/">Smoothie</a>
+                                                                    href>Smoothie</a>
                                                             </h2>
                                                             <div className="wp-block-woocommerce-product-price"><span
                                                                     className="wc-block-components-product-price wc-block-grid__product-price price wc-block-components-product-price"><span
@@ -124,7 +124,7 @@ function RestaurantDetails() {
                                                         </li>
                                                         <li className="wc-block-grid__product wc-block-layout" aria-hidden="false">
                                                             <div className="wc-block-components-product-image wc-block-grid__product-image"><a
-                                                                    href="https://preview.ait-themes.club/citadela/fooddelivery/product/poke-salad/"><img
+                                                                    href><img
                                                                         data-testid="product-image" alt="Poke Salad"
                                                                         src="https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/salad-fresh.jpg"
                                                                         srcSet="https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/salad-fresh.jpg 800w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/salad-fresh-300x225.jpg 300w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/salad-fresh-768x576.jpg 768w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/salad-fresh-640x480.jpg 640w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/salad-fresh-480x360.jpg 480w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/salad-fresh-600x450.jpg 600w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/salad-fresh-150x113.jpg 150w"
@@ -132,7 +132,7 @@ function RestaurantDetails() {
                                                                         style={{objectFit: 'cover'}}/></a></div>
                                                             <h2 className="wc-block-components-product-title wc-block-grid__product-title"><a
                                                                     className="wc-block-components-product-name"
-                                                                    href="https://preview.ait-themes.club/citadela/fooddelivery/product/poke-salad/">Poke
+                                                                    href>Poke
                                                                     Salad</a></h2>
                                                             <div className="wp-block-woocommerce-product-price"><span
                                                                     className="wc-block-components-product-price wc-block-grid__product-price price wc-block-components-product-price"><span
@@ -146,7 +146,7 @@ function RestaurantDetails() {
                                                         </li>
                                                         <li className="wc-block-grid__product wc-block-layout" aria-hidden="false">
                                                             <div className="wc-block-components-product-image wc-block-grid__product-image"><a
-                                                                    href="https://preview.ait-themes.club/citadela/fooddelivery/product/sandwiched-burger/"><img
+                                                                    href><img
                                                                         data-testid="product-image" alt="Sandwiched Burger"
                                                                         src="https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/sandwich.jpg"
                                                                         srcSet="https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/sandwich.jpg 800w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/sandwich-300x225.jpg 300w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/sandwich-768x576.jpg 768w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/sandwich-640x480.jpg 640w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/sandwich-480x360.jpg 480w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/sandwich-600x450.jpg 600w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/sandwich-150x113.jpg 150w"
@@ -154,7 +154,7 @@ function RestaurantDetails() {
                                                                         style={{objectFit: 'cover'}}/></a></div>
                                                             <h2 className="wc-block-components-product-title wc-block-grid__product-title"><a
                                                                     className="wc-block-components-product-name"
-                                                                    href="https://preview.ait-themes.club/citadela/fooddelivery/product/sandwiched-burger/">Sandwiched
+                                                                    href>Sandwiched
                                                                     Burger</a></h2>
                                                             <div className="wp-block-woocommerce-product-price"><span
                                                                     className="wc-block-components-product-price wc-block-grid__product-price price wc-block-components-product-price"><span
@@ -168,7 +168,7 @@ function RestaurantDetails() {
                                                         </li>
                                                         <li className="wc-block-grid__product wc-block-layout" aria-hidden="false">
                                                             <div className="wc-block-components-product-image wc-block-grid__product-image"><a
-                                                                    href="https://preview.ait-themes.club/citadela/fooddelivery/product/citrus-crepes/"><img
+                                                                    href><img
                                                                         data-testid="product-image" alt="Citrus Crepes"
                                                                         src="https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/pancakes.jpg"
                                                                         srcSet="https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/pancakes.jpg 800w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/pancakes-300x225.jpg 300w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/pancakes-768x576.jpg 768w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/pancakes-640x480.jpg 640w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/pancakes-480x360.jpg 480w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/pancakes-600x450.jpg 600w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/pancakes-150x113.jpg 150w"
@@ -176,7 +176,7 @@ function RestaurantDetails() {
                                                                         style={{objectFit: 'cover'}}/></a></div>
                                                             <h2 className="wc-block-components-product-title wc-block-grid__product-title"><a
                                                                     className="wc-block-components-product-name"
-                                                                    href="https://preview.ait-themes.club/citadela/fooddelivery/product/citrus-crepes/">Citrus
+                                                                    href>Citrus
                                                                     Crepes</a></h2>
                                                             <div className="wp-block-woocommerce-product-price"><span
                                                                     className="wc-block-components-product-price wc-block-grid__product-price price wc-block-components-product-price"><span
@@ -190,7 +190,7 @@ function RestaurantDetails() {
                                                         </li>
                                                         <li className="wc-block-grid__product wc-block-layout" aria-hidden="false">
                                                             <div className="wc-block-components-product-image wc-block-grid__product-image"><a
-                                                                    href="https://preview.ait-themes.club/citadela/fooddelivery/product/crab-bisque/">
+                                                                    href>
                                                                     <div
                                                                         className="wc-block-components-product-sale-badge wc-block-components-product-sale-badge--align-right wc-block-grid__product-onsale">
                                                                         <span aria-hidden="true">Sale</span><span
@@ -202,7 +202,7 @@ function RestaurantDetails() {
                                                                 </a></div>
                                                             <h2 className="wc-block-components-product-title wc-block-grid__product-title"><a
                                                                     className="wc-block-components-product-name"
-                                                                    href="https://preview.ait-themes.club/citadela/fooddelivery/product/crab-bisque/">Crab
+                                                                    href>Crab
                                                                     Bisque</a></h2>
                                                             <div className="wp-block-woocommerce-product-price"><span
                                                                     className="wc-block-components-product-price wc-block-grid__product-price price wc-block-components-product-price"><span
@@ -219,7 +219,7 @@ function RestaurantDetails() {
                                                         </li>
                                                         <li className="wc-block-grid__product wc-block-layout" aria-hidden="false">
                                                             <div className="wc-block-components-product-image wc-block-grid__product-image"><a
-                                                                    href="https://preview.ait-themes.club/citadela/fooddelivery/product/bruschetta/"><img
+                                                                    href><img
                                                                         data-testid="product-image" alt="Bruschetta"
                                                                         src="https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/bread-vegetable.jpg"
                                                                         srcSet="https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/bread-vegetable.jpg 800w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/bread-vegetable-300x225.jpg 300w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/bread-vegetable-768x576.jpg 768w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/bread-vegetable-640x480.jpg 640w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/bread-vegetable-480x360.jpg 480w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/bread-vegetable-600x450.jpg 600w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/bread-vegetable-150x113.jpg 150w"
@@ -227,7 +227,7 @@ function RestaurantDetails() {
                                                                         style={{objectFit: 'cover'}}/></a></div>
                                                             <h2 className="wc-block-components-product-title wc-block-grid__product-title"><a
                                                                     className="wc-block-components-product-name"
-                                                                    href="https://preview.ait-themes.club/citadela/fooddelivery/product/bruschetta/">Bruschetta</a>
+                                                                    href>Bruschetta</a>
                                                             </h2>
                                                             <div className="wp-block-woocommerce-product-price"><span
                                                                     className="wc-block-components-product-price wc-block-grid__product-price price wc-block-components-product-price"><span
@@ -241,7 +241,7 @@ function RestaurantDetails() {
                                                         </li>
                                                         <li className="wc-block-grid__product wc-block-layout" aria-hidden="false">
                                                             <div className="wc-block-components-product-image wc-block-grid__product-image"><a
-                                                                    href="https://preview.ait-themes.club/citadela/fooddelivery/product/tom-yum-goong/"><img
+                                                                    href><img
                                                                         data-testid="product-image" alt="Tom Yum Goong"
                                                                         src="https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/soup-shrimp.jpg"
                                                                         srcSet="https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/soup-shrimp.jpg 800w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/soup-shrimp-300x225.jpg 300w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/soup-shrimp-768x576.jpg 768w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/soup-shrimp-640x480.jpg 640w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/soup-shrimp-480x360.jpg 480w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/soup-shrimp-600x450.jpg 600w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/soup-shrimp-150x113.jpg 150w"
@@ -249,7 +249,7 @@ function RestaurantDetails() {
                                                                         style={{objectFit: 'cover'}}/></a></div>
                                                             <h2 className="wc-block-components-product-title wc-block-grid__product-title"><a
                                                                     className="wc-block-components-product-name"
-                                                                    href="https://preview.ait-themes.club/citadela/fooddelivery/product/tom-yum-goong/">Tom
+                                                                    href>Tom
                                                                     Yum Goong</a></h2>
                                                             <div className="wp-block-woocommerce-product-price"><span
                                                                     className="wc-block-components-product-price wc-block-grid__product-price price wc-block-components-product-price"><span
@@ -263,7 +263,7 @@ function RestaurantDetails() {
                                                         </li>
                                                         <li className="wc-block-grid__product wc-block-layout" aria-hidden="false">
                                                             <div className="wc-block-components-product-image wc-block-grid__product-image"><a
-                                                                    href="https://preview.ait-themes.club/citadela/fooddelivery/product/beef-bacon-burger/">
+                                                                    href>
                                                                     <div
                                                                         className="wc-block-components-product-sale-badge wc-block-components-product-sale-badge--align-right wc-block-grid__product-onsale">
                                                                         <span aria-hidden="true">Sale</span><span
@@ -275,7 +275,7 @@ function RestaurantDetails() {
                                                                 </a></div>
                                                             <h2 className="wc-block-components-product-title wc-block-grid__product-title"><a
                                                                     className="wc-block-components-product-name"
-                                                                    href="https://preview.ait-themes.club/citadela/fooddelivery/product/beef-bacon-burger/">Beef
+                                                                    href>Beef
                                                                     Bacon Burger</a></h2>
                                                             <div className="wp-block-woocommerce-product-price"><span
                                                                     className="wc-block-components-product-price wc-block-grid__product-price price wc-block-components-product-price"><span

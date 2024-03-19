@@ -9,6 +9,7 @@ export const createNewMenuItem = async (req, res) => {
             picturePath,
             price,
             dietType,
+            waitTime,
             nutritionalContent,
         } = req.body;
 
@@ -21,6 +22,7 @@ export const createNewMenuItem = async (req, res) => {
             picturePath: picturePath || "",
             price,
             dietType,
+            waitTime,
             nutritionalContent: nutritionalContent || [],
             reviews: []
         });

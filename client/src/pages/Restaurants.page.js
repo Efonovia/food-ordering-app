@@ -1,4 +1,12 @@
-<div id="content" class="site-content">
+import React from 'react';
+import StarIcon from '@mui/icons-material/Star';
+import StarOutlineIcon from '@mui/icons-material/StarOutline';
+
+function Restaurants() {
+        const starsHTML = Array(5).fill().map((_, index) => index < 4 ? <StarIcon key={index+1} sx={{color: "gold"}}/> : <StarOutlineIcon key={index+1} sx={{color: "gold", cursor: "pointer"}}/>)
+        
+
+    return <div id="content" class="site-content">
     <div id="primary" class="content-area">
         <main id="main" class="site-main">
             <article id="post-357" class="post-357 page type-page status-publish hentry">
@@ -20,7 +28,7 @@
                             <div class="wp-block-columns is-layout-flex wp-container-4 wp-block-columns-is-layout-flex">
                                 <div
                                     class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow">
-                                    <h1 class="has-huge-font-size wp-block-heading"><strong>Our Menu</strong></h1>
+                                    <h1 class="has-huge-font-size wp-block-heading"><strong>Eat from the best places in Nile University</strong></h1>
 
 
 
@@ -29,31 +37,7 @@
                                     </div>
 
 
-                                    <div class="citadela-block-responsive-text align-left">
-                                        <p class="inner-tag" style={{fontSize: '18px', lineHeight: '1.65'}}>Ut enim ad
-                                            minim veniam, quis nostrud exercitation ullamco. Pellentesque sed quam
-                                            lacinia, porta odio eget, dictum.</p>
-                                    </div>
-
-
-
-                                    <div class="wp-block-citadela-blocks-spacer citadela-block-spacer">
-                                        <div class="inner-holder" style={{paddingTop: '22px'}}></div>
-                                    </div>
-
-
-
-                                    <div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
-                                        <div class="wp-block-button"><a class="wp-block-button__link has-background"
-                                                href="#breakfast"
-                                                style={{borderRadius: '5px', backgroundColor: '#7855c4'}}>Breakfast</a></div>
-
-
-
-                                        <div class="wp-block-button is-style-fill"><a class="wp-block-button__link"
-                                                href="#lunch-dinner" style={{borderRadius: '5px'}}>Lunch &amp; Dinner</a>
-                                        </div>
-                                    </div>
+                            
                                 </div>
 
 
@@ -74,14 +58,6 @@
 
                             <div class="wp-block-group is-layout-flow wp-block-group-is-layout-flow">
                                 <div class="wp-block-group__inner-container">
-                                    <div class="citadela-block-responsive-text align-left">
-                                        <h2 class="inner-tag" style={{fontSize: '14px', letterSpacing: '0.1em'}}>SPECIAL
-                                            OFFER<span style={{color: '#888888'}} class="has-inline-color"> · PREORDER
-                                                ONLY</span></h2>
-                                    </div>
-
-
-
                                     <div class="wp-block-citadela-blocks-spacer citadela-block-spacer">
                                         <div class="inner-holder" style={{paddingTop: '20px'}}></div>
                                     </div>
@@ -106,21 +82,11 @@
                                                                     class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                                                                     alt="Asia Fresh Salad" decoding="async"
                                                                     srcset="https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/salad-300x225.jpg 300w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/salad-768x576.jpg 768w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/salad-640x480.jpg 640w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/salad-480x360.jpg 480w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/salad-600x450.jpg 600w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/salad-150x113.jpg 150w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/salad.jpg 800w"
-                                                                    sizes="(max-width: 300px) 100vw, 300px"></div>
-                                                            <div class="wc-block-grid__product-title">Asia Fresh Salad
+                                                                    sizes="(max-width: 300px) 100vw, 300px"/></div>
+                                                            <div style={{fontSize: "18px"}} class="wc-block-grid__product-title">Asia Fresh Salad
                                                             </div>
                                                         </a>
-                                                        <div class="wc-block-grid__product-onsale">
-                                                            <span aria-hidden="true">Sale</span>
-                                                            <span class="screen-reader-text">Product on sale</span>
-                                                        </div>
-                                                        <div class="wc-block-grid__product-price price"><del
-                                                                aria-hidden="true"><span
-                                                                    class="woocommerce-Price-amount amount"><span
-                                                                        class="woocommerce-Price-currencySymbol">$</span>15.00</span></del>
-                                                            <ins><span class="woocommerce-Price-amount amount"><span
-                                                                        class="woocommerce-Price-currencySymbol">$</span>11.00</span></ins>
-                                                        </div>
+                                                        <div class="wc-block-grid__product-price price">{starsHTML}</div>
 
 
                                                     </li>
@@ -133,7 +99,7 @@
                                                                     class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                                                                     alt="Beef Bacon Burger" decoding="async"
                                                                     srcset="https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/burger-white-300x225.jpg 300w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/burger-white-768x576.jpg 768w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/burger-white-640x480.jpg 640w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/burger-white-480x360.jpg 480w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/burger-white-600x450.jpg 600w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/burger-white-150x113.jpg 150w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/burger-white.jpg 800w"
-                                                                    sizes="(max-width: 300px) 100vw, 300px"></div>
+                                                                    sizes="(max-width: 300px) 100vw, 300px"/></div>
                                                             <div class="wc-block-grid__product-title">Beef Bacon Burger
                                                             </div>
                                                         </a>
@@ -160,7 +126,7 @@
                                                                     class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                                                                     alt="Crab Bisque" decoding="async"
                                                                     srcset="https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/soup-onion-300x225.jpg 300w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/soup-onion-768x576.jpg 768w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/soup-onion-640x480.jpg 640w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/soup-onion-480x360.jpg 480w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/soup-onion-600x450.jpg 600w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/soup-onion-150x113.jpg 150w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/soup-onion.jpg 800w"
-                                                                    sizes="(max-width: 300px) 100vw, 300px"></div>
+                                                                    sizes="(max-width: 300px) 100vw, 300px"/></div>
                                                             <div class="wc-block-grid__product-title">Crab Bisque</div>
                                                         </a>
                                                         <div class="wc-block-grid__product-onsale">
@@ -186,7 +152,7 @@
                                                                     class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                                                                     alt="Smoothie" decoding="async"
                                                                     srcset="https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/smoothies-300x225.jpg 300w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/smoothies-768x576.jpg 768w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/smoothies-640x480.jpg 640w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/smoothies-480x360.jpg 480w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/smoothies-600x450.jpg 600w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/smoothies-150x113.jpg 150w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/smoothies.jpg 800w"
-                                                                    sizes="(max-width: 300px) 100vw, 300px"></div>
+                                                                    sizes="(max-width: 300px) 100vw, 300px"/></div>
                                                             <div class="wc-block-grid__product-title">Smoothie</div>
                                                         </a>
                                                         <div class="wc-block-grid__product-onsale">
@@ -231,3 +197,7 @@
     </div>
 
 </div>
+}
+
+
+export default Restaurants

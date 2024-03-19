@@ -87,7 +87,6 @@ export const getUser = async (req, res) => {
 
 export const editUser = async(req, res) => {
     try {
-        console.log("5465768")
         const { userId, updates } = req.body
         console.log(req.body)
         const user = await UserDatabase.findById(userId);

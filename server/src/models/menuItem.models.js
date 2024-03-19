@@ -34,6 +34,10 @@ const MenuItemSchema = mongoose.Schema({
         type: Array,
         required: true
     },
+    waitTime: {
+        type: Number,
+        required: true
+    },
     reviews: {
         type: Array,
         required: true

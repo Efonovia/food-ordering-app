@@ -29,7 +29,7 @@ app.get("/", (req, res) => res.send("hello"))
 app.use("/users", usersRouter)
 app.use("/restaurants", restaurantsRouter)
 app.use("/orders", ordersRouter)
-app.use("/orders", menuItemsRouter)
+app.use("/menuitems", menuItemsRouter)
 
 //MONGOOSE SETUP
 const PORT = process.env.PORT || 6001
