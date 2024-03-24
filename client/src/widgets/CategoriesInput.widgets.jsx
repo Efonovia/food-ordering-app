@@ -38,7 +38,7 @@ export default function CheckboxesTags(props) {
         </li>
       )}
       value={props.value}
-      onChange={(event, value) => props.onCategoriesChange(value)}
+      onChange={(event, value) => props.onNutritionalContentChange(value)}
       style={{ width: props.width }}
       renderInput={(params) => (
         <TextField {...params} label={props.label} placeholder={props.placeholder} />

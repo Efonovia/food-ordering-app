@@ -4,12 +4,11 @@ const API_URL = "http://localhost:8000"
 export const httpGetAllOrders = async () => {
     try {
         const response = await fetch(`${API_URL}/orders`)
-        if (!response.ok) {
+        const result = await response.json()
+        if (!result.ok) {
             throw new Error('Failed to fetch orders. try again');
-        } else {
-            const result = await response.json()
-            return result;
         }
+        return result;
     } catch (error) {
         console.log(error)
         alert(error.message)
@@ -20,12 +19,11 @@ export const httpGetAllOrders = async () => {
 export const httpGetAllRestaurantOrders = async (restaurantId) => {
     try {
         const response = await fetch(`${API_URL}/orders/restaurant/${restaurantId}`)
-        if (!response.ok) {
+        const result = await response.json()
+        if (!result.ok) {
             throw new Error('Failed to fetch orders. try again');
-        } else {
-            const result = await response.json()
-            return result;
         }
+        return result;
     } catch (error) {
         console.log(error)
         alert(error.message)
@@ -36,12 +34,11 @@ export const httpGetAllRestaurantOrders = async (restaurantId) => {
 export const httpGetAllUserOrders = async (userId) => {
     try {
         const response = await fetch(`${API_URL}/orders/user/${userId}`)
-        if (!response.ok) {
+        const result = await response.json()
+        if (!result.ok) {
             throw new Error('Failed to fetch orders. try again');
-        } else {
-            const result = await response.json()
-            return result;
         }
+        return result;
     } catch (error) {
         console.log(error)
         alert(error.message)
@@ -52,12 +49,11 @@ export const httpGetAllUserOrders = async (userId) => {
 export const httpGetOrder = async (id) => {
     try {
         const response = await fetch(`${API_URL}/orders/${id}`)
-        if (!response.ok) {
+        const result = await response.json()
+        if (!result.ok) {
             throw new Error('Failed to fetch order. try again');
-        } else {
-            const result = await response.json()
-            return result;
         }
+        return result;
     } catch (error) {
         console.log(error)
         alert(error.message)
@@ -68,12 +64,11 @@ export const httpGetOrder = async (id) => {
 export const httpCompleteOrder = async (id) => {
     try {
         const response = await fetch(`${API_URL}/orders/complete/${id}`)
-        if (!response.ok) {
-            throw new Error(response.error);
-        } else {
-            const result = await response.json()
-            return result;
+        const result = await response.json()
+        if (!result.ok) {
+            throw new Error(result.error);
         }
+        return result;
     } catch (error) {
         console.log(error)
         alert(error.message)
@@ -91,12 +86,11 @@ export const httpCreateOrder = async (orderDetails) => {
               body: JSON.stringify(orderDetails)
         })
 
-        if (!response.ok) {
+        const result = await response.json()
+        if (!result.ok) {
             throw new Error('Failed to send order. try again');
-        } else {
-            const result = await response.json()
-            return result;
         }
+        return result;
     } catch (error) {
         console.log(error)
         alert(error.message)

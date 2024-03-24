@@ -1,0 +1,442 @@
+[
+    {
+        "name": "Restaurant 1",
+        "email": "contact1@restaurant.com",
+        "password": "Restaurant 1",
+        "picturePath": "restaurant1.jpg",
+        "phoneNumber": "+1234567891",
+        "reviews": [
+            {
+                "id": "10076f55-5886-440b-ab5d-e833ee74e07d",
+                "reviewer": "Sam Morgan",
+                "content": "Had a wonderful evening, the staff was great.",
+                "rating": 5,
+                "publishDate": "2023-11-13T16:00:43.580194"
+            },
+            {
+                "id": "3cf01ce2-fe6a-40b1-9f84-94fa5f0d79c7",
+                "reviewer": "Chris Lee",
+                "content": "Exceptional service and delicious food.",
+                "rating": 2,
+                "publishDate": "2023-05-15T16:55:25.033997"
+            },
+            {
+                "id": "e6bc9dd0-6a38-424e-b08f-28cb9ec0fea7",
+                "reviewer": "Sam Morgan",
+                "content": "Loved the ambiance, but the food was average.",
+                "rating": 1,
+                "publishDate": "2023-10-21T17:32:41.836725"
+            },
+            {
+                "id": "4ff5188e-e99e-4d2a-a870-c2229bb59c5f",
+                "reviewer": "Alex Johnson",
+                "content": "Not worth the price.",
+                "rating": 1,
+                "publishDate": "2023-12-15T23:25:14.023317"
+            },
+            {
+                "id": "ef65e3cc-7b33-429e-81ef-69203a50a219",
+                "reviewer": "Lin Casey",
+                "content": "The dessert was fantastic, main course not so much.",
+                "rating": 3,
+                "publishDate": "2023-10-05T13:38:36.702776"
+            }
+        ]
+    },
+    {
+        "name": "Restaurant 2",
+        "email": "contact2@restaurant.com",
+        "password": "Restaurant 2",
+        "picturePath": "restaurant2.jpg",
+        "phoneNumber": "+1234567892",
+        "reviews": [
+            {
+                "id": "16749a97-a1cc-4329-827a-9fb2ee413443",
+                "reviewer": "Jordan Pat",
+                "content": "The chef specials are a must-try!",
+                "rating": 4,
+                "publishDate": "2023-05-01T10:43:15.293426"
+            },
+            {
+                "id": "ec0f04b0-1835-4e02-b1a3-f4466dd0f5f0",
+                "reviewer": "Morgan Alex",
+                "content": "Very accommodating for our large group.",
+                "rating": 5,
+                "publishDate": "2023-08-28T18:17:52.493976"
+            },
+            {
+                "id": "ec496247-2921-41eb-a393-69e3e5df9d6a",
+                "reviewer": "Sam Morgan",
+                "content": "Good food but the service was slow.",
+                "rating": 1,
+                "publishDate": "2023-06-09T16:09:47.957911"
+            },
+            {
+                "id": "8991b680-85b5-4cec-89c8-745011a9b2ef",
+                "reviewer": "Lin Casey",
+                "content": "The dessert was fantastic, main course not so much.",
+                "rating": 4,
+                "publishDate": "2023-07-23T14:06:45.395942"
+            },
+            {
+                "id": "713829e7-572d-4599-8d34-3ac32a396dc6",
+                "reviewer": "Sam Morgan",
+                "content": "Loved the ambiance, but the food was average.",
+                "rating": 4,
+                "publishDate": "2024-01-12T19:28:35.668595"
+            }
+        ]
+    },
+    {
+        "name": "Restaurant 3",
+        "email": "contact3@restaurant.com",
+        "password": "Restaurant 3",
+        "picturePath": "restaurant3.jpg",
+        "phoneNumber": "+1234567893",
+        "reviews": [
+            {
+                "id": "9dee000b-7095-452a-8c3c-b5e438550e13",
+                "reviewer": "Sam Morgan",
+                "content": "Had a wonderful evening, the staff was great.",
+                "rating": 5,
+                "publishDate": "2023-11-17T17:16:26.239996"
+            },
+            {
+                "id": "75f3006d-f41b-4d2c-a2b0-cf4fac8cad10",
+                "reviewer": "Taylor Kim",
+                "content": "The dessert was fantastic, main course not so much.",
+                "rating": 2,
+                "publishDate": "2023-09-28T20:58:15.361088"
+            },
+            {
+                "id": "e79bbda7-47ad-48d7-a5ff-b1c2d7063de3",
+                "reviewer": "Alex Johnson",
+                "content": "Good food but the service was slow.",
+                "rating": 5,
+                "publishDate": "2023-09-10T14:56:57.209138"
+            },
+            {
+                "id": "bb96d5ca-f8a5-4c54-a4f1-345fb94c36ad",
+                "reviewer": "Lin Casey",
+                "content": "Not worth the price.",
+                "rating": 4,
+                "publishDate": "2023-10-18T14:27:11.430800"
+            },
+            {
+                "id": "ed981036-5826-4407-98f1-bf333d411558",
+                "reviewer": "Jamie Smith",
+                "content": "The chef specials are a must-try!",
+                "rating": 1,
+                "publishDate": "2023-12-29T07:22:01.816970"
+            }
+        ]
+    },
+    {
+        "name": "Restaurant 4",
+        "email": "contact4@restaurant.com",
+        "password": "Restaurant 4",
+        "picturePath": "restaurant4.jpg",
+        "phoneNumber": "+1234567894",
+        "reviews": [
+            {
+                "id": "6640a52a-d1a8-4b25-b53f-30c1c51af9b4",
+                "reviewer": "Pat Jordan",
+                "content": "Loved the ambiance, but the food was average.",
+                "rating": 2,
+                "publishDate": "2023-10-11T19:42:33.347129"
+            },
+            {
+                "id": "859aac12-451b-490f-8022-4958cbea4607",
+                "reviewer": "Morgan Alex",
+                "content": "Had a wonderful evening, the staff was great.",
+                "rating": 1,
+                "publishDate": "2023-04-17T17:08:04.645509"
+            },
+            {
+                "id": "41b33eab-0359-42ac-b355-0d6f9b71d192",
+                "reviewer": "Taylor Kim",
+                "content": "Very accommodating for our large group.",
+                "rating": 2,
+                "publishDate": "2024-03-22T16:27:25.833566"
+            },
+            {
+                "id": "2bd6ec4a-5141-49a7-8dde-18a946141ef8",
+                "reviewer": "Chris Lee",
+                "content": "Good food but the service was slow.",
+                "rating": 3,
+                "publishDate": "2023-10-29T23:14:26.054992"
+            },
+            {
+                "id": "cff91bb2-a79b-4eee-ac1c-8a005d46925a",
+                "reviewer": "Sam Morgan",
+                "content": "Good food but the service was slow.",
+                "rating": 1,
+                "publishDate": "2023-09-11T04:31:55.610655"
+            }
+        ]
+    },
+    {
+        "name": "Restaurant 5",
+        "email": "contact5@restaurant.com",
+        "password": "Restaurant 5",
+        "picturePath": "restaurant5.jpg",
+        "phoneNumber": "+1234567895",
+        "reviews": [
+            {
+                "id": "d9005098-6a81-4e17-88d9-f5753af3ac86",
+                "reviewer": "Jordan Pat",
+                "content": "Good food but the service was slow.",
+                "rating": 4,
+                "publishDate": "2023-04-01T08:44:35.989897"
+            },
+            {
+                "id": "b2bcfe33-d4fd-4677-8f70-e5ecdf7b79da",
+                "reviewer": "Lin Casey",
+                "content": "Good food but the service was slow.",
+                "rating": 2,
+                "publishDate": "2023-10-30T17:41:55.814512"
+            },
+            {
+                "id": "6a18cf54-f53f-41bf-811b-4df4b9f525ef",
+                "reviewer": "Lin Casey",
+                "content": "Good food but the service was slow.",
+                "rating": 5,
+                "publishDate": "2023-05-09T03:02:17.907907"
+            },
+            {
+                "id": "5ea789a5-0c12-445a-ad38-68fc95b189fe",
+                "reviewer": "Taylor Kim",
+                "content": "Exceptional service and delicious food.",
+                "rating": 1,
+                "publishDate": "2024-03-16T08:45:46.993482"
+            },
+            {
+                "id": "a24171c8-8ce6-4eb7-b55d-e5c9b3d14f0e",
+                "reviewer": "Jordan Pat",
+                "content": "I've had better.",
+                "rating": 5,
+                "publishDate": "2023-11-11T14:10:35.088143"
+            }
+        ]
+    },
+    {
+        "name": "Restaurant 6",
+        "email": "contact6@restaurant.com",
+        "password": "Restaurant 6",
+        "picturePath": "restaurant6.jpg",
+        "phoneNumber": "+1234567896",
+        "reviews": [
+            {
+                "id": "074c01e4-b90b-4d7c-b0fb-42385635247a",
+                "reviewer": "Casey Lin",
+                "content": "I've had better.",
+                "rating": 1,
+                "publishDate": "2024-02-19T22:09:54.324793"
+            },
+            {
+                "id": "f8a00407-7f36-404a-8330-a66d983c0b0c",
+                "reviewer": "Alex Johnson",
+                "content": "Good food but the service was slow.",
+                "rating": 4,
+                "publishDate": "2023-12-27T08:22:53.443225"
+            },
+            {
+                "id": "5e308ba4-ce1d-4167-ae84-2ba623513ee0",
+                "reviewer": "Morgan Alex",
+                "content": "Not worth the price.",
+                "rating": 1,
+                "publishDate": "2024-01-07T19:47:44.944640"
+            },
+            {
+                "id": "1c49c88f-f085-43de-a4b0-eec2b6bf0c7d",
+                "reviewer": "Sam Morgan",
+                "content": "Very accommodating for our large group.",
+                "rating": 3,
+                "publishDate": "2023-05-24T16:44:40.471611"
+            },
+            {
+                "id": "7dfcdacf-e8d0-416b-8249-bda30e60cd03",
+                "reviewer": "Taylor Kim",
+                "content": "Loved the ambiance, but the food was average.",
+                "rating": 4,
+                "publishDate": "2024-01-15T07:27:09.947154"
+            }
+        ]
+    },
+    {
+        "name": "Restaurant 7",
+        "email": "contact7@restaurant.com",
+        "password": "Restaurant 7",
+        "picturePath": "restaurant7.jpg",
+        "phoneNumber": "+1234567897",
+        "reviews": [
+            {
+                "id": "58b0cef8-5411-4d79-8559-4a6acdb412b1",
+                "reviewer": "Jordan Pat",
+                "content": "Not worth the price.",
+                "rating": 3,
+                "publishDate": "2023-12-28T20:11:24.755583"
+            },
+            {
+                "id": "6edad3e4-5b95-49a6-b1cb-c638299506bc",
+                "reviewer": "Morgan Alex",
+                "content": "Good food but the service was slow.",
+                "rating": 3,
+                "publishDate": "2024-01-19T10:22:41.234237"
+            },
+            {
+                "id": "55efe8b7-a1f7-4e71-b9d4-ba4b97cb4395",
+                "reviewer": "Pat Jordan",
+                "content": "Great experience, will come again!",
+                "rating": 4,
+                "publishDate": "2024-02-08T07:04:22.808777"
+            },
+            {
+                "id": "5d1f6bd3-cb97-41fc-bb88-64be72e9e28f",
+                "reviewer": "Jamie Smith",
+                "content": "Loved the ambiance, but the food was average.",
+                "rating": 3,
+                "publishDate": "2023-09-06T18:13:08.791511"
+            },
+            {
+                "id": "96942cdb-8641-4576-b036-12c9d983f49f",
+                "reviewer": "Sam Morgan",
+                "content": "Loved the ambiance, but the food was average.",
+                "rating": 5,
+                "publishDate": "2023-04-20T19:22:07.848341"
+            }
+        ]
+    },
+    {
+        "name": "Restaurant 8",
+        "email": "contact8@restaurant.com",
+        "password": "Restaurant 8",
+        "picturePath": "restaurant8.jpg",
+        "phoneNumber": "+1234567898",
+        "reviews": [
+            {
+                "id": "31e6ac72-3fa1-4761-9cb4-288fe17fc323",
+                "reviewer": "Sam Morgan",
+                "content": "Loved the ambiance, but the food was average.",
+                "rating": 3,
+                "publishDate": "2023-09-18T22:06:51.706293"
+            },
+            {
+                "id": "b86283fb-86d8-4663-bb46-7e9c60457c60",
+                "reviewer": "Taylor Kim",
+                "content": "Very accommodating for our large group.",
+                "rating": 5,
+                "publishDate": "2023-09-02T21:41:49.701306"
+            },
+            {
+                "id": "76f8d7dc-f2b8-48c8-8ad8-0ad14434d1bc",
+                "reviewer": "Morgan Alex",
+                "content": "Very accommodating for our large group.",
+                "rating": 3,
+                "publishDate": "2023-10-01T01:40:48.894151"
+            },
+            {
+                "id": "e100cae5-65a8-43c7-89e1-4d0a95414521",
+                "reviewer": "Jordan Pat",
+                "content": "Good food but the service was slow.",
+                "rating": 5,
+                "publishDate": "2023-07-09T14:13:33.172454"
+            },
+            {
+                "id": "e6828866-8ea0-4299-91f5-da58486d4c4e",
+                "reviewer": "Chris Lee",
+                "content": "Great experience, will come again!",
+                "rating": 3,
+                "publishDate": "2024-03-07T22:07:56.219411"
+            }
+        ]
+    },
+    {
+        "name": "Restaurant 9",
+        "email": "contact9@restaurant.com",
+        "password": "Restaurant 9",
+        "picturePath": "restaurant9.jpg",
+        "phoneNumber": "+1234567899",
+        "reviews": [
+            {
+                "id": "e82db4f6-a514-41f6-89f3-934f4b6b261f",
+                "reviewer": "Sam Morgan",
+                "content": "I've had better.",
+                "rating": 1,
+                "publishDate": "2024-02-02T07:58:42.073438"
+            },
+            {
+                "id": "301ddba1-19ba-4254-99fe-21d60d9440f3",
+                "reviewer": "Lin Casey",
+                "content": "The chef specials are a must-try!",
+                "rating": 3,
+                "publishDate": "2023-05-19T10:17:06.802713"
+            },
+            {
+                "id": "54467905-aa61-4bea-8805-539169fb59ac",
+                "reviewer": "Chris Lee",
+                "content": "Not worth the price.",
+                "rating": 2,
+                "publishDate": "2023-09-12T02:37:22.678538"
+            },
+            {
+                "id": "2531c802-84d7-4d83-9b9e-5036423962d4",
+                "reviewer": "Taylor Kim",
+                "content": "The dessert was fantastic, main course not so much.",
+                "rating": 1,
+                "publishDate": "2023-10-08T18:49:30.752742"
+            },
+            {
+                "id": "11b88f97-3708-499b-9b07-234b99d289ea",
+                "reviewer": "Morgan Alex",
+                "content": "The dessert was fantastic, main course not so much.",
+                "rating": 5,
+                "publishDate": "2023-04-28T04:17:25.737950"
+            }
+        ]
+    },
+    {
+        "name": "Restaurant 10",
+        "email": "contact10@restaurant.com",
+        "password": "Restaurant 10",
+        "picturePath": "restaurant10.jpg",
+        "phoneNumber": "+12345678910",
+        "reviews": [
+            {
+                "id": "dac2b983-475e-4454-84f4-5c75e05dee7a",
+                "reviewer": "Casey Lin",
+                "content": "Very accommodating for our large group.",
+                "rating": 4,
+                "publishDate": "2023-10-27T20:49:23.258445"
+            },
+            {
+                "id": "0a0f622c-69ce-4998-bd7c-caf7cb5e1a90",
+                "reviewer": "Jordan Pat",
+                "content": "The chef specials are a must-try!",
+                "rating": 4,
+                "publishDate": "2023-10-22T20:06:40.933160"
+            },
+            {
+                "id": "3941fd98-0476-437c-82ab-6b5fcbf1c731",
+                "reviewer": "Jordan Pat",
+                "content": "The dessert was fantastic, main course not so much.",
+                "rating": 2,
+                "publishDate": "2023-03-28T22:16:09.312888"
+            },
+            {
+                "id": "31b2cd49-c1e9-4bb8-9dc9-c68c5393e669",
+                "reviewer": "Alex Johnson",
+                "content": "The dessert was fantastic, main course not so much.",
+                "rating": 1,
+                "publishDate": "2023-08-28T16:29:40.997464"
+            },
+            {
+                "id": "699d729b-c9f6-43a7-9280-73429ee8e1ac",
+                "reviewer": "Jordan Pat",
+                "content": "The chef specials are a must-try!",
+                "rating": 3,
+                "publishDate": "2023-08-13T19:21:23.052559"
+            }
+        ]
+    }
+]

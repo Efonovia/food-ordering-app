@@ -1,15 +1,15 @@
 const API_URL = "http://localhost:8000"
+const limit = 10
 
 
 export const httpGetAllMenuItems = async () => {
     try {
         const response = await fetch(`${API_URL}/menuitems`)
-        if (!response.ok) {
+        const result = await response.json()
+        if (!result.ok) {
             throw new Error('Failed to fetch menu items. try again');
-        } else {
-            const result = await response.json()
-            return result;
         }
+        return result;
     } catch (error) {
         console.log(error)
         alert(error.message)
@@ -20,12 +20,11 @@ export const httpGetAllMenuItems = async () => {
 export const httpGetAllRestaurantMenuItems = async (restaurantId) => {
     try {
         const response = await fetch(`${API_URL}/menuitems/${restaurantId}`)
-        if (!response.ok) {
+        const result = await response.json()
+        if (!result.ok) {
             throw new Error('Failed to fetch menu items. try again');
-        } else {
-            const result = await response.json()
-            return result;
         }
+        return result;
     } catch (error) {
         console.log(error)
         alert(error.message)
@@ -36,12 +35,11 @@ export const httpGetAllRestaurantMenuItems = async (restaurantId) => {
 export const httpGetMenuItem = async (menuItemId) => {
     try {
         const response = await fetch(`${API_URL}/menuitems/${menuItemId}`)
-        if (!response.ok) {
+        const result = await response.json()
+        if (!result.ok) {
             throw new Error('Failed to fetch menu item. try again');
-        } else {
-            const result = await response.json()
-            return result;
         }
+        return result;
     } catch (error) {
         console.log(error)
         alert(error.message)
@@ -49,16 +47,15 @@ export const httpGetMenuItem = async (menuItemId) => {
     }
 }
 
-export const httpSearchAndFilterMenuItems = async (query, nutritionalContent, minPrice, maxPrice) => {
+export const httpSearchAndFilterMenuItems = async (query, nutritionalContent, minPrice, maxPrice, page) => {
     try {
-        const response = await fetch(`${API_URL}/menuitems/search?query=${query}&nutritionalContent=${nutritionalContent}&minPrice=${minPrice}&maxPrice=${maxPrice}`)
+        const response = await fetch(`${API_URL}/menuitems/search?query=${query}&nutritionalContent=${nutritionalContent}&minPrice=${minPrice}&maxPrice=${maxPrice}&page=${page}&limit=${limit}`)
 
-        if (!response.ok) {
+        const result = await response.json()
+        if (!result.ok) {
             throw new Error('Failed to fetch menu items. try again');
-        } else {
-            const result = await response.json()
-            return result;
         }
+        return result;
     } catch (error) {
         console.log(error)
         alert(error.message)

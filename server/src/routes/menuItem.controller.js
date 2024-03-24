@@ -1,4 +1,5 @@
 import MenuItemDatabase from "../models/menuItems.models.js";
+import { getPagination, getPaginationResults } from "../query.services.js";
 
 
 export const createNewMenuItem = async (req, res) => {
@@ -40,7 +41,13 @@ export const createNewMenuItem = async (req, res) => {
 
 export const getAllMenuItems = async (req, res) => {
     try {
-        return res.status(200).json({ok: true, body: await MenuItemDatabase.find({}, { '__v': 0 })})
+        const { skip, limit, page } = getPagination(req.query)
+        const totalDocuments = await MenuItemDatabase.countDocuments()
+        const menuItems = await MenuItemDatabase.find({}, { '__v': 0 })
+            .sort({ "importantTags.length": -1, "name": -1 })
+            .skip(skip)
+            .limit(limit);
+        return res.status(200).json({ok: true, body: {...getPaginationResults(page, limit, skip, totalDocuments), data: menuItems, totalResults: totalDocuments}})
     } catch (error) {
         return res.status(404).json({ok: false, error: error.message})
     }
@@ -67,6 +74,7 @@ export const getMenuItem = async (req, res) => {
 
 export const searchAndFilterMenuItems = async (req, res) => {
     try {
+        const { skip, limit, page } = getPagination(req.query);
         const { query, nutritionalContent, minPrice, maxPrice } = req.query;
 
         const filter = {};
@@ -88,10 +96,17 @@ export const searchAndFilterMenuItems = async (req, res) => {
         }
 
         console.log(req.query);
+        const totalDocuments = await MenuItemDatabase.countDocuments(filter)
+        let menuItems
+        if (query && query !== "undefined") {
+            menuItems = await MenuItemDatabase.find(filter).sort({ score: { $meta: 'textScore' } });
+        } else {
+            menuItems = await MenuItemDatabase.find(filter).sort({ name: 1 });
+        }
 
-        const menuItems = await MenuItemDatabase.find(filter).sort({ name: 1 });
+        const sortedMenuItems = await menuItems.skip(skip).limit(limit)
 
-        return res.status(200).json({ ok: true, body: menuItems })
+        return res.status(200).json({ok: true, body: {...getPaginationResults(page, limit, skip, totalDocuments), data: sortedMenuItems, totalResults: totalDocuments}})
     } catch (error) {
         return res.status(500).json({ ok: false, error: error.message });
     }

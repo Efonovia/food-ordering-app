@@ -3,12 +3,54 @@ import Searchbar from '../widgets/SearchBar.widgets';
 import nigerianStates from '../data/nigeria_states';
 import CheckboxesTags from '../widgets/CategoriesInput.widgets';
 import RangeSlider from '../widgets/Slider.widgets';
+import Pagination from '@mui/material/Pagination';
+import { useSearchParams, useNavigate, useLocation } from 'react-router-dom'
+import Stack from '@mui/material/Stack';
+import { getSearchQueriesUrl } from '../utils/utils';
+
 
 function Browse() {
+    const [searchParams] = useSearchParams()
+    const location = useLocation()
+    const { query, page, nutritionalContent, minPrice, maxPrice } = Object.fromEntries(searchParams)
+    const [loading, setLoading] = React.useState(true)
+    const [searchQuery, setSearchQuery] = React.useState(query || undefined)
+    const [searchMinPrice, setSearchMinPrice] = React.useState(minPrice || undefined)
+    const [searchMaxPrice, setSearchMaxPrice] = React.useState(maxPrice || undefined)
+    const [searchNutritionalContent, setSearchNutritionalContent] = React.useState(nutritionalContent?.split(",") || [])
+    console.log(searchNutritionalContent, searchMinPrice, searchMaxPrice, searchQuery)
+    const [restaurants, setRestaurants] = React.useState([])
+    const [urlQueries, setUrlQueries] = React.useState(getSearchQueriesUrl(location.search))
+    const navigate = useNavigate()
+
+    const handleChange = (event, value) => {
+        navigate(`/browse${urlQueries}&page=${value}`)
+        setLoading(true)
+    };
+
+    function onSearchQueryChange(event) {
+        setSearchQuery(event.target.value)
+        console.log(event.target.value)
+    }
+
+    function onSearchNutritionalContentChange(value) {
+        if(value.length < 4) {
+            setSearchNutritionalContent(value)
+        }
+        console.log(searchNutritionalContent)
+    }
+
+    function executeSearch() {
+        if(!searchQuery) {
+            return
+        }
+        navigate(`/browse?query=${searchQuery}&page=1`)
+        setLoading(true)
+    }
 
 
     return <>
-            <Searchbar />
+            <Searchbar value={searchQuery} onChange={onSearchQueryChange} executeSearch={executeSearch}/>
             <div id="content" className="site-content">
                 <div id="primary" className="content-area">
                     <article id="post-21" className="post-21 page type-page status-publish hentry">
@@ -18,8 +60,8 @@ function Browse() {
                                 </div>
                                 <div className="bg-image-overlay" style={{opacity: '0.5'}}></div>
                                 <div className="inner-holder">
-                                    <div className="wp-block-columns is-layout-flex wp-container-9 wp-block-columns-is-layout-flex">
-                                        <div className="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style={{flexBasis: '22%'}}>
+                                    <div style={{gap: "5%"}} className="wp-block-columns is-layout-flex wp-container-9 wp-block-columns-is-layout-flex">
+                                        <div className="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style={{flexBasis: '18%'}}>
                                             <div className="citadela-block-responsive-text align-left no-margins">
                                                 <h2 className="inner-tag" style={{fontSize: '22px'}}>Order your favorites</h2>
                                             </div>
@@ -45,8 +87,8 @@ function Browse() {
                                             <CheckboxesTags
                                                 placeholder="Nutritional Contents"
                                                 label="Nutritional Contents"
-                                                // value={searchCategories}
-                                                // onCategoriesChange={onSearchCategoriesChange}
+                                                value={searchNutritionalContent}
+                                                onNutritionalContentChange={onSearchNutritionalContentChange}
                                                 options={Object.keys(nigerianStates)} 
                                                 width={"100%"} 
                                             />
@@ -69,7 +111,7 @@ function Browse() {
                                                 className="wp-block-button__link wp-element-button" 
                                                 // onClick={executeFilter} 
                                                 style={{width: "100%", borderRadius: "5px", background: '#fb246a' }} 
-                                                // style={{width: "340px", borderRadius: "5px", background: (searchQuery||searchCategories.length||searchState) ? '#fb246a' : "grey"}} 
+                                                // style={{width: "340px", borderRadius: "5px", background: (searchQuery||searchNutritionalContent.length||searchMinPrice) ? '#fb246a' : "grey"}} 
                                                 href 
                                             >FILTER</a>
 
@@ -102,9 +144,13 @@ function Browse() {
                                                                                 srcSet="https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/burgers.jpg 800w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/burgers-300x225.jpg 300w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/burgers-768x576.jpg 768w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/burgers-640x480.jpg 640w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/burgers-480x360.jpg 480w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/burgers-600x450.jpg 600w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/burgers-150x113.jpg 150w"
                                                                                 sizes="(max-width: 800px) 100vw, 800px"
                                                                                 style={{objectFit: 'cover'}}/></a></div>
-                                                                    <h2 className="wc-block-components-product-title wc-block-grid__product-title"><a
+                                                                    <h4 className="wc-block-components-product-title wc-block-grid__product-title"><a
                                                                             className="wc-block-components-product-name"
-                                                                            href>Vegan
+                                                                            href>Restaraunt name</a></h4>
+                                                                    <p style={{ fontWeight: 500, fontSize: "12px" }} className="wc-block-components-product-title wc-block-grid__product-title">10 min</p>
+                                                                    <p style={{ fontWeight: 100, fontSize: "12px" }} className="wc-block-components-product-title wc-block-grid__product-title">nutriotion and all that</p>
+                                                                    <h2>
+                                                                    <a href>Vegan
                                                                             Burger</a></h2>
                                                                     <div className="wp-block-woocommerce-product-price"><span
                                                                             className="wc-block-components-product-price wc-block-grid__product-price price wc-block-components-product-price"><span
@@ -314,6 +360,22 @@ function Browse() {
                                                                             to cart</button></div>
                                                                 </li>
                                                             </ul>
+                                                            {/* {((query||nutritionalContent||minPrice||maxPrice)&&page&&Boolean(restaurants["data"]?.length&&!loading)) && <Stack marginBottom={7} spacing={2}> */}
+                                                            {<Stack marginBottom={7} spacing={2}>
+                                                                <Pagination 
+                                                                    sx={{ 
+                                                                    '& .MuiPaginationItem-root': { color: 'black' },
+                                                                    '& .MuiPaginationItem-page.Mui-selected': { backgroundColor: '#ea2251', color: 'white' }
+                                                                    }} 
+                                                                    size='large' 
+                                                                    variant='outlined' 
+                                                                    shape='rounded' 
+                                                                    count={10}
+                                                                    // count={Math.ceil(companies.totalResults/10)} 
+                                                                    page={Number(page)} 
+                                                                    onChange={handleChange} 
+                                                                />
+                                                            </Stack>}
                                                         </div>
                                                     </div>
                                                 </div>

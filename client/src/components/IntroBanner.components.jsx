@@ -1,7 +1,9 @@
 import React from 'react';
 import blobPlate from "../images/blob-plate-bg.png"
+import { useNavigate } from 'react-router-dom';
 
 function IntroBanner(props) {
+    const navigate = useNavigate()
 
     return <div className="wp-block-citadela-blocks-custom-container citadela-block-custom-container responsive-options size-wide bg-type-image inside-space-none has-bg has-overlay bg-size-auto"
     style={{backgroundColor: "rgba(255, 255, 255, 1)"}}
@@ -16,13 +18,13 @@ function IntroBanner(props) {
         <div className="wp-block-citadela-blocks-spacer citadela-block-spacer responsive-options"
             data-block-attr="{&quot;desktop&quot;:{&quot;height&quot;:&quot;8.5em&quot;},&quot;mobile&quot;:{&quot;height&quot;:&quot;4em&quot;}}"
             data-block-mobile-breakpoint="600">
-            <div className="inner-holder" style={{paddingTop: "8.5em;"}}></div>
+            <div className="inner-holder" style={{paddingTop: "8.5em"}}></div>
         </div>
 
 
 
         <h1 className="wp-block-heading has-huge-font-size"><strong>Fresh <span
-                    style={{backgroundColor: "rgba(0, 0, 0, 0)", color:"#ea2251"}} className="has-inline-color">food delivery</span> </strong><br/><strong>from your favorite bistro</strong></h1>
+                    style={{backgroundColor: "rgba(0, 0, 0, 0)", color:"#ea2251"}} className="has-inline-color">food</span> </strong><br/><strong>from your favorite Nile Eateries</strong></h1>
 
 
 
@@ -33,7 +35,7 @@ function IntroBanner(props) {
 
 
         <div className="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
-            <div className="wp-block-button"><a className="wp-block-button__link wp-element-button" href
+            <div onClick={() => navigate("/browse")} className="wp-block-button"><a className="wp-block-button__link wp-element-button" href
                     style={{borderRadius: "5px"}}>Order Now</a></div>
 
 

@@ -25,8 +25,8 @@ function App() {
         <Route path="/restaurants" element={<Restaurants />} />
         <Route path="/orderhistory" element={<OrderHistory />} />
         <Route path="/admin/allorders" element={<AdminAllOrders />} />
-        <Route path="/admin/vieworder/:id" element={<AdminViewOrder />} />
-        <Route path="/restaurant/:id" element={<RestaurantDetails />} />
+        <Route path="/admin/vieworder/:orderId" element={<AdminViewOrder />} />
+        <Route path="/restaurant/:restaurantId" element={<RestaurantDetails />} />
       </Routes>
     </BrowserRouter>
   )

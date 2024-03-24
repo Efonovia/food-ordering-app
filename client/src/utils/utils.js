@@ -114,3 +114,19 @@ export function sortByStatus(objectsList) {
 
     return sortedObjects
 }
+
+export function calculateAverageRating(reviews) {
+    if (reviews.length === 0) return 0;
+
+    let totalRating = reviews.reduce((acc, review) => acc + review.rating, 0);
+    return Math.round(totalRating / reviews.length);
+}
+
+export function getSearchQueriesUrl(searchPath) {
+    if(!Boolean(searchPath)) {
+        return ""
+    }
+    let searchList = searchPath.split("&")
+    searchList.pop()
+    return searchList.join("&")
+}

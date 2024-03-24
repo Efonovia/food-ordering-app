@@ -4,12 +4,11 @@ const API_URL = "http://localhost:8000"
 export const httpGetAllRestaurants = async () => {
     try {
         const response = await fetch(`${API_URL}/restaurants`)
-        if (!response.ok) {
+        const result = await response.json()
+        if (!result.ok) {
             throw new Error('Failed to fetch restaurants. try again');
-        } else {
-            const result = await response.json()
-            return result;
-        }
+        } 
+        return result
     } catch (error) {
         console.log(error)
         alert(error.message)
@@ -20,12 +19,11 @@ export const httpGetAllRestaurants = async () => {
 export const httpGetRestaurant = async (restaurantId) => {
     try {
         const response = await fetch(`${API_URL}/restaurants/${restaurantId}`)
-        if (!response.ok) {
+        const result = await response.json()
+        if (!result.ok) {
             throw new Error('Failed to fetch restaurant. try again');
-        } else {
-            const result = await response.json()
-            return result;
-        }
+        } 
+        return result
     } catch (error) {
         console.log(error)
         alert(error.message)
@@ -43,12 +41,11 @@ export const httpLoginRestaurant = async (loginDetails) => {
               body: JSON.stringify(loginDetails)
         })
 
-        if (!response.ok) {
-            throw new Error(response.error);
-        } else {
-            const result = await response.json()
-            return result;
+        const result = await response.json()
+        if (!result.ok) {
+            throw new Error(result.error);
         }
+        return result;
     } catch (error) {
         console.log(error)
         alert(error.message)
@@ -58,7 +55,7 @@ export const httpLoginRestaurant = async (loginDetails) => {
 
 export const httpPostRestaurantReview = async (reviewDetails) => {
     try {
-        const response = await fetch(`${API_URL}/restaurants/reiews/add`, {
+        const response = await fetch(`${API_URL}/restaurants/reviews/add`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -66,12 +63,11 @@ export const httpPostRestaurantReview = async (reviewDetails) => {
               body: JSON.stringify(reviewDetails)
         })
 
-        if (!response.ok) {
-            throw new Error(response.error);
-        } else {
-            const result = await response.json()
-            return result;
-        }
+        const result = await response.json()
+        if (!result.ok) {
+            throw new Error(result.error);
+        } 
+        return result
     } catch (error) {
         console.log(error)
         alert(error.message)

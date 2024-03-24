@@ -1,6 +1,8 @@
 import React from 'react';
 import "../styles/general.css"
 import { useNavigate, useLocation } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { setUser } from '../state';
 
 function Navbar() {
     const defaultClassName = "home page-template-default page page-id-21 wp-custom-logo theme-citadela woocommerce-js classic-theme-layout classic-header-layout default-theme-design page-fullwidth no-page-title no-header-space citadela-events-css pro-plugin-active sticky-header-enabled sticky-header-desktop-full sticky-header-mobile-full footer-collapsible-widgets-enabled custom-header custom-header-over-content custom-header-transparent-bg wide-content-width header-with-cart header-scrolled"
@@ -8,9 +10,10 @@ function Navbar() {
     const mobileMenuOpened = "home page-template-default page page-id-21 wp-custom-logo theme-citadela woocommerce-js classic-theme-layout classic-header-layout default-theme-design page-fullwidth no-page-title no-header-space citadela-events-css pro-plugin-active sticky-header-enabled sticky-header-desktop-full sticky-header-mobile-full footer-collapsible-widgets-enabled custom-header custom-header-over-content custom-header-transparent-bg wide-content-width header-with-cart header-scrolled mobile-screen-width responsive-menu footer-collapsible-widgets menu-opened"
     const mobileCartOpened = "home page-template-default page page-id-21 wp-custom-logo theme-citadela woocommerce-js classic-theme-layout classic-header-layout default-theme-design page-fullwidth no-page-title no-header-space citadela-events-css pro-plugin-active sticky-header-enabled sticky-header-desktop-full sticky-header-mobile-full footer-collapsible-widgets-enabled custom-header custom-header-over-content custom-header-transparent-bg wide-content-width header-with-cart header-scrolled mobile-screen-width responsive-menu footer-collapsible-widgets cart-opened"
 
-    const userType = null
-    const userInfo = "peace when i'm rolling around"
-    const isLoggedIn = !Boolean(userInfo)
+    const userInfo = useSelector(state => state.user)
+    // console.log(userInfo)
+    const userType = userInfo?.type
+    const isLoggedIn = Boolean(userInfo)
     const mobileWidthLimit = 880
     const [isMobile, setIsMobile] = React.useState(window.innerWidth < mobileWidthLimit)
     const [showMenu, setShowMenu] = React.useState(false)
@@ -18,7 +21,13 @@ function Navbar() {
 
     const location = useLocation()
     const navigate = useNavigate()
-    console.log(location.pathname)
+    const dispatch = useDispatch()
+
+    function logout() {
+        console.log("dfsdgfhg")
+		dispatch(setUser({ user: null }))
+		navigate("/auth/login")
+	}
 
     function openMenu(bool) {
         setShowMenu(bool)
@@ -66,7 +75,7 @@ function Navbar() {
                     <span onClick={() => openMenu(false)} className="responsive-close-button"></span>
                     <ul id="main-menu" className="citadela-menu" data-liwidth="642">
                         {!isMobile && <>
-                            {!isLoggedIn && <><li onClick={() => navigate("/")} id="menu-item-25"
+                            {(!isLoggedIn || userType === "student") && <><li onClick={() => navigate("/")} id="menu-item-25"
                             className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-21 menu-item-has-children menu-item-25 menu-item-position-0 top-level-menu-item"
                             data-width="99"><a id={`${location.pathname === "/" ? "custom-active-page": ""}`} href aria-current="page">Home</a>
                             </li>
@@ -78,7 +87,7 @@ function Navbar() {
                                 className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-146 menu-item-position-2 top-level-menu-item"
                                 data-width="99"><a id={`${location.pathname === "/restaurants" ? "custom-active-page": ""}`} href>Restaurants</a>
                             </li></>}
-                            {(isLoggedIn && userType === "user") && <li onClick={() => navigate("/orderhistory")} id="menu-item-343"
+                            {(isLoggedIn && userType === "student") && <li onClick={() => navigate("/orderhistory")} id="menu-item-343"
                                 className="menu-item menu-item-type-post_type menu-item-object-page menu-item-343 menu-item-position-3 top-level-menu-item"
                                 data-width="82"><a id={`${location.pathname === "/orderhistory" ? "custom-active-page": ""}`} href>Order History</a>
                             </li>}
@@ -92,10 +101,10 @@ function Navbar() {
                             </li></>}
                             {isLoggedIn && <li id="menu-item-343"
                                 className="menu-item menu-item-type-post_type menu-item-object-page menu-item-343 menu-item-position-3 top-level-menu-item"
-                                data-width="82"><a style={{color: "red"}} href>Log Out</a>
+                                data-width="82"><a onClick={logout} style={{color: "red"}} href>Log Out</a>
                             </li>}
                         </>}
-                        {(isMobile && (!userType && userType !== "admin")) && <li className="menu-item-wrapper menu-item-has-children sub-menu-right-position top-level-menu-item">
+                        {(isMobile && (userType !== "admin")) && <li className="menu-item-wrapper menu-item-has-children sub-menu-right-position top-level-menu-item">
                             {!showMenu && <a onClick={() => openMenu(true)} href><i className="fa fa-bars"></i></a>}
                             {showMenu && <ul className="sub-menu">
                                 {!isLoggedIn && <><li onClick={() => navigate("auth/signup")} id="menu-item-343"
@@ -117,18 +126,18 @@ function Navbar() {
                                     className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-146 menu-item-position-2 menu-item-cloned"
                                     data-width="99"><a href>Restaurants</a>
                                 </li>
-                                {(isLoggedIn && userType === "user") && <li onClick={() => navigate("/orderhistory")} id="menu-item-343"
+                                {(isLoggedIn && userType === "student") && <li onClick={() => navigate("/orderhistory")} id="menu-item-343"
                                     className="menu-item menu-item-type-post_type menu-item-object-page menu-item-343 menu-item-position-3 menu-item-cloned"
                                     data-width="82"><a href>Order History</a></li>}
                                 {isLoggedIn && <li id="menu-item-343"
                                     className="menu-item menu-item-type-post_type menu-item-object-page menu-item-343 menu-item-position-3 menu-item-cloned"
-                                    data-width="82"><a href>Log Out</a></li>}
+                                    data-width="82"><a onClick={logout} href>Log Out</a></li>}
                             </ul>}
                         </li>}
                     </ul>
                 </div>
 
-                {(isLoggedIn && userType === "user") && <div onClick={() => navigate("/cart")} className="citadela-woocommerce-minicart is-empty" style={{display: "inline-block", fontSize: "initial"}}>
+                {(isLoggedIn && userType === "student") && <div onClick={() => navigate("/cart")} className="citadela-woocommerce-minicart is-empty" style={{display: "inline-block", fontSize: "initial"}}>
                     <div className="inner-wrapper">
                         <div className="cart-header">
                             <div className="cart-icon"><i className="fas fa-shopping-basket"></i></div>
@@ -145,7 +154,7 @@ function Navbar() {
                 {(isMobile && isLoggedIn && userType === "admin") && <div className="citadela-woocommerce-minicart is-empty" style={{display: "inline-block", fontSize: "initial"}}>
                     <div className="inner-wrapper">
                         <div className="cart-header">
-                            <div style={{width: "100px", color: "red"}} className="cart-icon">Log Out</div>
+                            <div onClick={logout} style={{width: "100px", color: "red"}} className="cart-icon">Log Out</div>
                         </div>
                     </div>
                 </div>}

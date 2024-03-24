@@ -19,7 +19,7 @@ export const createNewUser = async (req, res) => {
 
         if (existingUser) {
             console.log("User already exists. Will not create a new record.");
-            return res.status(200).json({ ok: false, exists: true, body: existingUser, error: "User with that email already exists" });
+            return res.status(400).json({ ok: false, exists: true, body: existingUser, error: "User with that email already exists" });
         }
 
 // If the user does not exist, proceed with creating a new record
@@ -42,7 +42,8 @@ export const createNewUser = async (req, res) => {
         return res.status(201).json({ ok: true, exists: false, body: newUser });
 
     } catch (error) {
-        return res.status(500).json({ ok: false, error: error.message });
+        console.log(error.message)
+        return res.status(500).json({ ok: false, exists: true, error: error.message });
     }
 };
 

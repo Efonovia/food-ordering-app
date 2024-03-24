@@ -24,10 +24,6 @@ const RestaurantSchema = mongoose.Schema({
         type: String,
         default: "",
     },
-    menu: {
-        type: Array,
-        default: [],
-    },
     reviews: {
         type: Array,
         default: [],

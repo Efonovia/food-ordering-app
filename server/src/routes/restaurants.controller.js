@@ -11,7 +11,6 @@ export const createNewRestaurant = async (req, res) => {
             email,
             phoneNumber,
             picturePath,
-            menu,
             reviews
         } = req.body;
 
@@ -36,7 +35,6 @@ export const createNewRestaurant = async (req, res) => {
             password: passwordHash,
             phoneNumber,
             picturePath,
-            menu,
             reviews
         });
 
@@ -62,7 +60,7 @@ export const loginRestaurant = async(req, res) => {
       }
   
       //Check if password is correct
-      const isMatch = await bcrypt.compare(password, restaurant.password)
+      const isMatch = password === restaurant.password
       if(!isMatch) return res.status(400).json({ok: false, error: "Incorrect Password" })
   
       
@@ -74,7 +72,7 @@ export const loginRestaurant = async(req, res) => {
 
 export const getAllRestaurants = async (req, res) => {
     try {
-        return res.status(200).json({ok: true, body: await RestaurantDatabase.find({}, { '_id': 0, '__v': 0 })})
+        return res.status(200).json({ok: true, body: await RestaurantDatabase.find({}, { '__v': 0 })})
     } catch (error) {
         return res.status(404).json({ok: false, error: error.message})
     }

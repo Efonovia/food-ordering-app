@@ -4,12 +4,11 @@ const API_URL = "http://localhost:8000"
 export const httpGetUser = async (userId) => {
     try {
         const response = await fetch(`${API_URL}/users/${userId}`)
-        if (!response.ok) {
+        const result = await response.json()
+        if (!result.ok) {
             throw new Error('Failed to fetch restaurant. try again');
-        } else {
-            const result = await response.json()
-            return result;
         }
+        return result;
     } catch (error) {
         console.log(error)
         alert(error.message)
@@ -26,15 +25,13 @@ export const httpSignUpUser = async (signUpDetails) => {
               },
               body: JSON.stringify(signUpDetails)
         })
-
-        if (!response.ok) {
-            throw new Error(response.error);
-        } else {
-            const result = await response.json()
-            return result;
+        const result = await response.json()
+        if (!result.ok) {
+            throw new Error(result.error);
         }
+        return result;
     } catch (error) {
-        console.log(error)
+        console.log(error.message)
         alert(error.message)
         return
     }
@@ -50,12 +47,11 @@ export const httpLoginUser = async (loginDetails) => {
               body: JSON.stringify(loginDetails)
         })
 
-        if (!response.ok) {
-            throw new Error(response.error);
-        } else {
-            const result = await response.json()
-            return result;
+        const result = await response.json()
+        if (!result.ok) {
+            throw new Error(result.error);
         }
+        return result;
     } catch (error) {
         console.log(error)
         alert(error.message)
@@ -73,12 +69,11 @@ export const httpEditUserDetails = async (editDetails) => {
               body: JSON.stringify(editDetails)
         })
 
-        if (!response.ok) {
-            throw new Error(response.error);
-        } else {
-            const result = await response.json()
-            return result;
+        const result = await response.json()
+        if (!result.ok) {
+            throw new Error(result.error);
         }
+        return result;
     } catch (error) {
         console.log(error)
         alert(error.message)
