@@ -46,6 +46,7 @@ export default function RangeSlider() {
             getAriaValueText={valuetext}
             step={100}
             min={100}
+            sx={{color: "#ea2251"}}
             max={10000}
         />
         <Grid container spacing={2} alignItems="center" justifyContent="space-between">

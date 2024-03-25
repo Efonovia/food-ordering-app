@@ -20,7 +20,7 @@ const MenuItemSchema = mongoose.Schema({
     },
     picturePath: {
         type: String,
-        required: true
+        default: ""
     },
     price: {
         type: Number,
@@ -36,10 +36,6 @@ const MenuItemSchema = mongoose.Schema({
     },
     waitTime: {
         type: Number,
-        required: true
-    },
-    reviews: {
-        type: Array,
         required: true
     }
 }, { timestamps: true })

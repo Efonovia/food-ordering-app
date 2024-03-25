@@ -25,7 +25,6 @@ export const createNewMenuItem = async (req, res) => {
             dietType,
             waitTime,
             nutritionalContent: nutritionalContent || [],
-            reviews: []
         });
 
         // Save the new menuItem record to the database

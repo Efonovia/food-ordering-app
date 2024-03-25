@@ -1,0 +1,35 @@
+const nutritionalContents = [
+    'Calories',
+    'Protein',
+    'Fat',
+    'Saturated Fat',
+    'Trans Fat',
+    'Cholesterol',
+    'Sodium',
+    'Carbohydrates',
+    'Dietary Fiber',
+    'Sugars',
+    'Added Sugars',
+    'Vitamin D',
+    'Calcium',
+    'Iron',
+    'Potassium',
+    'Vitamin A',
+    'Vitamin C',
+    'Vitamin E',
+    'Vitamin K',
+    'Thiamin (Vitamin B1)',
+    'Riboflavin (Vitamin B2)',
+    'Niacin (Vitamin B3)',
+    'Vitamin B6',
+    'Folate (Vitamin B9)',
+    'Vitamin B12',
+    'Biotin',
+    'Pantothenic Acid',
+    'Phosphorus',
+    'Magnesium',
+    'Zinc'
+]
+
+
+export default nutritionalContents

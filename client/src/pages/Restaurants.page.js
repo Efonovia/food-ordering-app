@@ -8,13 +8,14 @@ import { httpGetAllRestaurants } from '../hooks/restaurants.hooks';
 function Restaurants() {
     const [restaurants, setRestaurants] = React.useState([])
     const [loading, setLoading] = React.useState(true)
-    const restaurantsHTML = restaurants.map(restaurant => <RestaurantCard key={restaurant._id} id={restaurant._id} name={restaurant.name} averageRating={calculateAverageRating(restaurant.reviews)}/>)
+    const restaurantsHTML = restaurants?.map(restaurant => <RestaurantCard key={restaurant._id} id={restaurant._id} name={restaurant.name} averageRating={calculateAverageRating(restaurant.reviews)}/>)
 
     React.useEffect(() => {
         const fetchData = async () => {
             try {
                 const result = await httpGetAllRestaurants();
                 setRestaurants(result?.body);
+                console.log(result?.body);
             } catch (error) {
                 console.error('Error fetching featured companies:', error);
                 setLoading(false)

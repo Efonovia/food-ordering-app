@@ -2,3 +2,8 @@
     font-weight: 700;
     color: red;
 }
+
+#restaurant_name:hover {
+    cursor: pointer;
+    color: #ea2251;
+}

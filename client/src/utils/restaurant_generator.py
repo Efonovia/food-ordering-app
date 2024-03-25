@@ -52,6 +52,6 @@ restaurants_json = json.dumps(restaurants_data, indent=4)
 # print(restaurants_json)
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-data_file_path = os.path.join(script_dir, "data.json")
+data_file_path = os.path.join(script_dir, "sample_restaurant_data.json")
 with open(data_file_path, "w") as jsx_file:
     jsx_file.write(restaurants_json)

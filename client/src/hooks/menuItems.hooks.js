@@ -2,9 +2,9 @@ const API_URL = "http://localhost:8000"
 const limit = 10
 
 
-export const httpGetAllMenuItems = async () => {
+export const httpGetAllMenuItems = async (page) => {
     try {
-        const response = await fetch(`${API_URL}/menuitems`)
+        const response = await fetch(`${API_URL}/menuitems?page=${page}&limit=${limit}`)
         const result = await response.json()
         if (!result.ok) {
             throw new Error('Failed to fetch menu items. try again');

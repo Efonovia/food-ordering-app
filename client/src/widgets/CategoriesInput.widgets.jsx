@@ -41,9 +41,21 @@ export default function CheckboxesTags(props) {
       onChange={(event, value) => props.onNutritionalContentChange(value)}
       style={{ width: props.width }}
       renderInput={(params) => (
-        <TextField {...params} label={props.label} placeholder={props.placeholder} />
+        <TextField {...params} label={props.label} placeholder={props.placeholder} 
+        sx={{
+            '& .MuiOutlinedInput-root': {
+              '&.Mui-focused fieldset': {
+                borderColor: '#ea2251', // Change the border color when focused
+                borderWidth: '2px', // Adjust the border width when focused
+              },
+              '&:hover fieldset': {
+                borderColor: '#ea2251', // Optional: Change the border color on hover
+              },
+            },
+          }}
+        />
       )}
-      limitTags={3}
+      limitTags={4}
     />
   );
 }

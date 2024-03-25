@@ -1,0 +1,279 @@
+[
+    {
+        "name": "Sweet Gluten-Free Pasta",
+        "restaurantId": "65fefdb589f8405883839250",
+        "price": 3300,
+        "dietType": "Vegetarian",
+        "nutritionalContent": [
+            "Cholesterol",
+            "Magnesium",
+            "Folate (Vitamin B9)",
+            "Phosphorus",
+            "Sodium"
+        ],
+        "waitTime": 46
+    },
+    {
+        "name": "Savory Tofu Salad",
+        "restaurantId": "65fefdb589f8405883839251",
+        "price": 7800,
+        "dietType": "Meat",
+        "nutritionalContent": [
+            "Niacin (Vitamin B3)",
+            "Vitamin C",
+            "Iron",
+            "Vitamin B6"
+        ],
+        "waitTime": 18
+    },
+    {
+        "name": "Spicy Grilled Salmon",
+        "restaurantId": "65fefdb589f8405883839252",
+        "price": 6600,
+        "dietType": "Vegetarian",
+        "nutritionalContent": [
+            "Trans Fat",
+            "Pantothenic Acid",
+            "Dietary Fiber",
+            "Calcium",
+            "Cholesterol",
+            "Protein"
+        ],
+        "waitTime": 57
+    },
+    {
+        "name": "Savory Grilled Salmon",
+        "restaurantId": "65fefdb589f8405883839253",
+        "price": 6600,
+        "dietType": "Meat",
+        "nutritionalContent": [
+            "Thiamin (Vitamin B1)",
+            "Added Sugars",
+            "Vitamin K",
+            "Niacin (Vitamin B3)"
+        ],
+        "waitTime": 6
+    },
+    {
+        "name": "Exotic Grilled Salmon",
+        "restaurantId": "65fefdb589f8405883839250",
+        "price": 8100,
+        "dietType": "Vegan",
+        "nutritionalContent": [
+            "Calories",
+            "Added Sugars",
+            "Riboflavin (Vitamin B2)",
+            "Vitamin C"
+        ],
+        "waitTime": 23
+    },
+    {
+        "name": "Sweet Gluten-Free Pasta",
+        "restaurantId": "65fefdb589f8405883839251",
+        "price": 2100,
+        "dietType": "Dairy-Free",
+        "nutritionalContent": [
+            "Vitamin D",
+            "Sodium",
+            "Carbohydrates",
+            "Saturated Fat",
+            "Phosphorus",
+            "Added Sugars"
+        ],
+        "waitTime": 42
+    },
+    {
+        "name": "Savory Chicken Curry",
+        "restaurantId": "65fefdb589f8405883839252",
+        "price": 7700,
+        "dietType": "Meat",
+        "nutritionalContent": [
+            "Vitamin D",
+            "Riboflavin (Vitamin B2)",
+            "Carbohydrates",
+            "Iron",
+            "Sugars",
+            "Vitamin A"
+        ],
+        "waitTime": 33
+    },
+    {
+        "name": "Savory Gluten-Free Pasta",
+        "restaurantId": "65fefdb589f8405883839253",
+        "price": 8900,
+        "dietType": "Meat",
+        "nutritionalContent": [
+            "Saturated Fat",
+            "Folate (Vitamin B9)",
+            "Thiamin (Vitamin B1)",
+            "Dietary Fiber",
+            "Carbohydrates",
+            "Sodium"
+        ],
+        "waitTime": 31
+    },
+    {
+        "name": "Savory Grilled Salmon",
+        "restaurantId": "65fefdb589f8405883839250",
+        "price": 2100,
+        "dietType": "Dairy-Free",
+        "nutritionalContent": [
+            "Calories",
+            "Sodium",
+            "Biotin",
+            "Niacin (Vitamin B3)",
+            "Potassium"
+        ],
+        "waitTime": 45
+    },
+    {
+        "name": "Spicy Grilled Salmon",
+        "restaurantId": "65fefdb589f8405883839251",
+        "price": 8000,
+        "dietType": "Dairy-Free",
+        "nutritionalContent": [
+            "Vitamin D",
+            "Vitamin E",
+            "Vitamin A",
+            "Dietary Fiber",
+            "Iron",
+            "Potassium"
+        ],
+        "waitTime": 17
+    },
+    {
+        "name": "Spicy Vegan Burger",
+        "restaurantId": "65fefdb589f8405883839252",
+        "price": 8600,
+        "dietType": "Dairy-Free",
+        "nutritionalContent": [
+            "Vitamin E",
+            "Pantothenic Acid",
+            "Vitamin K",
+            "Saturated Fat",
+            "Vitamin A"
+        ],
+        "waitTime": 54
+    },
+    {
+        "name": "Exotic Gluten-Free Pasta",
+        "restaurantId": "65fefdb589f8405883839253",
+        "price": 9400,
+        "dietType": "Vegetarian",
+        "nutritionalContent": [
+            "Vitamin B6",
+            "Calories",
+            "Vitamin K",
+            "Pantothenic Acid"
+        ],
+        "waitTime": 53
+    },
+    {
+        "name": "Savory Grilled Salmon",
+        "restaurantId": "65fefdb589f8405883839250",
+        "price": 5000,
+        "dietType": "Gluten-Free",
+        "nutritionalContent": [
+            "Vitamin K",
+            "Cholesterol",
+            "Magnesium",
+            "Niacin (Vitamin B3)"
+        ],
+        "waitTime": 25
+    },
+    {
+        "name": "Sweet Vegan Burger",
+        "restaurantId": "65fefdb589f8405883839251",
+        "price": 10000,
+        "dietType": "Gluten-Free",
+        "nutritionalContent": [
+            "Calories",
+            "Vitamin B6",
+            "Phosphorus",
+            "Vitamin E"
+        ],
+        "waitTime": 17
+    },
+    {
+        "name": "Savory Vegan Burger",
+        "restaurantId": "65fefdb589f8405883839252",
+        "price": 8000,
+        "dietType": "Vegetarian",
+        "nutritionalContent": [
+            "Added Sugars",
+            "Vitamin B6",
+            "Biotin"
+        ],
+        "waitTime": 23
+    },
+    {
+        "name": "Exotic Tofu Salad",
+        "restaurantId": "65fefdb589f8405883839253",
+        "price": 6800,
+        "dietType": "Meat",
+        "nutritionalContent": [
+            "Calories",
+            "Iron",
+            "Cholesterol",
+            "Thiamin (Vitamin B1)",
+            "Protein"
+        ],
+        "waitTime": 60
+    },
+    {
+        "name": "Exotic Gluten-Free Pasta",
+        "restaurantId": "65fefdb589f8405883839250",
+        "price": 1300,
+        "dietType": "Dairy-Free",
+        "nutritionalContent": [
+            "Carbohydrates",
+            "Folate (Vitamin B9)",
+            "Dietary Fiber",
+            "Zinc",
+            "Vitamin C",
+            "Sodium"
+        ],
+        "waitTime": 22
+    },
+    {
+        "name": "Sweet Vegan Burger",
+        "restaurantId": "65fefdb589f8405883839251",
+        "price": 400,
+        "dietType": "Gluten-Free",
+        "nutritionalContent": [
+            "Carbohydrates",
+            "Riboflavin (Vitamin B2)",
+            "Trans Fat",
+            "Thiamin (Vitamin B1)"
+        ],
+        "waitTime": 31
+    },
+    {
+        "name": "Spicy Grilled Salmon",
+        "restaurantId": "65fefdb589f8405883839252",
+        "price": 7800,
+        "dietType": "Gluten-Free",
+        "nutritionalContent": [
+            "Magnesium",
+            "Vitamin D",
+            "Biotin",
+            "Protein",
+            "Vitamin C",
+            "Iron"
+        ],
+        "waitTime": 48
+    },
+    {
+        "name": "Exotic Vegan Burger",
+        "restaurantId": "65fefdb589f8405883839253",
+        "price": 8300,
+        "dietType": "Dairy-Free",
+        "nutritionalContent": [
+            "Calcium",
+            "Trans Fat",
+            "Vitamin E",
+            "Vitamin B12"
+        ],
+        "waitTime": 29
+    }
+]
