@@ -7,7 +7,7 @@ import RangeSlider from '../widgets/Slider.widgets';
 import Pagination from '@mui/material/Pagination';
 import { useSearchParams, useNavigate, useLocation } from 'react-router-dom'
 import Stack from '@mui/material/Stack';
-import { getSearchQueriesUrl } from '../utils/utils';
+import { removePageFromSearchQueries } from '../utils/utils';
 import { httpGetAllMenuItems, httpSearchAndFilterMenuItems } from '../hooks/menuItems.hooks';
 import { CircularProgress } from '@mui/material';
 import MenuCard from '../components/MenuCard.components';
@@ -19,16 +19,35 @@ function Browse() {
     const { query, page, nutritionalContent, minPrice, maxPrice } = Object.fromEntries(searchParams)
     const [loading, setLoading] = React.useState(true)
     const [searchQuery, setSearchQuery] = React.useState(query || undefined)
-    const [searchMinPrice, setSearchMinPrice] = React.useState(minPrice || undefined)
-    const [searchMaxPrice, setSearchMaxPrice] = React.useState(maxPrice || undefined)
+    const [priceValue, setPriceValue] = React.useState({min: minPrice || 1000, max: maxPrice || 9000});
     const [searchNutritionalContent, setSearchNutritionalContent] = React.useState(nutritionalContent?.split(",") || [])
-    // console.log(searchNutritionalContent, searchMinPrice, searchMaxPrice, searchQuery)
+    // console.log(searchNutritionalContent, priceValue.min, priceValue.max, searchQuery)
+    console.log("locationsearch", location.search)
     const [menuItems, setMenuItems] = React.useState([])
-    const [urlQueries, setUrlQueries] = React.useState(getSearchQueriesUrl(location.search))
     const navigate = useNavigate()
 
+
+    const handleSliderChange = (event, newValue) => {
+        setPriceValue({min: newValue[0], max: newValue[1]});
+    };
+    
+    const handleInputChange = (event) => {
+        console.log(event.target.name, event.target.value)
+        if(event.target.name === "first") {
+            setPriceValue(prev =>  {
+                return {...prev, min: event.target.value === '' ? 0 : Number(event.target.value)}
+            })
+        }
+        if(event.target.name === "second") {
+            setPriceValue(prev =>  {
+                return {...prev, max: event.target.value === '' ? 0 : Number(event.target.value)}
+            })
+        }
+    };
+
     const handlePageChange = (event, value) => {
-        navigate(`/browse?${urlQueries}${urlQueries ? "&": ""}page=${value}`)
+        const locationSearch = removePageFromSearchQueries(location.search)
+        navigate(`/browse?${locationSearch}${locationSearch ? "&": ""}page=${value}`)
         setLoading(true)
     };
 
@@ -38,7 +57,7 @@ function Browse() {
     }
 
     function onSearchNutritionalContentChange(value) {
-        if(value.length < 4) {
+        if(value.length < 5) {
             setSearchNutritionalContent(value)
         }
         console.log(searchNutritionalContent)
@@ -52,11 +71,34 @@ function Browse() {
         setLoading(true)
     }
 
+    async function executeFilter() {
+        if(!searchQuery && !searchNutritionalContent.length && !priceValue.min && !priceValue.max) {
+            return
+        }
+        let urlQueries = []
+        if(searchQuery) {
+            urlQueries.push(`query=${searchQuery}`)
+        }
+        if(searchNutritionalContent) {
+            urlQueries.push(`nutritionalContent=${searchNutritionalContent.join(",")}`)
+        }
+        if(priceValue.min) {
+            urlQueries.push(`minPrice=${priceValue.min}`)
+        }
+        if(priceValue.max) {
+            urlQueries.push(`maxPrice=${priceValue.max}`)
+        }
+
+        urlQueries.push("page=1")
+        navigate(`/browse?${urlQueries.join("&")}`)
+        setLoading(true)
+    }
+
     React.useEffect(() => {
         const fetchData = async () => {
             try {
-                console.log("rtey", Boolean(query||nutritionalContent||minPrice||maxPrice)&&Boolean(page), page)
-                const results = Boolean(query||nutritionalContent||minPrice||maxPrice)&&Boolean(page) ? await httpSearchAndFilterMenuItems(query, nutritionalContent, minPrice, maxPrice, page) : await httpGetAllMenuItems(page || 1);
+                // console.log("rtey", Boolean(query||nutritionalContent||minPrice||maxPrice)&&Boolean(page), page)
+                const results = Boolean(location.search) ? await httpSearchAndFilterMenuItems(location.search) : await httpGetAllMenuItems(page || 1);
                 setMenuItems(results?.body);
                 console.log(results)
             } catch (error) {
@@ -68,11 +110,11 @@ function Browse() {
 
         fetchData();
         
-    }, [query, nutritionalContent, minPrice, maxPrice, page])
+    }, [page, location.search])
 
     const menuItemsHTML = menuItems?.data?.map(menuItem => <MenuCard key={menuItem._id} {...menuItem}/>)
 
-    return loading ? <CircularProgress sx={{marginTop: "300px", marginLeft: "700px", color: "#fb246a"}} size={100}/> : <>
+    return loading ? <CircularProgress sx={{marginTop: "300px", marginLeft: "700px", color: "#ea2251"}} size={100}/> : <>
             <div className="wp-block-citadela-blocks-spacer citadela-block-spacer">
                 <div className="inner-holder" style={{paddingTop: '10px'}}></div>
             </div>
@@ -87,9 +129,9 @@ function Browse() {
                                 <div className="bg-image-overlay" style={{opacity: '0.5'}}></div>
                                 <div className="inner-holder">
                                     <div style={{gap: "5%"}} className="wp-block-columns is-layout-flex wp-container-9 wp-block-columns-is-layout-flex">
-                                        <div className="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style={{flexBasis: '18%'}}>
+                                        <div className="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style={{flexBasis: '18%', background: "white", padding: "0 5px"}}>
                                             <div className="citadela-block-responsive-text align-left no-margins">
-                                                <h2 className="inner-tag" style={{fontSize: '20px'}}>Order your favorites</h2>
+                                                <h2 className="inner-tag" style={{fontSize: '20px', textAlign: "center"}}>Filter by your preferences</h2>
                                             </div>
 
 
@@ -128,16 +170,20 @@ function Browse() {
                                             <div className="citadela-block-responsive-text align-left">
                                                 <h6 className="inner-tag" style={{fontSize: '14px', letterSpacing: '0.1em'}}>PRICE RANGE</h6>
                                             </div>
-                                            <RangeSlider />
+
+                                            <RangeSlider
+                                                value={priceValue}
+                                                handleSliderChange={handleSliderChange}
+                                                handleInputChange={handleInputChange}
+                                            />
 
                                             <div className="wp-block-citadela-blocks-spacer citadela-block-spacer">
                                                 <div className="inner-holder" style={{paddingTop: '20px'}}></div>
                                             </div>
                                             <a 
                                                 className="wp-block-button__link wp-element-button" 
-                                                // onClick={executeFilter} 
-                                                style={{width: "100%", borderRadius: "5px", background: '#fb246a' }} 
-                                                // style={{width: "340px", borderRadius: "5px", background: (searchQuery||searchNutritionalContent.length||searchMinPrice) ? '#fb246a' : "grey"}} 
+                                                onClick={executeFilter} 
+                                                style={{width: "100%", borderRadius: "5px", background: Boolean(searchQuery||searchNutritionalContent.length||priceValue.min||priceValue.max) ? '#ea2251' : "grey"}} 
                                                 href 
                                             >FILTER</a>
 
@@ -161,7 +207,10 @@ function Browse() {
                                                         <div className="with-scroll-to-top__scroll-point" aria-hidden="true"></div>
                                                         <div className="wc-block-grid alignwide has-3-columns has-multiple-rows">
                                                             
-                                                            <ul className="wc-block-grid__products">{menuItemsHTML}</ul>
+                                                            {Boolean(menuItems?.data?.length) ? 
+                                                            <ul className="wc-block-grid__products">{menuItemsHTML}</ul> :
+                                                            <h1>Sorry, no results matched your criteria</h1>
+                                                            }
                                                         </div>
                                                     </div>
                                                 </div>
@@ -179,7 +228,7 @@ function Browse() {
                                     size='large' 
                                     variant='outlined' 
                                     shape='rounded' 
-                                    count={Math.ceil(menuItems.totalResults/10)} 
+                                    count={Math.ceil(menuItems?.totalResults/10)} 
                                     page={page ? Number(page) : 1} 
                                     onChange={handlePageChange} 
                                 />

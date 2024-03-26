@@ -29,7 +29,7 @@ function Restaurants() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    return loading ? <CircularProgress sx={{marginTop: "300px", marginLeft: "800px", color: "#fb246a"}} size={100}/> :<div id="content" className="site-content">
+    return loading ? <CircularProgress sx={{marginTop: "300px", marginLeft: "700px", color: "#fb246a"}} size={100}/> :<div id="content" className="site-content">
     <div id="primary" className="content-area">
         <main id="main" className="site-main">
             <article id="post-357" className="post-357 page type-page status-publish hentry">

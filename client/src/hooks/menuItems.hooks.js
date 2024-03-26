@@ -34,7 +34,7 @@ export const httpGetAllRestaurantMenuItems = async (restaurantId) => {
 
 export const httpGetMenuItem = async (menuItemId) => {
     try {
-        const response = await fetch(`${API_URL}/menuitems/${menuItemId}`)
+        const response = await fetch(`${API_URL}/menuitems/id/${menuItemId}`)
         const result = await response.json()
         if (!result.ok) {
             throw new Error('Failed to fetch menu item. try again');
@@ -47,9 +47,10 @@ export const httpGetMenuItem = async (menuItemId) => {
     }
 }
 
-export const httpSearchAndFilterMenuItems = async (query, nutritionalContent, minPrice, maxPrice, page) => {
+
+export const httpSearchAndFilterMenuItems = async (locationSearch) => {
     try {
-        const response = await fetch(`${API_URL}/menuitems/search?query=${query}&nutritionalContent=${nutritionalContent}&minPrice=${minPrice}&maxPrice=${maxPrice}&page=${page}&limit=${limit}`)
+        const response = await fetch(`${API_URL}/menuitems/search${locationSearch}&limit=${limit}`)
 
         const result = await response.json()
         if (!result.ok) {

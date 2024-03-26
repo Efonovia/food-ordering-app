@@ -14,34 +14,14 @@ const Input = styled(MuiInput)`
   width: 70px;
 `;
 
-export default function RangeSlider() {
-  const [value, setValue] = React.useState({min: 1000, max: 9000});
-
-  const handleChange = (event, newValue) => {
-    setValue({min: newValue[0], max: newValue[1]});
-  };
-
-  const handleInputChange = (event) => {
-    console.log(event.target.name, event.target.value)
-    if(event.target.name === "first") {
-        setValue(prev =>  {
-          return {...prev, min: event.target.value === '' ? 0 : Number(event.target.value)}
-        })
-    }
-    if(event.target.name === "second") {
-      setValue(prev =>  {
-        return {...prev, max: event.target.value === '' ? 0 : Number(event.target.value)}
-      })
-    }
-  };
-
+export default function RangeSlider(props) {
 
   return (
     <Box sx={{ width: "100%" }}>
         <Slider
             getAriaLabel={() => 'Temperature range'}
-            value={[value.min, value.max]}
-            onChange={handleChange}
+            value={[props.value.min, props.value.max]}
+            onChange={props.handleSliderChange}
             valueLabelDisplay="auto"
             getAriaValueText={valuetext}
             step={100}
@@ -52,10 +32,10 @@ export default function RangeSlider() {
         <Grid container spacing={2} alignItems="center" justifyContent="space-between">
             <Grid item>
                 #<Input
-                    value={value.min}
+                    value={props.value.min}
                     name="first"
                     size="small"
-                    onChange={handleInputChange}
+                    onChange={props.handleInputChange}
                     inputProps={{
                     step: 100,
                     min: 100,
@@ -67,10 +47,10 @@ export default function RangeSlider() {
             </Grid>
             <Grid item>
                 #<Input
-                    value={value.max}
+                    value={props.value.max}
                     name="second"
                     size="small"
-                    onChange={handleInputChange}
+                    onChange={props.handleInputChange}
                     inputProps={{
                     step: 100,
                     min: 100,

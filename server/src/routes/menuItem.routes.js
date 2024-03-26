@@ -14,7 +14,7 @@ menuItemsRouter.get("/", getAllMenuItems)
 menuItemsRouter.post("/create", createNewMenuItem)
 menuItemsRouter.post("/reviews/add", addReviewToMenuItem)
 menuItemsRouter.get("/restaurant/:id", getAllRestaurantMenuItems)
-menuItemsRouter.get("/:id", getMenuItem)
+menuItemsRouter.get("id/:id", getMenuItem)
 menuItemsRouter.get("/search", searchAndFilterMenuItems)
 
 export default menuItemsRouter

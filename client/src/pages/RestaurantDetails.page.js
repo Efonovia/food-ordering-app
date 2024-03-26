@@ -22,7 +22,7 @@ function RestaurantDetails() {
         const fetchData = async () => {
             try {
                 const result = await httpGetRestaurant(restaurantId);
-                console.log(result)
+                // console.log(result)
                 setRestaurant(result?.body);
             } catch (error) {
                 console.error('Error fetching restaurant info:', error);
@@ -37,7 +37,7 @@ function RestaurantDetails() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    return loading ? <CircularProgress sx={{marginTop: "300px", marginLeft: "800px", color: "#fb246a"}} size={100}/> :
+    return loading ? <CircularProgress sx={{marginTop: "300px", marginLeft: "700px", color: "#fb246a"}} size={100}/> :
     <div id="content" className="site-content">
     <div id="primary" className="content-area">
         <main id="main" className="site-main">
@@ -57,7 +57,7 @@ function RestaurantDetails() {
 
 
 
-                            <h1 style={{fontWeight: 700, fontSize: "64px"}} className="has-huge-font-size wp-block-heading">{restaurant.name}</h1>
+                            <h1 style={{fontWeight: 700, fontSize: "64px"}} className="has-huge-font-size wp-block-heading">{restaurant?.name}</h1>
                             <div>{starsHTML}</div>
 
 
@@ -335,7 +335,7 @@ function RestaurantDetails() {
                                     <Reviews
                                         restaurantId={restaurantId}
                                         userInfo={{firstName: userInfo.firstName, lastName: userInfo.lastName}}
-                                        reviews={restaurant.reviews}
+                                        reviews={restaurant?.reviews}
                                     />
 
                                 </div>

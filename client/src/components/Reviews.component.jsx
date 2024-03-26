@@ -62,7 +62,7 @@ function Reviews(props) {
         }
     }
 
-    const testReviewsHtml = allReviews.map(review => {
+    const testReviewsHtml = allReviews?.map(review => {
         return <div key={review.reviewer+"_"+review.publishDate} className="reviews-right__item">
         <AccountCircleIcon sx={{ height: 50, width: 50 }}/>
         <div className='deets'>
@@ -97,9 +97,9 @@ function Reviews(props) {
                             rows="2" placeholder="Leave a review"
                         ></textarea>
                     </div>
-                    <div style={{backgroundColor: Boolean(props.userInfo) ? "white" : "grey"}} onClick={postReview} className="post-button">{loading ? <><CircularProgress sx={{color: "white"}} size={20}/>posting...</> : (Boolean(props.userInfo) ? "Post review" : "You have to log in to make a review")}</div>
+                    <div style={{backgroundColor: Boolean(props?.userInfo) ? "white" : "grey"}} onClick={postReview} className="post-button">{loading ? <><CircularProgress sx={{color: "white"}} size={20}/>posting...</> : (Boolean(props.userInfo) ? "Post review" : "You have to log in to make a review")}</div>
                 </div>
-                {allReviews.length ? <><p>All reviews for this restaurant</p>
+                {allReviews?.length ? <><p>All reviews for this restaurant</p>
                 <div className='all-reviews'>{testReviewsHtml}</div></> : <p>No reviews for this restaurant yet. Be the first one to make one.</p>}
             </div>
 }

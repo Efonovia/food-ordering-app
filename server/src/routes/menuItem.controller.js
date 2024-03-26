@@ -71,42 +71,41 @@ export const getMenuItem = async (req, res) => {
     }
 }
 
+
 export const searchAndFilterMenuItems = async (req, res) => {
     try {
         const { skip, limit, page } = getPagination(req.query);
         const { query, nutritionalContent, minPrice, maxPrice } = req.query;
+        console.log(req.query)
 
         const filter = {};
         
         if (query && query !== "undefined") {
-            filter.$text = { $search: query };
+            filter.name = { $regex: query, $options: 'i' }
         }
 
         if (nutritionalContent && nutritionalContent!=="undefined") {
-            filter.nutritionalContent = { $in: nutritionalContent.split(",") };
+            filter.nutritionalContent = { $all: nutritionalContent.split(",") };
         }
 
         if (minPrice && maxPrice && minPrice !== "undefined" && maxPrice !== "undefined") {
-            filter.price = { $gte: minPrice, $lte: maxPrice };
+            filter.price = { $gte: Number(minPrice), $lte: Number(maxPrice) };
         } else if (minPrice && minPrice !== "undefined") {
-            filter.price = { $gte: minPrice };
+            filter.price = { $gte: Number(minPrice) };
         } else if (maxPrice && maxPrice !== "undefined") {
-            filter.price = { $lte: maxPrice };
+            filter.price = { $lte: Number(maxPrice) };
         }
 
-        console.log(req.query);
+        console.log(filter);
         const totalDocuments = await MenuItemDatabase.countDocuments(filter)
-        let menuItems
-        if (query && query !== "undefined") {
-            menuItems = await MenuItemDatabase.find(filter).sort({ score: { $meta: 'textScore' } });
-        } else {
-            menuItems = await MenuItemDatabase.find(filter).sort({ name: 1 });
-        }
-
-        const sortedMenuItems = await menuItems.skip(skip).limit(limit)
+        const sortedMenuItems = await MenuItemDatabase.find(filter)
+        .sort({ name: 1 })
+        .skip(skip)
+        .limit(limit)
 
         return res.status(200).json({ok: true, body: {...getPaginationResults(page, limit, skip, totalDocuments), data: sortedMenuItems, totalResults: totalDocuments}})
     } catch (error) {
+        console.log(error)
         return res.status(500).json({ ok: false, error: error.message });
     }
 }

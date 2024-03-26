@@ -3,7 +3,21 @@ import blobPlate from "../images/blob-plate-bg.png"
 import { useNavigate } from 'react-router-dom';
 
 function IntroBanner(props) {
+    const [searchQuery, setSearchQuery] = React.useState("")
     const navigate = useNavigate()
+
+    function onSearchQueryChange(event) {
+        setSearchQuery(event.target.value)
+        console.log(event.target.value)
+    }
+
+    function executeSearch(e) {
+        e.preventDefault()
+        if(!searchQuery) {
+            return
+        }
+        navigate(`/browse?query=${searchQuery}&page=1`)
+    }
 
     return <div className="wp-block-citadela-blocks-custom-container citadela-block-custom-container responsive-options size-wide bg-type-image inside-space-none has-bg has-overlay bg-size-auto"
     style={{backgroundColor: "rgba(255, 255, 255, 1)"}}
@@ -63,16 +77,12 @@ function IntroBanner(props) {
                         <div className="wp-block-columns is-layout-flex wp-container-5 wp-block-columns-is-layout-flex">
                             <div className="wp-block-column is-vertically-aligned-bottom is-layout-flow wp-block-column-is-layout-flow"
                                 style= {{flexBasis: "66.66%"}}>
-                                <form role="search" method="get"
-                                    action="https://preview.ait-themes.club/citadela/fooddelivery/"
-                                    className="wp-block-search__button-outside wp-block-search__text-button wp-block-search">
-                                    <label className="wp-block-search__label" for="wp-block-search__input-2">Search</label>
-                                    <div className="wp-block-search__inside-wrapper "><input className="wp-block-search__input"
-                                            id="wp-block-search__input-2" placeholder="Search products…" value=""
-                                            type="search" name="s" required=""/><input type="hidden" name="post_type"
-                                            value="product"/><button aria-label="Search"
-                                            className="wp-block-search__button wp-element-button"
-                                            type="submit">Search</button></div>
+                                <form className="wp-block-search__button-outside wp-block-search__text-button wp-block-search">
+                                    <label className="wp-block-search__label">Search</label>
+                                    <div className="wp-block-search__inside-wrapper ">
+                                        <input className="wp-block-search__input" placeholder="Search products…" value={searchQuery} onChange={onSearchQueryChange}/>
+                                        <button className="wp-block-search__button wp-element-button" onClick={executeSearch}>Search</button>
+                                    </div>
                                 </form>
                             </div>
 

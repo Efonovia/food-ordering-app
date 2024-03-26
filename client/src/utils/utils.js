@@ -122,7 +122,7 @@ export function calculateAverageRating(reviews) {
     return Math.round(totalRating / reviews.length);
 }
 
-export function getSearchQueriesUrl(searchPath) {
+export function removePageFromSearchQueries(searchPath) {
     if(!Boolean(searchPath)) {
         return ""
     }
