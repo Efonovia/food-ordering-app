@@ -45,7 +45,7 @@ function SignIn() {
             const response = formDetails.isRestaurant ? await httpLoginRestaurant(formDetails) : await httpLoginUser(formDetails)
             console.log(response)
             if(response.ok) {
-                dispatch(setUser({ user: { type: formDetails.isRestaurant ? "admin" : "student", ...response.body } }))
+                dispatch(setUser({ user: { cart: !formDetails.isRestaurant && [], type: formDetails.isRestaurant ? "admin" : "student", ...response.body } }))
                 navigate(formDetails.isRestaurant ? "/admin/allorders" : "/")
             }
 

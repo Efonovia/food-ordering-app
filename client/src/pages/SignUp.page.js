@@ -47,7 +47,7 @@ function SignUp() {
                 alert("Student already exists. try logging in instead")
                 navigate("/auth/login")
             } else if(!response?.exists) {
-                dispatch(setUser({ user: { type: "student", ...response?.body } }))
+                dispatch(setUser({ user: { type: "student", cart: [],  ...response?.body } }))
                 navigate("/")
             }
 

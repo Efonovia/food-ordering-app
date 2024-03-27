@@ -3,6 +3,7 @@ import "../styles/general.css"
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { setUser } from '../state';
+import CartMenuContents from './CartMenuContents.components';
 
 function Navbar() {
     const defaultClassName = "home page-template-default page page-id-21 wp-custom-logo theme-citadela woocommerce-js classic-theme-layout classic-header-layout default-theme-design page-fullwidth no-page-title no-header-space citadela-events-css pro-plugin-active sticky-header-enabled sticky-header-desktop-full sticky-header-mobile-full footer-collapsible-widgets-enabled custom-header custom-header-over-content custom-header-transparent-bg wide-content-width header-with-cart header-scrolled"
@@ -11,12 +12,14 @@ function Navbar() {
     const mobileCartOpened = "home page-template-default page page-id-21 wp-custom-logo theme-citadela woocommerce-js classic-theme-layout classic-header-layout default-theme-design page-fullwidth no-page-title no-header-space citadela-events-css pro-plugin-active sticky-header-enabled sticky-header-desktop-full sticky-header-mobile-full footer-collapsible-widgets-enabled custom-header custom-header-over-content custom-header-transparent-bg wide-content-width header-with-cart header-scrolled mobile-screen-width responsive-menu footer-collapsible-widgets cart-opened"
 
     const userInfo = useSelector(state => state.user)
+    const cartLength = userInfo.cart.length
     // console.log(userInfo)
     const userType = userInfo?.type
     const isLoggedIn = Boolean(userInfo)
     const mobileWidthLimit = 880
     const [isMobile, setIsMobile] = React.useState(window.innerWidth < mobileWidthLimit)
     const [showMenu, setShowMenu] = React.useState(false)
+    const [showCartMenu, setShowCartMenu] = React.useState(false)
     const [currentBodyClassName, setCurrentBodyClassName] = React.useState(mobileDefault)
 
     const location = useLocation()
@@ -28,6 +31,10 @@ function Navbar() {
 		dispatch(setUser({ user: null }))
 		navigate("/auth/login")
 	}
+
+    function openCartMenu() {
+        setShowCartMenu(prev => !prev)
+    }
 
     function openMenu(bool) {
         setShowMenu(bool)
@@ -137,21 +144,27 @@ function Navbar() {
                     </ul>
                 </div>
 
-                {(isLoggedIn && userType === "student") && <div onClick={() => navigate("/cart")} className="citadela-woocommerce-minicart is-empty" style={{display: "inline-block", fontSize: "initial"}}>
+                {(isLoggedIn && userType === "student") && <div onClick={openCartMenu} className="citadela-woocommerce-minicart opened" style={{display: "inline-block", fontSize: "initial"}}>
                     <div className="inner-wrapper">
                         <div className="cart-header">
-                            <div className="cart-icon"><i className="fas fa-shopping-basket"></i></div>
-                            <div className="cart-count"><span>0</span></div>
+                            <div style={{ borderRadius: cartLength ? "3px 0px 0px 3px" : "3px" }} className="cart-icon"><i className="fas fa-shopping-basket"></i></div>
+                            <div style={{ display: cartLength ? "inline-block" : "none" }} className="cart-count"><span>{cartLength}</span></div>
                         </div>
-                        <div className="cart-content">
+                        <div style={{display: showCartMenu ? "block" : "none"}} className="cart-content">
                             <div className="widget woocommerce widget_shopping_cart">
-                                <div className="widget_shopping_cart_content"></div>
+                                <div className="widget_shopping_cart_content">
+                                    {
+                                        cartLength ? 
+                                        <CartMenuContents cartDetails={userInfo.cart}/> : 
+                                        <p className="woocommerce-mini-cart__empty-message">You haven't added any items to the cart.</p>
+                                    }
+                                </div>
                             </div>
                         </div>
 
                     </div>
                 </div>}
-                {(isMobile && isLoggedIn && userType === "admin") && <div className="citadela-woocommerce-minicart is-empty" style={{display: "inline-block", fontSize: "initial"}}>
+                {(isMobile && isLoggedIn && userType === "admin") && <div className="citadela-woocommerce-minicart is-empty opened" style={{display: "inline-block", fontSize: "initial"}}>
                     <div className="inner-wrapper">
                         <div className="cart-header">
                             <div onClick={logout} style={{width: "100px", color: "red"}} className="cart-icon">Log Out</div>

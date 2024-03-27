@@ -54,6 +54,7 @@ export const getAllMenuItems = async (req, res) => {
 
 export const getAllRestaurantMenuItems = async (req, res) => {
     const { id } = req.params
+    console.log(id)
     try {
         return res.status(200).json({ok: true, body: await MenuItemDatabase.find({restaurantId: id}, { '__v': 0 })})
     } catch (error) {

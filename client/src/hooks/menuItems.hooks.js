@@ -19,7 +19,7 @@ export const httpGetAllMenuItems = async (page) => {
 
 export const httpGetAllRestaurantMenuItems = async (restaurantId) => {
     try {
-        const response = await fetch(`${API_URL}/menuitems/${restaurantId}`)
+        const response = await fetch(`${API_URL}/menuitems/restaurant/${restaurantId}`)
         const result = await response.json()
         if (!result.ok) {
             throw new Error('Failed to fetch menu items. try again');

@@ -1,6 +1,5 @@
 import React from 'react';
 import Searchbar from '../widgets/SearchBar.widgets';
-
 import allNutritionalContents from '../data/all_nutritional_contents';
 import CheckboxesTags from '../widgets/CategoriesInput.widgets';
 import RangeSlider from '../widgets/Slider.widgets';
@@ -22,7 +21,7 @@ function Browse() {
     const [priceValue, setPriceValue] = React.useState({min: minPrice || 1000, max: maxPrice || 9000});
     const [searchNutritionalContent, setSearchNutritionalContent] = React.useState(nutritionalContent?.split(",") || [])
     // console.log(searchNutritionalContent, priceValue.min, priceValue.max, searchQuery)
-    console.log("locationsearch", location.search)
+    // console.log("locationsearch", location.search)
     const [menuItems, setMenuItems] = React.useState([])
     const navigate = useNavigate()
 
@@ -100,7 +99,7 @@ function Browse() {
                 // console.log("rtey", Boolean(query||nutritionalContent||minPrice||maxPrice)&&Boolean(page), page)
                 const results = Boolean(location.search) ? await httpSearchAndFilterMenuItems(location.search) : await httpGetAllMenuItems(page || 1);
                 setMenuItems(results?.body);
-                console.log(results)
+                // console.log(results)
             } catch (error) {
                 console.error('Error fetching featured menu items:', error);
             } finally {
