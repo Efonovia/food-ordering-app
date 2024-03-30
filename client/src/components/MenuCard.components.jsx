@@ -15,10 +15,10 @@ function MenuCard(props) {
     const dispatch = useDispatch()
     const userInfo = useSelector(state => state.user)
     const isLoggedIn = userInfo && userInfo.type === "student"
-    const isInCart = Boolean(userInfo.cart.find(item => item._id === props._id))
+    const isInCart = isLoggedIn && Boolean(userInfo.cart.find(item => item._id === props._id))
 
     function handleAddToCart() {
-        console.log(userInfo.cart)
+        // console.log(userInfo.cart)
         const menuInfo = { ...props, quantity: 1 }
         if(isLoggedIn) {
             if(isInCart) {
@@ -29,7 +29,7 @@ function MenuCard(props) {
         } else {
             alert("You must be logged in to add items to cart")
         }
-        console.log(userInfo.cart)
+        // console.log(userInfo.cart)
     }
 
     return <li className="wc-block-grid__product wc-block-layout" aria-hidden="false">
@@ -43,14 +43,14 @@ function MenuCard(props) {
                             style={{objectFit: 'cover'}}/>
                     </a>
                 </div>
-                <h4 id='restaurant_name' className="wc-block-components-product-title wc-block-grid__product-title"><a onClick={() => navigate(`/restaurant/${props.restaurantId}`)} className="wc-block-components-product-name" href><StorefrontIcon sx={{"width": 15, "height": 15}}/> {"props.restaurantName"}</a></h4>
+                <h4 id='restaurant_name' className="wc-block-components-product-title wc-block-grid__product-title"><a onClick={() => navigate(`/restaurant/${props.restaurantId}`)} className="wc-block-components-product-name" href><StorefrontIcon sx={{"width": 15, "height": 15}}/> {props.restaurantName}</a></h4>
                 <p style={{ fontWeight: 500, fontSize: "12px" }} className="wc-block-components-product-title wc-block-grid__product-title"><AccessAlarmIcon sx={{"width": 15, "height": 15}}/> {props.waitTime} min</p>
                 <p style={{ fontWeight: 500, fontSize: "12px" }} className="wc-block-components-product-title wc-block-grid__product-title"><RestaurantIcon sx={{"width": 15, "height": 15}}/> {props.dietType}</p>
                 <p style={{ fontWeight: 100, fontSize: "12px" }} className="wc-block-components-product-title wc-block-grid__product-title"><GrassIcon sx={{"width": 15, "height": 15}}/> {props.nutritionalContent.join(", ")}</p>
                 <h2 style={{ fontSize: "22px", fontWeight: 800, color: "#ea2251" }} ><a href>{props.name}</a></h2>
                 <div className="wp-block-woocommerce-product-price">
                     <span className="wc-block-components-product-price wc-block-grid__product-price price wc-block-components-product-price">
-                        <span style={{ fontWeight: 800 }} className="wc-block-formatted-money-amount wc-block-components-formatted-money-amount wc-block-components-product-price__value wc-block-grid__product-price__value">#{props.price}</span>
+                        <span style={{ fontWeight: 800 }} className="wc-block-formatted-money-amount wc-block-components-formatted-money-amount wc-block-components-product-price__value wc-block-grid__product-price__value">#{props.price.toLocaleString()}</span>
                     </span>
                 </div>
                 <div className="wp-block-button wc-block-components-product-button wc-block-grid__product-add-to-cart">

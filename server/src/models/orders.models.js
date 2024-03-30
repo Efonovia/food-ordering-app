@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+
 const OrderSchema = mongoose.Schema({
     userId: {
         type: mongoose.Schema.Types.ObjectId,
@@ -15,9 +16,6 @@ const OrderSchema = mongoose.Schema({
         type: Array,
         required: true
     },
-    note: {
-        type: String,
-    },
     dateMade: {
         type: Date,
         required: true
@@ -25,8 +23,14 @@ const OrderSchema = mongoose.Schema({
     completed: {
         type: Boolean,
         required: true,
+        default: false
+    },
+    dateCompleted: {
+        type: Date,
+        default: null
     },
 }, { timestamps: true })
+
 
 const Order = mongoose.model("Orders", OrderSchema, "Orders")
 export default Order

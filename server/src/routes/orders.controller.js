@@ -1,4 +1,6 @@
 import OrderDatabase from "../models/orders.models.js";
+import UserDatabase from "../models/users.models.js";
+import MenuItemDatabase from "../models/menuItems.models.js";
 
 
 export const createNewOrder = async (req, res) => {
@@ -7,18 +9,18 @@ export const createNewOrder = async (req, res) => {
             restaurantId,
             userId,
             items,
-            note
+            dateMade
         } = req.body;
 
         console.log(req.body);
+
 
         // Create a new order record
         const newOrder = new OrderDatabase({
             restaurantId,
             userId,
             items,
-            note: note || "",
-            dateMade: new Date(),
+            dateMade,
             completed: false
         });
 
@@ -29,33 +31,60 @@ export const createNewOrder = async (req, res) => {
         return res.status(201).json({ ok: true, body: newOrder });
 
     } catch (error) {
+        console.log(error)
         return res.status(500).json({ ok: false, error: error.message });
     }
 }
 
 export const getAllOrders = async (req, res) => {
     try {
-        return res.status(200).json({ok: true, body: await OrderDatabase.find({}, { '__v': 0 })})
+        const orders = await OrderDatabase.find({}, { '__v': 0 })
+            .populate({
+                path: 'restaurantId',
+                select: 'name picturePath _id'
+            });
+
+        const modifiedOrders = orders.map(order => {
+            const orderObj = order.toObject()
+            if (orderObj.restaurantId) {
+                orderObj.restaurantName = orderObj.restaurantId.name;
+                orderObj.restaurantLogo = orderObj.restaurantId.picturePath;
+                orderObj.restaurantId = orderObj.restaurantId._id;
+            }
+            return orderObj;
+        });
+
+        return res.status(200).json({ok: true, body: modifiedOrders});
     } catch (error) {
-        return res.status(404).json({ok: false, error: error.message})
+        return res.status(404).json({ok: false, error: error.message});
     }
 }
 
 export const getAllRestaurantOrders = async (req, res) => {
     const { id } = req.params
     try {
-        return res.status(200).json({ok: true, body: await OrderDatabase.find({restaurantId: id}, { '__v': 0 })})
+        const orders = await OrderDatabase.find({restaurantId: id}, { '__v': 0 })
+
+        return res.status(200).json({ok: true, body: orders});
     } catch (error) {
-        return res.status(404).json({ok: false, error: error.message})
+        return res.status(404).json({ok: false, error: error.message});
     }
 }
 
 export const getAllUserOrders = async (req, res) => {
     const { id } = req.params
     try {
-        return res.status(200).json({ok: true, body: await OrderDatabase.find({userId: id}, { '__v': 0 })})
+        const orders = await OrderDatabase.find({userId: id}, { '__v': 0 })
+        .populate({
+            path: 'items.menuItem',
+            model: MenuItemDatabase,
+            select: '_id name price restaurantName restaurantId picturePath waitTime'
+        })
+        .exec();
+
+        return res.status(200).json({ok: true, body: orders});
     } catch (error) {
-        return res.status(404).json({ok: false, error: error.message})
+        return res.status(404).json({ok: false, error: error.message});
     }
 }
 
@@ -63,7 +92,15 @@ export const getOrder = async (req, res) => {
     try {
         const { id } = req.params
         const order = await OrderDatabase.findById(id)
-        return res.status(200).json({ok: true, body: order})
+        .populate({
+            path: 'items.menuItem',
+            model: MenuItemDatabase,
+            select: '_id name price picturePath waitTime'
+        })
+        .exec();
+        // console.log(order)
+        const user = await UserDatabase.findById(order.userId)
+        return res.status(200).json({ok: true, body: { orderInfo: order, userInfo: user }})
     } catch (error) {
         return res.status(404).json({ok: false, error: error.message})
     }
@@ -80,6 +117,7 @@ export const completeOrder = async(req, res) => {
         }
 
         order["completed"] = true;
+        order["dateCompleted"] = new Date()
         await order.save()
 
         const updatedOrder = await OrderDatabase.findById(id);
@@ -88,5 +126,39 @@ export const completeOrder = async(req, res) => {
     } catch (error) {
         console.error("Error completing order" +":", error.message);
         return res.status(500).json({ok: false, error: "Error completing order" +":"+error.message})
+    }
+}
+
+export const getLatestOrders = async (req, res) => {
+    try {
+        const userId = req.params.id
+        // Step 1: Find the latest dateMade value
+        const latestOrder = await OrderDatabase.findOne({ userId })
+            .sort({ dateMade: -1 }) // Sort orders by dateMade in descending order
+            .exec();
+
+        if (!latestOrder) {
+            return res.status(200).json({ ok: true, body: [] });
+        }
+
+        const latestDateMade = latestOrder.dateMade;
+
+        // Step 2: Fetch all orders with that dateMade
+        const ordersWithLatestDate = await OrderDatabase.find({ userId, dateMade: latestDateMade })
+        .populate({
+            path: 'items.menuItem',
+            model: MenuItemDatabase,
+            select: '_id name price restaurantName restaurantId picturePath waitTime'
+        })
+        .exec();
+
+        res.status(200).json({ ok: true, body: ordersWithLatestDate });
+    } catch (error) {
+        console.log('Error fetching orders on the latest date:', error);
+        res.status(500).json({
+            ok: false,
+            message: 'An error occurred while fetching orders on the latest date',
+            error: error.message
+        });
     }
 }

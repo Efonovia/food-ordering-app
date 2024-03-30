@@ -68,11 +68,13 @@ function RestaurantDetails() {
 
                             <h1 style={{fontWeight: 700, fontSize: "64px"}} className="has-huge-font-size wp-block-heading">{restaurant?.name}</h1>
                             <div>{starsHTML}</div>
+                            <div>Email: {restaurant?.email}</div>
+                            <div>Telephone: {restaurant?.phoneNumber}</div>
 
 
 
                             <div className="wp-block-citadela-blocks-spacer citadela-block-spacer">
-                                <div className="inner-holder" style={{paddingTop: '22px'}}></div>
+                                <div className="inner-holder" style={{paddingTop: '10px'}}></div>
                             </div>
 
                             <div className="wp-block-citadela-blocks-spacer citadela-block-spacer responsive-options"
@@ -119,7 +121,7 @@ function RestaurantDetails() {
                                 <div className="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style={{flexBasis: '30%'}}>
                                     <Reviews
                                         restaurantId={restaurantId}
-                                        userInfo={{firstName: userInfo.firstName, lastName: userInfo.lastName}}
+                                        userInfo={userInfo ? {firstName: userInfo?.firstName, lastName: userInfo?.lastName} : null}
                                         reviews={restaurant?.reviews}
                                     />
 

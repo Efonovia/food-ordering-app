@@ -1,10 +1,11 @@
 import mongoose from "mongoose";
+import RestaurantDatabase from "./restaurants.models.js";
 
 const MenuItemSchema = mongoose.Schema({
     restaurantId: {
-        // type: mongoose.Schema.Types.ObjectId, //!DONT FORGET TO CHANGE IT BACK ONCE THE REAL DATA IS FINALLY HERE
-        type: String,
-        // ref: 'Restaurants', //!SAME HERE
+        type: mongoose.Schema.Types.ObjectId, //!DONT FORGET TO CHANGE IT BACK ONCE THE REAL DATA IS FINALLY HERE
+        // type: String,
+        ref: 'Restaurants', //!SAME HERE
         required: true
     },
     restaurantName: {

@@ -7,3 +7,31 @@
     cursor: pointer;
     color: #ea2251;
 }
+
+#complete_button {
+    background: green;
+    color: white;
+    cursor: pointer;
+}
+#complete_button:hover {
+    border: 1px solid green;
+    color: green;
+    background: white;
+}
+
+#completed_button {
+    background: green;
+    color: white;
+}
+
+#admin-title {
+    height: 40px;
+    width: 250px;
+    font-size: 20px;
+    margin: auto;
+    text-align: center;
+    flex: 1 1 auto;
+    font-weight: 900;
+    color: #ea2251;
+    cursor: pointer;
+}

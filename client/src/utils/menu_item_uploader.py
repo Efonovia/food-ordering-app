@@ -9,7 +9,7 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 file_path = os.path.join(script_dir, 'sample_menu_item_data.json')
 
 # MongoDB connection
-client = pymongo.MongoClient() #insert MONGO_URL
+client = pymongo.MongoClient("") #!insert MONGO_URL
 db = client['main']
 collection = db['MenuItems']
 
