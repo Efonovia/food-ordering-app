@@ -4,7 +4,7 @@ import StarOutlineIcon from '@mui/icons-material/StarOutline';
 import {useNavigate} from "react-router-dom"
 
 function RestaurantCard(props) {
-    const starsHTML = Array(5).fill().map((_, index) => index < props.averageRating ? <StarIcon key={index+1} sx={{color: "gold"}}/> : <StarOutlineIcon key={index+1} sx={{color: "gold", cursor: "pointer"}}/>)
+    const starsHTML = Array(5).fill()?.map((_, index) => index < props.averageRating ? <StarIcon key={index+1} sx={{color: "gold"}}/> : <StarOutlineIcon key={index+1} sx={{color: "gold", cursor: "pointer"}}/>)
     const navigate = useNavigate()
     return (
         <li style={{cursor: "pointer"}} onClick={() => navigate("/restaurant/" + props.id)} className="wc-block-grid__product">

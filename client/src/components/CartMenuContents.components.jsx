@@ -9,7 +9,7 @@ function CartMenuContents(props) {
     const dispatch = useDispatch()
     const totalPrice = props.cartDetails.reduce((total, item) => total + (item.price * item.quantity), 0)
 
-    const cartContentsHTML = props.cartDetails.map(item => {
+    const cartContentsHTML = props.cartDetails?.map(item => {
         return (
             <li key={item._id} className="woocommerce-mini-cart-item mini_cart_item">
                 <a onClick={() => dispatch(removeFromCart({id: item._id}))} style={{cursor: "pointer"}} href className="remove remove_from_cart_button" data-product_id="162" data-cart_item_key="82aa4b0af34c2313a562076992e50aa3" data-product_sku="">×</a> 

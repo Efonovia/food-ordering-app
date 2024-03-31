@@ -70,7 +70,7 @@ function Reviews(props) {
             <p>{formatDate(review.publishDate)}</p>
         </div>
         <span style={{color: "black"}} className="stars">Rating: 
-        {Array(5).fill().map((_, index) => index < review.rating ? <StarIcon key={index+1} sx={{color: "#ea2251", height: 15, width: 15}}/> : <StarOutlineIcon key={index+1} sx={{color: "#ea2251", cursor: "pointer", height: 15, width: 15}}/>)}
+        {Array(5).fill()?.map((_, index) => index < review.rating ? <StarIcon key={index+1} sx={{color: "#ea2251", height: 15, width: 15}}/> : <StarOutlineIcon key={index+1} sx={{color: "#ea2251", cursor: "pointer", height: 15, width: 15}}/>)}
         </span>
         <h5>{review.content}</h5>
     </div>

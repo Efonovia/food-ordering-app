@@ -123,7 +123,7 @@ function Browse() {
                     <article id="post-21" className="post-21 page type-page status-publish hentry">
                         <div className="entry-content">
                             <div className="wp-block-citadela-blocks-custom-container citadela-block-custom-container responsive-options size-wide bg-type-image inside-space-none bg-size-auto has-overlay has-min-height vertical-align-top" style={{minHeight: '620px'}} data-block-attr="{&quot;size&quot;:&quot;bg-size-full-horizontal&quot;,&quot;position&quot;:&quot;100% 88%&quot;}" data-block-mobile-breakpoint="900">
-                                <div className="bg-image-wrapper" style={{backgroundImage: 'url(https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/blob-bowl-bg.png)', backgroundRepeat: 'no-repeat', backgroundPosition: '46% 95%'}}>
+                                <div className="bg-image-wrapper" style={{backgroundImage: 'url(https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/blob-bowl-bg.png)', backgroundRepeat: 'no-repeat', backgroundPosition: '26% 9%'}}>
                                 </div>
                                 <div className="bg-image-overlay" style={{opacity: '0.5'}}></div>
                                 <div className="inner-holder">

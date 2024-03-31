@@ -19,9 +19,10 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
+      
       <Routes>
 
-      <Route element={<FreeProtectedRoute />}>
+        <Route element={<FreeProtectedRoute />}>
             <Route path='/' element={ <Home /> }/>
             <Route path="/browse" element={<Browse />} />
             <Route path="/auth/login" element={<SignIn />} />

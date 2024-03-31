@@ -31,7 +31,7 @@ function TrackOrder() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    const menuTimersHTML = latestOrders.map(order => {
+    const menuTimersHTML = latestOrders?.map(order => {
         let totalWaitTime = 5
         for (const item of order.items) {
             if(item.quantity === 1) {
@@ -52,7 +52,7 @@ function TrackOrder() {
 
     return (
         loading ? <CircularProgress sx={{marginTop: "300px", marginLeft: "700px", color: "#fb246a"}} size={100}/> :
-        (Boolean(latestOrders.length) ? <div id="content" className="site-content" style={{margin: "60px"}}>
+        (Boolean(latestOrders?.length) ? <div id="content" className="site-content" style={{margin: "60px"}}>
             <div style={{margin: "30px auto", width: 350, ...centerStyle, flexDirection: "column"}}>
                 <p style={{fontWeight: "500", textAlign: "center", fontSize: "20px"}}>Your orders are getting prepared...</p>
                 
