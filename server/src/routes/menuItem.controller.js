@@ -1,5 +1,7 @@
 import MenuItemDatabase from "../models/menuItems.models.js";
 import { getPagination, getPaginationResults } from "../query.services.js";
+import path from "path"
+import { getDirname } from "../query.services.js";
 
 
 export const createNewMenuItem = async (req, res) => {
@@ -142,3 +144,12 @@ export const addReviewToMenuItem = async (req, res) => {
         return res.status(500).json({ ok: false, error: error.message });
     }
 };
+
+export const getMenuPic = async (req, res) => {
+    try {
+        const { picturePath } = req.params
+        return res.sendFile(path.join(getDirname(), "../src/uploads/menus", picturePath))
+    } catch (error) {
+        return res.status(404).json({error: error.message})
+    }
+}

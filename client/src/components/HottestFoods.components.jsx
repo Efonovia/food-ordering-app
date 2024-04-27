@@ -40,7 +40,7 @@ function HottestFoods() {
                     </a>
 
                     <div className="wc-block-grid__product-price price"><span className="woocommerce-Price-amount amount"><span
-                                className="woocommerce-Price-currencySymbol">$</span>13.50</span></div>
+                                className="woocommerce-Price-currencySymbol">#</span>3,000</span></div>
 
 
                 </li>
@@ -56,7 +56,7 @@ function HottestFoods() {
                     </a>
 
                     <div className="wc-block-grid__product-price price"><span className="woocommerce-Price-amount amount"><span
-                                className="woocommerce-Price-currencySymbol">$</span>12.00</span></div>
+                                className="woocommerce-Price-currencySymbol">#</span>1,200</span></div>
 
 
                 </li>
@@ -72,7 +72,7 @@ function HottestFoods() {
                     </a>
 
                     <div className="wc-block-grid__product-price price"><span className="woocommerce-Price-amount amount"><span
-                                className="woocommerce-Price-currencySymbol">$</span>3.00</span></div>
+                                className="woocommerce-Price-currencySymbol">#</span>4,000</span></div>
 
 
                 </li>
@@ -88,7 +88,7 @@ function HottestFoods() {
                     </a>
 
                     <div className="wc-block-grid__product-price price"><span className="woocommerce-Price-amount amount"><span
-                                className="woocommerce-Price-currencySymbol">$</span>10.00</span></div>
+                                className="woocommerce-Price-currencySymbol">#</span>2,500</span></div>
 
 
                 </li>

@@ -7,7 +7,6 @@ import FormatListNumberedIcon from '@mui/icons-material/FormatListNumbered';
 import { getStatusColor, centerStyle, formatDate, formatTime } from '../utils/utils';
 import { useSelector } from 'react-redux';
 import { httpGetAllRestaurantOrders } from '../hooks/orders.hooks';
-import foodpic from "../images/food_loading.gif"
 import { CircularProgress } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
@@ -60,8 +59,8 @@ function AdminAllOrders() {
 
     <div style={{ display: "block" }} className="page-title standard">
         <header className="entry-header">
-            <div className="entry-header-wrap">
-                <img alt="" width={100} height={100} src={foodpic}></img>
+            <div style={{...centerStyle, flexDirection:"column"}} className="entry-header-wrap">
+                <img alt="" width={120} height={120} src={`http://localhost:8000/restaurants/pic/${restaurantInfo.picturePath}`}></img>
                 <h1 className="entry-title">All Orders for <span style={{color: "#ea2251"}}>{restaurantName}</span></h1>
             </div>
         </header>

@@ -1,6 +1,15 @@
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+
 const DEFAULT_PAGE_NUMBER = 1;
 const DEFAULT_PAGE_LIMIT = 10;
 const MAX_PAGE_LIMIT = 40;
+
+export function getDirname() {
+  const __filename = fileURLToPath(import.meta.url);
+  return dirname(__filename);
+}
 
 export const getPagination = (query) => {
   const page = Math.abs(query.page) || DEFAULT_PAGE_NUMBER;

@@ -1,6 +1,8 @@
 import { nanoid } from "nanoid";
 import RestaurantDatabase from "../models/restaurants.models.js";
 import bcrypt from "bcrypt"
+import path from "path"
+import { getDirname } from "../query.services.js";
 
 
 export const createNewRestaurant = async (req, res) => {
@@ -119,3 +121,12 @@ export const addReviewToRestaurant = async (req, res) => {
         return res.status(500).json({ ok: false, error: error.message });
     }
 };
+
+export const getRestaurantPic = async (req, res) => {
+    try {
+        const { picturePath } = req.params
+        return res.sendFile(path.join(getDirname(), "../src/uploads/restaurants", picturePath))
+    } catch (error) {
+        return res.status(404).json({error: error.message})
+    }
+}

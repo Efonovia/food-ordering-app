@@ -77,10 +77,9 @@ function Cart() {
                         <img
                             width="300" height="225"
                             style={{ width: "48px" }}
-                            src="https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/fish-chips-300x225.jpg"
+                            src={`http://localhost:8000/menuitems/pic/${item.picturePath}`}
                             className="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                             alt="" decoding="async" fetchpriority="high"
-                            srcSet="https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/fish-chips-300x225.jpg 300w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/fish-chips-768x576.jpg 768w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/fish-chips-640x480.jpg 640w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/fish-chips-480x360.jpg 480w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/fish-chips-600x450.jpg 600w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/fish-chips-150x113.jpg 150w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/fish-chips.jpg 800w"
                             sizes="(max-width: 300px) 100vw, 300px"
                         />
                     </a>

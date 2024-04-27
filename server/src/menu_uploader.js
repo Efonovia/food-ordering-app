@@ -16,9 +16,7 @@ async function insertMenuItemsFromJSON(filePath) {
       const data = readFileSync(filePath, 'utf8');
       let menuItems = JSON.parse(data);
   
-      // Assuming you have a small number of unique restaurantIds
-      // If you have many, consider a more efficient way to fetch and map restaurant data
-      const restaurantIds = [...new Set(menuItems.map(item => item.restaurantId))];
+      const restaurantIds = ["65fefdb589f8405883839250", "65fefdb589f8405883839251", "65fefdb589f8405883839252", "65fefdb589f8405883839253", "65fefdb589f8405883839254"]
       const restaurants = await Promise.all(
         restaurantIds.map(id => Restaurant.findById(id))
       );
@@ -33,11 +31,12 @@ async function insertMenuItemsFromJSON(filePath) {
             ...item,
             restaurantName: restaurantMap[item.restaurantId].name,
             restaurantLogo: restaurantMap[item.restaurantId].picturePath,
+            picturePath: item.name.split(" ").join("_") + ".jpg"
           };
         }
         return item;
       });
-  
+      // console.log(menuItems)
       await MenuItem.insertMany(menuItems);
       console.log('All menu items have been successfully inserted.');
     } catch (error) {
@@ -46,7 +45,6 @@ async function insertMenuItemsFromJSON(filePath) {
   }
 
 // C:\Users\Efosa1\Desktop\Command Central\pending\food ordering app\client\src\utils\sample_menu_item_data.json
-// Adjust the file path as necessary
 const filePath = join(process.cwd(), './client/src/utils/sample_menu_item_data.json');
 console.log(filePath)
 // insertMenuItemsFromJSON(filePath);

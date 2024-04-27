@@ -37,8 +37,7 @@ function MenuCard(props) {
                     <a href>
                         <img
                             data-testid="product-image" alt="Vegan Burger"
-                            src="https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/burgers.jpg"
-                            srcSet="https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/burgers.jpg 800w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/burgers-300x225.jpg 300w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/burgers-768x576.jpg 768w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/burgers-640x480.jpg 640w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/burgers-480x360.jpg 480w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/burgers-600x450.jpg 600w, https://preview.ait-themes.club/citadela/fooddelivery/wp-content/uploads/sites/17/2020/11/burgers-150x113.jpg 150w"
+                            src={`http://localhost:8000/menuitems/pic/${props.picturePath}`}
                             sizes="(max-width: 800px) 100vw, 800px"
                             style={{objectFit: 'cover'}}/>
                     </a>
@@ -47,7 +46,7 @@ function MenuCard(props) {
                 <p style={{ fontWeight: 500, fontSize: "12px" }} className="wc-block-components-product-title wc-block-grid__product-title"><AccessAlarmIcon sx={{"width": 15, "height": 15}}/> {props.waitTime} min</p>
                 <p style={{ fontWeight: 500, fontSize: "12px" }} className="wc-block-components-product-title wc-block-grid__product-title"><RestaurantIcon sx={{"width": 15, "height": 15}}/> {props.dietType}</p>
                 <p style={{ fontWeight: 100, fontSize: "12px" }} className="wc-block-components-product-title wc-block-grid__product-title"><GrassIcon sx={{"width": 15, "height": 15}}/> {props.nutritionalContent.join(", ")}</p>
-                <h2 style={{ fontSize: "22px", fontWeight: 800, color: "#ea2251" }} ><a href>{props.name}</a></h2>
+                <h2 style={{ fontSize: "22px", fontWeight: 800, color: "#ea2251", textAlign: "center" }} ><a href>{props.name}</a></h2>
                 <div className="wp-block-woocommerce-product-price">
                     <span className="wc-block-components-product-price wc-block-grid__product-price price wc-block-components-product-price">
                         <span style={{ fontWeight: 800 }} className="wc-block-formatted-money-amount wc-block-components-formatted-money-amount wc-block-components-product-price__value wc-block-grid__product-price__value">#{props.price.toLocaleString()}</span>

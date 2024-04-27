@@ -4,6 +4,7 @@ import {
     createNewRestaurant, 
     getAllRestaurants, 
     getRestaurant, 
+    getRestaurantPic, 
     loginRestaurant 
 } from "./restaurants.controller.js"
 
@@ -14,5 +15,6 @@ restaurantsRouter.post("/signup", createNewRestaurant)
 restaurantsRouter.post("/login", loginRestaurant)
 restaurantsRouter.post("/reviews/add", addReviewToRestaurant)
 restaurantsRouter.get("/:id", getRestaurant)
+restaurantsRouter.get("/pic/:picturePath", getRestaurantPic)
 
 export default restaurantsRouter

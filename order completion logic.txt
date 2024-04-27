@@ -1,3 +1,3 @@
-when creating the orders, ensure they all have the same date i.e define the date variable first and then give it to all of them
+when creating the orders, make sure they all have the same date i.e define the date variable first and then give it to all of them
 
 get the latest set of a users orders. display them even though they are completed. replace once there's a more recent set (already done by implication)
