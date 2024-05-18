@@ -1,0 +1,198 @@
+[
+    {
+        "restaurantId": "65fefdb589f8405883839250",
+        "name": "Grilled Salmon Salad Supreme",
+        "dietType": "Low Glycemic Index",
+        "nutritionalContent": [
+            "Omega-3 Fatty Acids",
+            "Vitamin D",
+            "Selenium"
+        ],
+        "special": "diabetes",
+        "price": 9800,
+        "waitTime": 3
+    },
+    {
+        "restaurantId": "65fefdb589f8405883839251",
+        "name": "Vegetable Stir-Fry with Tofu",
+        "dietType": "High Fiber",
+        "nutritionalContent": [
+            "Vitamin C",
+            "Vitamin K",
+            "Iron"
+        ],
+        "special": "diabetes",
+        "price": 9800,
+        "waitTime": 4
+    },
+    {
+        "restaurantId": "65fefdb589f8405883839252",
+        "name": "Turkey and Quinoa Stuffed Bell Peppers",
+        "dietType": "Balanced Macronutrients",
+        "nutritionalContent": [
+            "Vitamin A",
+            "Vitamin C",
+            "Potassium"
+        ],
+        "special": "diabetes",
+        "price": 8800,
+        "waitTime": 3
+    },
+    {
+        "restaurantId": "65fefdb589f8405883839253",
+        "name": "Zucchini Noodles with Chicken Alfredo",
+        "dietType": "Low Carbohydrate",
+        "nutritionalContent": [
+            "Calcium",
+            "Vitamin B12",
+            "Zinc"
+        ],
+        "special": "diabetes",
+        "price": 9000,
+        "waitTime": 6
+    },
+    {
+        "restaurantId": "65fefdb589f8405883839254",
+        "name": "Mediterranean Grilled Veggie Platter",
+        "dietType": "Antioxidant-Rich",
+        "nutritionalContent": [
+            "Fiber",
+            "Vitamin-E",
+            "Potassium"
+        ],
+        "special": "diabetes",
+        "price": 6100,
+        "waitTime": 4
+    },
+    {
+        "restaurantId": "65fefdb589f8405883839250",
+        "name": "Coconut Curry Tofu",
+        "dietType": "Dairy-Free",
+        "nutritionalContent": [
+            "Iron",
+            "Calcium (from tofu)",
+            "Vitamin C"
+        ],
+        "special": "lactose intolerance",
+        "price": 2500,
+        "waitTime": 1
+    },
+    {
+        "restaurantId": "65fefdb589f8405883839251",
+        "name": "Quinoa Salad with Citrus Vinaigrette",
+        "dietType": "Lactose-Free",
+        "nutritionalContent": [
+            "Protein",
+            "Fiber",
+            "Vitamin A",
+            "Vitamin C"
+        ],
+        "special": "lactose intolerance",
+        "price": 1100,
+        "waitTime": 3
+    },
+    {
+        "restaurantId": "65fefdb589f8405883839252",
+        "name": "Chickpea and Spinach Curry",
+        "dietType": "Vegan",
+        "nutritionalContent": [
+            "Folate",
+            "Iron",
+            "Magnesium"
+        ],
+        "special": "lactose intolerance",
+        "price": 9000,
+        "waitTime": 4
+    },
+    {
+        "restaurantId": "65fefdb589f8405883839253",
+        "name": "Grilled Portobello Mushroom Burgers",
+        "dietType": "Dairy-Free",
+        "nutritionalContent": [
+            "Protein",
+            "Fiber",
+            "Vitamin D"
+        ],
+        "special": "lactose intolerance",
+        "price": 1700,
+        "waitTime": 6
+    },
+    {
+        "restaurantId": "65fefdb589f8405883839254",
+        "name": "Vegetable Coconut Curry Soup",
+        "dietType": "Lactose-Free",
+        "nutritionalContent": [
+            "Vitamin A",
+            "Vitamin-C",
+            "Fiber"
+        ],
+        "special": "lactose intolerance",
+        "price": 6500,
+        "waitTime": 1
+    },
+    {
+        "restaurantId": "65fefdb589f8405883839250",
+        "name": "Grilled Chicken and Vegetable Skewers",
+        "dietType": "Low Calorie",
+        "nutritionalContent": [
+            "Protein",
+            "Fiber",
+            "Vitamin C"
+        ],
+        "special": "obesity",
+        "price": 9700,
+        "waitTime": 3
+    },
+    {
+        "restaurantId": "65fefdb589f8405883839251",
+        "name": "Quinoa and Black Bean Salad",
+        "dietType": "High Fiber",
+        "nutritionalContent": [
+            "Protein",
+            "Iron",
+            "Folate"
+        ],
+        "special": "obesity",
+        "price": 9300,
+        "waitTime": 5
+    },
+    {
+        "restaurantId": "65fefdb589f8405883839252",
+        "name": "Stuffed Bell Peppers with Lean Turkey",
+        "dietType": "Balanced Macronutrients",
+        "nutritionalContent": [
+            "Vitamin A",
+            "Vitamin C",
+            "Potassium"
+        ],
+        "special": "obesity",
+        "price": 1800,
+        "waitTime": 2
+    },
+    {
+        "restaurantId": "65fefdb589f8405883839253",
+        "name": "Vegetable and Lentil Soup",
+        "dietType": "Low Calorie",
+        "nutritionalContent": [
+            "Fiber",
+            "Protein",
+            "Vitamin K"
+        ],
+        "special": "obesity",
+        "price": 9700,
+        "waitTime": 3
+    },
+    {
+        "restaurantId": "65fefdb589f8405883839254",
+        "name": "Salmon and Asparagus Foil Packets",
+        "dietType": "Omega-3 Fatty Acids",
+        "nutritionalContent": [
+            "Protein",
+            "Fiber",
+            "Vitamin-K"
+        ],
+        "special": "obesity",
+        "price": 7900,
+        "waitTime": 4
+    }
+]

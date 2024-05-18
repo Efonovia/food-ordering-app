@@ -35,3 +35,9 @@
     color: #ea2251;
     cursor: pointer;
 }
+
+@media (max-width: 972px) {
+    .filter-bar {
+        display: none
+    }
+}

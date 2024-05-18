@@ -3,9 +3,9 @@ import RestaurantDatabase from "./restaurants.models.js";
 
 const MenuItemSchema = mongoose.Schema({
     restaurantId: {
-        type: mongoose.Schema.Types.ObjectId, //!DONT FORGET TO CHANGE IT BACK ONCE THE REAL DATA IS FINALLY HERE
+        type: mongoose.Schema.Types.ObjectId,
         // type: String,
-        ref: 'Restaurants', //!SAME HERE
+        ref: 'Restaurants',
         required: true
     },
     restaurantName: {
@@ -19,6 +19,9 @@ const MenuItemSchema = mongoose.Schema({
     name: {
         type: String,
         required: true
+    },
+    special: {
+        type: String,
     },
     picturePath: {
         type: String,

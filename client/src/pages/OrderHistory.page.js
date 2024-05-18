@@ -56,7 +56,7 @@ function OrderHistory() {
         return (
             <form key={order.dateOfOrder} className="woocommerce-cart-form">
                 <h3>{formatDate(order.dateOfOrder)} by {formatTime(order.dateOfOrder)}</h3>
-                <table className="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
+                <table className="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellSpacing="0">
                     <thead>
                         <tr>
                             <th className="product-thumbnail"><span className="screen-reader-text">Thumbnail image</span></th>

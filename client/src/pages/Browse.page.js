@@ -128,7 +128,7 @@ function Browse() {
                                 <div className="bg-image-overlay" style={{opacity: '0.5'}}></div>
                                 <div className="inner-holder">
                                     <div style={{gap: "5%"}} className="wp-block-columns is-layout-flex wp-container-9 wp-block-columns-is-layout-flex">
-                                        <div className="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style={{flexBasis: '18%', height: "10%", background: "white", padding: "0 5px"}}>
+                                        <div className="filter-bar wp-block-column is-layout-flow wp-block-column-is-layout-flow" style={{flexBasis: '18%', height: "10%", background: "white", padding: "0 5px"}}>
                                             <div className="citadela-block-responsive-text align-left no-margins">
                                                 <h2 className="inner-tag" style={{fontSize: '20px', textAlign: "center"}}>Filter by your preferences</h2>
                                             </div>

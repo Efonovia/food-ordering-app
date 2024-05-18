@@ -83,7 +83,7 @@ function Navbar() {
             <nav id="site-navigation" className="main-navigation" data-availablespace="748" data-burgerspace="55">
                 <div className="citadela-menu-container citadela-menu-main-menu">
                     <span onClick={() => openMenu(false)} className="responsive-close-button"></span>
-                    <ul id="main-menu" className="citadela-menu" data-liwidth="642">
+                    <ul style={{background: "white"}} id="main-menu" className="citadela-menu" data-liwidth="642">
                         {!isMobile && <>
                             {(!isLoggedIn || userType === "student") && <><li onClick={() => navigate("/")} id="menu-item-25"
                             className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-21 menu-item-has-children menu-item-25 menu-item-position-0 top-level-menu-item"

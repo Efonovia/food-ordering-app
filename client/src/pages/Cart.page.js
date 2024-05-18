@@ -22,13 +22,13 @@ function Cart() {
 
     async function submitOrder() {
         const activeOrders = await httpGetLatestUserOrders(userInfo._id)
-        if(activeOrders.body.length) {
-            const hasActiveOrder = activeOrders.body.some(order => order.completed === false)
-            if(hasActiveOrder) {
-                alert("You can't make an order while you already have a pending order")
-                return
-            }
+        console.log(activeOrders)
+        const hasActiveOrder = activeOrders.body.length ? activeOrders.body.some(order => order.completed === false) : false
+        if(hasActiveOrder) {
+            alert("You can't make an order while you already have a pending order")
+            return
         } else {
+            setLoading(true)
             let orderList = []
             const dateMade = new Date()
             for (const item of userInfo.cart) {
@@ -47,7 +47,6 @@ function Cart() {
             }
             console.log(orderList)
             try {
-                setLoading(true)
                 const submitedOrdersResults = await Promise.all(
                     orderList.map(async order => {
                         const response = await httpCreateOrder(order)
