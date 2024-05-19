@@ -44,7 +44,8 @@ function RestaurantDetails() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    const menuItemsHTML = menuItems?.map(menuItem => <MenuCard key={menuItem._id} {...menuItem}/>)
+    const regularMenuItemsHTML = menuItems?.filter(item => item.special === "none").map(menuItem => <MenuCard key={menuItem._id} {...menuItem}/>)
+    const specialMenuItemsHTML = menuItems?.filter(item => item.special !== "none").map(menuItem => <MenuCard key={menuItem._id} {...menuItem}/>)
 
     return loading ? <CircularProgress sx={{marginTop: "300px", marginLeft: "700px", color: "#fb246a"}} size={100}/> :
     <div id="content" className="site-content">
@@ -65,7 +66,7 @@ function RestaurantDetails() {
                             </div>
 
 
-                            <img alt="" src={`http://localhost:8000/restaurants/pic/${restaurant.picturePath}`} height={200} width={200}></img>
+                            <img alt="" src={`http://localhost:8000/restaurants/pic/${restaurant?.picturePath}`} height={200} width={200}></img>
                             <h1 style={{fontWeight: 700, fontSize: "64px"}} className="has-huge-font-size wp-block-heading">{restaurant?.name}</h1>
                             <div>{starsHTML}</div>
                             <div>Email: {restaurant?.email}</div>
@@ -90,10 +91,10 @@ function RestaurantDetails() {
                                 <div className="inner-holder" style={{paddingTop: '100px'}}></div>
                             </div>
 
-                            <h2 className="wp-block-heading has-huge-font-size">Our Menu</h2>
 
                             <div className="wp-block-columns is-layout-flex wp-container-9 wp-block-columns-is-layout-flex">
                                 <div className="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+                                    <h2 className="wp-block-heading has-huge-font-size">Special Menu</h2>
                                     <div className="wp-block-citadela-blocks-custom-container citadela-block-custom-container size-wide bg-type-color inside-space-zero has-bg has-shadow"
                                         style={{backgroundColor: 'rgba(255, 255, 255, 1)', boxShadow: '0px 0px 0px 20px rgba(255, 255, 255, 1)'}}>
                                         <div className="inner-holder">
@@ -111,7 +112,31 @@ function RestaurantDetails() {
                                                 <div className="with-scroll-to-top__scroll-point" aria-hidden="true"></div>
                                                 <div className="wc-block-grid alignwide has-3-columns has-multiple-rows">
                                                     
-                                                    <ul className="wc-block-grid__products">{menuItemsHTML}</ul>
+                                                    <ul className="wc-block-grid__products">{specialMenuItemsHTML}</ul>
+                                                </div>
+                                            </div>
+                                    <hr style={{height: "10px"}}></hr>
+                                        </div>
+                                    </div>
+                                    <h2 className="wp-block-heading has-huge-font-size">Our Menu</h2>
+                                    <div className="wp-block-citadela-blocks-custom-container citadela-block-custom-container size-wide bg-type-color inside-space-zero has-bg has-shadow"
+                                        style={{backgroundColor: 'rgba(255, 255, 255, 1)', boxShadow: '0px 0px 0px 20px rgba(255, 255, 255, 1)'}}>
+                                        <div className="inner-holder">
+                                            <div data-block-name="woocommerce/all-products" data-columns="3" data-rows="3"
+                                                data-align-buttons="false" data-content-visibility="{&quot;orderBy&quot;:true}"
+                                                data-orderby="date"
+                                                data-layout-config="[[&quot;woocommerce\/product-image&quot;],[&quot;woocommerce\/product-title&quot;],[&quot;woocommerce\/product-price&quot;],[&quot;woocommerce\/product-rating&quot;],[&quot;woocommerce\/product-button&quot;]]"
+                                                className="wp-block-woocommerce-all-products alignwide wc-block-all-products"
+                                                data-attributes="{&quot;align&quot;:&quot;wide&quot;,&quot;alignButtons&quot;:false,&quot;columns&quot;:3,&quot;contentVisibility&quot;:{&quot;orderBy&quot;:true},&quot;isPreview&quot;:false,&quot;layoutConfig&quot;:[[&quot;woocommerce/product-image&quot;],[&quot;woocommerce/product-title&quot;],[&quot;woocommerce/product-price&quot;],[&quot;woocommerce/product-rating&quot;],[&quot;woocommerce/product-button&quot;]],&quot;orderby&quot;:&quot;date&quot;,&quot;rows&quot;:3}">
+                                                <div className="wc-block-components-notices"></div>
+                                                <div className="wc-block-components-notices__snackbar wc-block-components-notice-snackbar-list"
+                                                    tabIndex="-1">
+                                                    <div></div>
+                                                </div>
+                                                <div className="with-scroll-to-top__scroll-point" aria-hidden="true"></div>
+                                                <div className="wc-block-grid alignwide has-3-columns has-multiple-rows">
+                                                    
+                                                    <ul className="wc-block-grid__products">{regularMenuItemsHTML}</ul>
                                                 </div>
                                             </div>
                                         </div>

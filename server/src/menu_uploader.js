@@ -11,11 +11,10 @@ mongoose.connect(connectionString)
 .catch(err => console.error('Could not connect to MongoDB:', err));
 
 
-async function insertMenuItemsFromJSON(filePath1, filePath2) {
+async function insertMenuItemsFromJSON(filePath) {
     try {
-      const data1 = readFileSync(filePath1, 'utf8');
-      const data2 = readFileSync(filePath2, 'utf8');
-      let menuItems = JSON.parse(data1.concat(data2));
+      const data = readFileSync(filePath, 'utf8');
+      let menuItems = JSON.parse(data);
   
       const restaurantIds = ["65fefdb589f8405883839250", "65fefdb589f8405883839251", "65fefdb589f8405883839252", "65fefdb589f8405883839253", "65fefdb589f8405883839254"]
       const restaurants = await Promise.all(
@@ -32,7 +31,7 @@ async function insertMenuItemsFromJSON(filePath1, filePath2) {
             ...item,
             restaurantName: restaurantMap[item.restaurantId].name,
             restaurantLogo: restaurantMap[item.restaurantId].picturePath,
-            picturePath: item.name.split(" ").join("_") + ".jpg"
+            picturePath: item.special === "none" ? item.name.split(" ").join("_") + ".jpg" : item.name.split(" ").join("_") + ".jpeg"
           };
         }
         return item;
@@ -46,7 +45,6 @@ async function insertMenuItemsFromJSON(filePath1, filePath2) {
   }
 
 // C:\Users\Efosa1\Desktop\Command Central\pending\food ordering app\client\src\utils\sample_menu_item_data.json
-const filePath1 = join(process.cwd(), './client/src/utils/sample_menu_item_data.json');
-const filePath2 = join(process.cwd(), './client/src/utils/specials_menu_item_data.json');
-console.log(filePath1, filePath2)
-// insertMenuItemsFromJSON(filePath1, filePath2);
+const filePath = join(process.cwd(), './client/src/utils/sample_menu_item_data.json');
+console.log(filePath)
+// insertMenuItemsFromJSON(filePath);

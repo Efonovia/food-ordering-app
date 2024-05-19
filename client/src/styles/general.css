@@ -41,3 +41,11 @@
         display: none
     }
 }
+
+.special-menu-item {
+    text-align: center;
+    background-color: #ea2251;
+    color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}

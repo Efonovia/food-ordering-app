@@ -8,7 +8,9 @@ import CheckIcon from '@mui/icons-material/Check';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart, removeFromCart } from '../state';
-import { centerStyle } from '../utils/utils';
+import { capitalizeWords, centerStyle } from '../utils/utils';
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
+
 
 function MenuCard(props) {
     const navigate = useNavigate()
@@ -52,6 +54,7 @@ function MenuCard(props) {
                         <span style={{ fontWeight: 800 }} className="wc-block-formatted-money-amount wc-block-components-formatted-money-amount wc-block-components-product-price__value wc-block-grid__product-price__value">#{props.price.toLocaleString()}</span>
                     </span>
                 </div>
+                {props.special !== "none" && <div className='special-menu-item'><AutoAwesomeIcon />{capitalizeWords(props.special)} Special</div>}
                 <div className="wp-block-button wc-block-components-product-button wc-block-grid__product-add-to-cart">
                     <button onClick={handleAddToCart} className="wp-block-button__link wp-element-button add_to_cart_button wc-block-components-product-button__button">{isInCart ? <span style={{...centerStyle}}><CheckIcon /> &nbsp;{"In Cart"}</span> : "Add to cart"}</button>
                 </div>

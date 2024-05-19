@@ -2,754 +2,988 @@
     {
         "name": "Big Boyz Meal",
         "restaurantId": "65fefdb589f8405883839250",
-        "price": 9700,
-        "dietType": "Gluten-Free",
+        "price": 2100,
+        "dietType": "Flexitarian",
         "nutritionalContent": [
-            "Protein",
-            "Dietary Fiber",
             "Magnesium",
-            "Potassium",
-            "Sugars"
+            "Biotin",
+            "Niacin (Vitamin B3)",
+            "Sodium",
+            "Pantothenic Acid",
+            "Calories"
         ],
-        "waitTime": 58
+        "waitTime": 1,
+        "special": "none"
     },
     {
         "name": "Chicken Pieces",
         "restaurantId": "65fefdb589f8405883839251",
-        "price": 3600,
-        "dietType": "Flexitarian",
+        "price": 900,
+        "dietType": "Paleo",
         "nutritionalContent": [
-            "Iron",
-            "Fat",
-            "Dietary Fiber",
-            "Vitamin E"
+            "Sugars",
+            "Phosphorus",
+            "Zinc",
+            "Riboflavin (Vitamin B2)",
+            "Niacin (Vitamin B3)",
+            "Cholesterol"
         ],
-        "waitTime": 34
+        "waitTime": 3,
+        "special": "none"
     },
     {
         "name": "Chicken Pies",
         "restaurantId": "65fefdb589f8405883839252",
-        "price": 9500,
+        "price": 8800,
         "dietType": "Gluten-Free",
         "nutritionalContent": [
             "Sugars",
-            "Pantothenic Acid",
-            "Cholesterol",
-            "Fat",
-            "Calories",
+            "Vitamin B12",
+            "Thiamin (Vitamin B1)",
             "Vitamin C"
         ],
-        "waitTime": 34
+        "waitTime": 2,
+        "special": "none"
     },
     {
         "name": "Chicken Salad",
         "restaurantId": "65fefdb589f8405883839253",
-        "price": 5500,
+        "price": 3500,
         "dietType": "Gluten-Free",
         "nutritionalContent": [
-            "Phosphorus",
-            "Vitamin A",
             "Protein",
-            "Sugars",
-            "Magnesium"
+            "Folate (Vitamin B9)",
+            "Pantothenic Acid",
+            "Vitamin D",
+            "Fat"
         ],
-        "waitTime": 31
+        "waitTime": 1,
+        "special": "none"
     },
     {
         "name": "Chief Burger",
         "restaurantId": "65fefdb589f8405883839254",
-        "price": 4200,
-        "dietType": "Meat",
+        "price": 7600,
+        "dietType": "Ketogenic",
         "nutritionalContent": [
-            "Biotin",
-            "Magnesium",
             "Vitamin C",
+            "Zinc",
             "Calcium",
-            "Niacin (Vitamin B3)",
-            "Zinc"
+            "Riboflavin (Vitamin B2)"
         ],
-        "waitTime": 53
+        "waitTime": 1,
+        "special": "none"
     },
     {
         "name": "Chief Burger Meal",
         "restaurantId": "65fefdb589f8405883839250",
-        "price": 1100,
-        "dietType": "Paleo",
+        "price": 8300,
+        "dietType": "Gluten-Free",
         "nutritionalContent": [
-            "Calories",
-            "Zinc",
-            "Dietary Fiber"
+            "Phosphorus",
+            "Saturated Fat",
+            "Vitamin D",
+            "Vitamin B6"
         ],
-        "waitTime": 5
+        "waitTime": 3,
+        "special": "none"
     },
     {
         "name": "Chips",
         "restaurantId": "65fefdb589f8405883839251",
-        "price": 8800,
+        "price": 4800,
         "dietType": "Ketogenic",
         "nutritionalContent": [
+            "Sugars",
+            "Biotin",
+            "Protein",
+            "Calories",
             "Pantothenic Acid",
-            "Carbohydrates",
-            "Folate (Vitamin B9)",
-            "Vitamin E",
-            "Vitamin K"
+            "Zinc"
         ],
-        "waitTime": 41
+        "waitTime": 3,
+        "special": "none"
     },
     {
         "name": "Citizens Meal",
         "restaurantId": "65fefdb589f8405883839252",
-        "price": 3000,
-        "dietType": "Paleo",
+        "price": 2200,
+        "dietType": "Flexitarian",
         "nutritionalContent": [
-            "Dietary Fiber",
-            "Cholesterol",
-            "Vitamin K",
-            "Magnesium",
-            "Zinc"
+            "Calcium",
+            "Protein",
+            "Phosphorus"
         ],
-        "waitTime": 10
+        "waitTime": 3,
+        "special": "none"
     },
     {
         "name": "Citizens Spicy Yam Meal",
         "restaurantId": "65fefdb589f8405883839253",
-        "price": 4400,
-        "dietType": "Gluten-Free",
+        "price": 1300,
+        "dietType": "Ketogenic",
         "nutritionalContent": [
-            "Biotin",
+            "Sugars",
+            "Vitamin K",
             "Dietary Fiber",
-            "Folate (Vitamin B9)",
-            "Thiamin (Vitamin B1)",
-            "Protein",
-            "Zinc"
+            "Vitamin B6"
         ],
-        "waitTime": 6
+        "waitTime": 4,
+        "special": "none"
     },
     {
         "name": "Coleslaw",
         "restaurantId": "65fefdb589f8405883839254",
-        "price": 4800,
-        "dietType": "Meat",
+        "price": 3600,
+        "dietType": "Flexitarian",
         "nutritionalContent": [
-            "Sodium",
-            "Pantothenic Acid",
-            "Cholesterol",
-            "Thiamin (Vitamin B1)"
+            "Folate (Vitamin B9)",
+            "Thiamin (Vitamin B1)",
+            "Sugars",
+            "Biotin"
         ],
-        "waitTime": 38
+        "waitTime": 5,
+        "special": "none"
     },
     {
         "name": "Dodo Chunks",
         "restaurantId": "65fefdb589f8405883839250",
-        "price": 200,
-        "dietType": "Ketogenic",
+        "price": 100,
+        "dietType": "Paleo",
         "nutritionalContent": [
-            "Vitamin B6",
-            "Niacin (Vitamin B3)",
-            "Calories"
+            "Added Sugars",
+            "Cholesterol",
+            "Folate (Vitamin B9)",
+            "Potassium",
+            "Saturated Fat",
+            "Phosphorus"
         ],
-        "waitTime": 7
+        "waitTime": 1,
+        "special": "none"
     },
     {
         "name": "Double Chick Whizz",
         "restaurantId": "65fefdb589f8405883839251",
-        "price": 5500,
-        "dietType": "Ketogenic",
+        "price": 7800,
+        "dietType": "Gluten-Free",
         "nutritionalContent": [
-            "Niacin (Vitamin B3)",
-            "Magnesium",
-            "Phosphorus"
+            "Cholesterol",
+            "Trans Fat",
+            "Dietary Fiber",
+            "Sugars"
         ],
-        "waitTime": 11
+        "waitTime": 1,
+        "special": "none"
     },
     {
         "name": "Double Chick Whizz Meal",
         "restaurantId": "65fefdb589f8405883839252",
-        "price": 1700,
+        "price": 1300,
         "dietType": "Flexitarian",
         "nutritionalContent": [
-            "Pantothenic Acid",
-            "Folate (Vitamin B9)",
+            "Dietary Fiber",
             "Cholesterol",
-            "Added Sugars",
-            "Biotin"
+            "Iron"
         ],
-        "waitTime": 6
+        "waitTime": 4,
+        "special": "none"
     },
     {
         "name": "Express Meal With Chips",
         "restaurantId": "65fefdb589f8405883839253",
-        "price": 2600,
-        "dietType": "Flexitarian",
+        "price": 800,
+        "dietType": "Ketogenic",
         "nutritionalContent": [
-            "Dietary Fiber",
-            "Vitamin B12",
-            "Fat",
-            "Pantothenic Acid"
+            "Trans Fat",
+            "Biotin",
+            "Pantothenic Acid",
+            "Vitamin D"
         ],
-        "waitTime": 13
+        "waitTime": 4,
+        "special": "none"
     },
     {
         "name": "Fried Rice",
         "restaurantId": "65fefdb589f8405883839254",
-        "price": 7300,
-        "dietType": "Ketogenic",
+        "price": 100,
+        "dietType": "Paleo",
         "nutritionalContent": [
-            "Calcium",
-            "Potassium",
-            "Added Sugars",
-            "Folate (Vitamin B9)",
-            "Cholesterol",
-            "Calories"
+            "Vitamin B6",
+            "Pantothenic Acid",
+            "Fat",
+            "Biotin",
+            "Vitamin A",
+            "Riboflavin (Vitamin B2)"
         ],
-        "waitTime": 21
+        "waitTime": 2,
+        "special": "none"
     },
     {
         "name": "Full Chicken",
         "restaurantId": "65fefdb589f8405883839250",
-        "price": 9500,
-        "dietType": "Flexitarian",
+        "price": 5300,
+        "dietType": "Paleo",
         "nutritionalContent": [
-            "Niacin (Vitamin B3)",
-            "Vitamin A",
-            "Riboflavin (Vitamin B2)"
+            "Potassium",
+            "Pantothenic Acid",
+            "Vitamin D",
+            "Zinc"
         ],
-        "waitTime": 47
+        "waitTime": 4,
+        "special": "none"
     },
     {
         "name": "Full Flame Grilled",
         "restaurantId": "65fefdb589f8405883839251",
-        "price": 6100,
-        "dietType": "Flexitarian",
+        "price": 6600,
+        "dietType": "Paleo",
         "nutritionalContent": [
-            "Riboflavin (Vitamin B2)",
-            "Protein",
-            "Sodium",
-            "Dietary Fiber"
+            "Vitamin A",
+            "Phosphorus",
+            "Calcium",
+            "Vitamin B6",
+            "Iron",
+            "Riboflavin (Vitamin B2)"
         ],
-        "waitTime": 27
+        "waitTime": 3,
+        "special": "none"
     },
     {
         "name": "Halfflamegrilled 1",
         "restaurantId": "65fefdb589f8405883839252",
-        "price": 1100,
-        "dietType": "Ketogenic",
+        "price": 6900,
+        "dietType": "Paleo",
         "nutritionalContent": [
-            "Trans Fat",
-            "Vitamin C",
-            "Added Sugars",
+            "Magnesium",
+            "Calcium",
+            "Pantothenic Acid",
+            "Vitamin E",
+            "Carbohydrates",
             "Sugars"
         ],
-        "waitTime": 30
+        "waitTime": 1,
+        "special": "none"
     },
     {
         "name": "Half Rotisserie",
         "restaurantId": "65fefdb589f8405883839253",
-        "price": 1200,
-        "dietType": "Flexitarian",
+        "price": 4200,
+        "dietType": "Gluten-Free",
         "nutritionalContent": [
-            "Saturated Fat",
-            "Thiamin (Vitamin B1)",
-            "Cholesterol",
-            "Vitamin E",
+            "Magnesium",
+            "Added Sugars",
             "Vitamin C",
-            "Vitamin A"
+            "Dietary Fiber",
+            "Potassium"
         ],
-        "waitTime": 48
+        "waitTime": 2,
+        "special": "none"
     },
     {
         "name": "Half Rotisserie Chips Meal",
         "restaurantId": "65fefdb589f8405883839254",
-        "price": 2200,
-        "dietType": "Flexitarian",
+        "price": 7200,
+        "dietType": "Gluten-Free",
         "nutritionalContent": [
-            "Fat",
-            "Riboflavin (Vitamin B2)",
-            "Phosphorus",
-            "Calcium"
+            "Calcium",
+            "Folate (Vitamin B9)",
+            "Saturated Fat",
+            "Sodium",
+            "Sugars",
+            "Calories"
         ],
-        "waitTime": 46
+        "waitTime": 2,
+        "special": "none"
     },
     {
         "name": "Half Rotisserie Meal",
         "restaurantId": "65fefdb589f8405883839250",
-        "price": 1700,
-        "dietType": "Gluten-Free",
+        "price": 9200,
+        "dietType": "Ketogenic",
         "nutritionalContent": [
             "Phosphorus",
-            "Sugars",
+            "Calories",
+            "Vitamin C",
             "Vitamin B12",
-            "Vitamin D",
-            "Vitamin C"
+            "Calcium"
         ],
-        "waitTime": 20
+        "waitTime": 5,
+        "special": "none"
     },
     {
         "name": "Jollof Rice",
         "restaurantId": "65fefdb589f8405883839251",
-        "price": 3800,
-        "dietType": "Gluten-Free",
+        "price": 8700,
+        "dietType": "Meat",
         "nutritionalContent": [
-            "Phosphorus",
             "Potassium",
-            "Vitamin B12"
+            "Vitamin C",
+            "Sugars",
+            "Vitamin A"
         ],
-        "waitTime": 22
+        "waitTime": 1,
+        "special": "none"
     },
     {
         "name": "Meat Pies",
         "restaurantId": "65fefdb589f8405883839252",
-        "price": 3900,
-        "dietType": "Ketogenic",
+        "price": 5500,
+        "dietType": "Meat",
         "nutritionalContent": [
-            "Riboflavin (Vitamin B2)",
-            "Biotin",
-            "Niacin (Vitamin B3)",
-            "Added Sugars",
-            "Calcium",
-            "Sugars"
+            "Dietary Fiber",
+            "Sodium",
+            "Vitamin D",
+            "Thiamin (Vitamin B1)",
+            "Added Sugars"
         ],
-        "waitTime": 59
+        "waitTime": 5,
+        "special": "none"
     },
     {
         "name": "Newly Improved Moin Moin",
         "restaurantId": "65fefdb589f8405883839253",
-        "price": 5600,
-        "dietType": "Paleo",
+        "price": 9200,
+        "dietType": "Ketogenic",
         "nutritionalContent": [
-            "Calories",
-            "Added Sugars",
-            "Vitamin E"
+            "Trans Fat",
+            "Thiamin (Vitamin B1)",
+            "Niacin (Vitamin B3)"
         ],
-        "waitTime": 43
+        "waitTime": 5,
+        "special": "none"
     },
     {
         "name": "New Double Spicy Chickwhizz",
         "restaurantId": "65fefdb589f8405883839254",
-        "price": 900,
-        "dietType": "Ketogenic",
+        "price": 6300,
+        "dietType": "Flexitarian",
         "nutritionalContent": [
-            "Vitamin E",
             "Sugars",
+            "Biotin",
+            "Zinc",
             "Vitamin A",
-            "Potassium",
-            "Niacin (Vitamin B3)",
-            "Saturated Fat"
+            "Sodium"
         ],
-        "waitTime": 49
+        "waitTime": 4,
+        "special": "none"
     },
     {
         "name": "New Double Spicy Chickwhizz Meal",
         "restaurantId": "65fefdb589f8405883839250",
-        "price": 5600,
-        "dietType": "Paleo",
+        "price": 3600,
+        "dietType": "Flexitarian",
         "nutritionalContent": [
-            "Niacin (Vitamin B3)",
-            "Riboflavin (Vitamin B2)",
             "Protein",
-            "Calories",
-            "Vitamin B12"
+            "Vitamin D",
+            "Trans Fat",
+            "Vitamin C"
         ],
-        "waitTime": 57
+        "waitTime": 3,
+        "special": "none"
     },
     {
         "name": "New Spicy Chickwhizz",
         "restaurantId": "65fefdb589f8405883839251",
-        "price": 7200,
-        "dietType": "Paleo",
+        "price": 400,
+        "dietType": "Meat",
         "nutritionalContent": [
-            "Calcium",
-            "Vitamin E",
-            "Vitamin B12",
-            "Vitamin A"
+            "Riboflavin (Vitamin B2)",
+            "Saturated Fat",
+            "Vitamin K",
+            "Vitamin A",
+            "Zinc"
         ],
-        "waitTime": 9
+        "waitTime": 1,
+        "special": "none"
     },
     {
         "name": "New Spicy Chickwhizz Meal",
         "restaurantId": "65fefdb589f8405883839252",
-        "price": 6200,
-        "dietType": "Ketogenic",
+        "price": 6400,
+        "dietType": "Flexitarian",
         "nutritionalContent": [
-            "Trans Fat",
-            "Protein",
-            "Fat",
-            "Potassium"
+            "Cholesterol",
+            "Potassium",
+            "Vitamin C",
+            "Sodium",
+            "Pantothenic Acid"
         ],
-        "waitTime": 28
+        "waitTime": 2,
+        "special": "none"
     },
     {
         "name": "New Spicy Yam Max Meal",
         "restaurantId": "65fefdb589f8405883839253",
-        "price": 7700,
+        "price": 9800,
         "dietType": "Paleo",
         "nutritionalContent": [
-            "Trans Fat",
-            "Phosphorus",
-            "Saturated Fat",
+            "Folate (Vitamin B9)",
+            "Niacin (Vitamin B3)",
             "Pantothenic Acid",
-            "Calcium",
-            "Added Sugars"
+            "Fat",
+            "Biotin"
         ],
-        "waitTime": 33
+        "waitTime": 1,
+        "special": "none"
     },
     {
         "name": "Original Chickwhizz",
         "restaurantId": "65fefdb589f8405883839254",
-        "price": 4500,
-        "dietType": "Meat",
+        "price": 7900,
+        "dietType": "Ketogenic",
         "nutritionalContent": [
-            "Fat",
-            "Protein",
-            "Cholesterol",
-            "Carbohydrates",
-            "Biotin"
+            "Potassium",
+            "Niacin (Vitamin B3)",
+            "Pantothenic Acid",
+            "Fat"
         ],
-        "waitTime": 58
+        "waitTime": 3,
+        "special": "none"
     },
     {
         "name": "Original Chickwhizz Meal",
         "restaurantId": "65fefdb589f8405883839250",
-        "price": 9700,
-        "dietType": "Flexitarian",
+        "price": 9800,
+        "dietType": "Gluten-Free",
         "nutritionalContent": [
-            "Calories",
-            "Vitamin K",
-            "Thiamin (Vitamin B1)"
+            "Fat",
+            "Carbohydrates",
+            "Vitamin D",
+            "Iron",
+            "Biotin"
         ],
-        "waitTime": 39
+        "waitTime": 1,
+        "special": "none"
     },
     {
         "name": "Pasta Salad",
         "restaurantId": "65fefdb589f8405883839251",
-        "price": 1700,
-        "dietType": "Flexitarian",
+        "price": 4500,
+        "dietType": "Paleo",
         "nutritionalContent": [
             "Riboflavin (Vitamin B2)",
-            "Vitamin A",
-            "Iron",
-            "Cholesterol",
-            "Vitamin K",
-            "Pantothenic Acid"
+            "Phosphorus",
+            "Saturated Fat"
         ],
-        "waitTime": 57
+        "waitTime": 4,
+        "special": "none"
     },
     {
         "name": "Pepper Sauce",
         "restaurantId": "65fefdb589f8405883839252",
-        "price": 3700,
-        "dietType": "Gluten-Free",
+        "price": 4200,
+        "dietType": "Meat",
         "nutritionalContent": [
-            "Potassium",
-            "Fat",
-            "Sugars",
-            "Pantothenic Acid"
+            "Sodium",
+            "Calories",
+            "Folate (Vitamin B9)",
+            "Trans Fat",
+            "Thiamin (Vitamin B1)"
         ],
-        "waitTime": 35
+        "waitTime": 3,
+        "special": "none"
     },
     {
         "name": "Quarter Flamer Grilled",
         "restaurantId": "65fefdb589f8405883839253",
-        "price": 3700,
-        "dietType": "Ketogenic",
+        "price": 5200,
+        "dietType": "Gluten-Free",
         "nutritionalContent": [
-            "Vitamin B12",
-            "Sugars",
-            "Folate (Vitamin B9)",
-            "Added Sugars",
-            "Calcium"
+            "Niacin (Vitamin B3)",
+            "Iron",
+            "Vitamin C",
+            "Cholesterol",
+            "Sodium",
+            "Thiamin (Vitamin B1)"
         ],
-        "waitTime": 35
+        "waitTime": 5,
+        "special": "none"
     },
     {
         "name": "Quarter Flamer Grilled Chips Meal",
         "restaurantId": "65fefdb589f8405883839254",
-        "price": 4300,
-        "dietType": "Gluten-Free",
+        "price": 4000,
+        "dietType": "Paleo",
         "nutritionalContent": [
-            "Vitamin B12",
+            "Added Sugars",
+            "Phosphorus",
             "Vitamin E",
-            "Carbohydrates",
+            "Vitamin C",
             "Thiamin (Vitamin B1)"
         ],
-        "waitTime": 9
+        "waitTime": 4,
+        "special": "none"
     },
     {
         "name": "Quarter Flamer Grilled Rice Meal",
         "restaurantId": "65fefdb589f8405883839250",
-        "price": 9200,
-        "dietType": "Ketogenic",
+        "price": 1900,
+        "dietType": "Paleo",
         "nutritionalContent": [
-            "Vitamin C",
-            "Riboflavin (Vitamin B2)",
-            "Magnesium",
+            "Vitamin D",
+            "Cholesterol",
             "Thiamin (Vitamin B1)",
-            "Vitamin B12"
+            "Trans Fat"
         ],
-        "waitTime": 25
+        "waitTime": 2,
+        "special": "none"
     },
     {
         "name": "Quarter Rotisserie",
         "restaurantId": "65fefdb589f8405883839251",
-        "price": 500,
+        "price": 7400,
         "dietType": "Flexitarian",
         "nutritionalContent": [
-            "Calories",
-            "Vitamin B6",
-            "Vitamin E",
-            "Vitamin B12",
-            "Fat",
-            "Calcium"
+            "Pantothenic Acid",
+            "Folate (Vitamin B9)",
+            "Niacin (Vitamin B3)"
         ],
-        "waitTime": 33
+        "waitTime": 1,
+        "special": "none"
     },
     {
         "name": "Quarter Rotisserie Chips",
         "restaurantId": "65fefdb589f8405883839252",
-        "price": 9800,
-        "dietType": "Gluten-Free",
+        "price": 9400,
+        "dietType": "Flexitarian",
         "nutritionalContent": [
+            "Folate (Vitamin B9)",
             "Vitamin B6",
-            "Potassium",
-            "Thiamin (Vitamin B1)",
-            "Vitamin E",
-            "Calories",
-            "Saturated Fat"
+            "Phosphorus"
         ],
-        "waitTime": 31
+        "waitTime": 1,
+        "special": "none"
     },
     {
         "name": "Quarter Rotisserie Meal",
         "restaurantId": "65fefdb589f8405883839253",
-        "price": 6300,
-        "dietType": "Meat",
+        "price": 4200,
+        "dietType": "Flexitarian",
         "nutritionalContent": [
+            "Vitamin K",
+            "Vitamin E",
+            "Pantothenic Acid",
             "Sugars",
-            "Vitamin B6",
-            "Phosphorus"
+            "Vitamin B12"
         ],
-        "waitTime": 48
+        "waitTime": 4,
+        "special": "none"
     },
     {
         "name": "Refuel Dodo Max Meal",
         "restaurantId": "65fefdb589f8405883839254",
-        "price": 3000,
+        "price": 300,
         "dietType": "Paleo",
         "nutritionalContent": [
-            "Calories",
-            "Vitamin C",
-            "Dietary Fiber",
-            "Sugars",
-            "Fat",
-            "Trans Fat"
+            "Magnesium",
+            "Calcium",
+            "Vitamin C"
         ],
-        "waitTime": 50
+        "waitTime": 2,
+        "special": "none"
     },
     {
         "name": "Refuel Dodo Meal",
         "restaurantId": "65fefdb589f8405883839250",
-        "price": 9800,
-        "dietType": "Paleo",
+        "price": 6000,
+        "dietType": "Meat",
         "nutritionalContent": [
-            "Riboflavin (Vitamin B2)",
+            "Fat",
             "Pantothenic Acid",
-            "Cholesterol",
-            "Vitamin E",
-            "Sodium",
-            "Vitamin B6"
+            "Calcium",
+            "Vitamin B12",
+            "Zinc",
+            "Protein"
         ],
-        "waitTime": 22
+        "waitTime": 1,
+        "special": "none"
     },
     {
         "name": "Refuel Fried Rice Meal",
         "restaurantId": "65fefdb589f8405883839251",
-        "price": 1200,
-        "dietType": "Ketogenic",
+        "price": 9100,
+        "dietType": "Gluten-Free",
         "nutritionalContent": [
-            "Riboflavin (Vitamin B2)",
-            "Vitamin E",
-            "Magnesium",
-            "Vitamin B6",
-            "Phosphorus"
+            "Folate (Vitamin B9)",
+            "Dietary Fiber",
+            "Niacin (Vitamin B3)",
+            "Sodium"
         ],
-        "waitTime": 44
+        "waitTime": 3,
+        "special": "none"
     },
     {
         "name": "Refuel Max Fried Rice Meal",
         "restaurantId": "65fefdb589f8405883839252",
-        "price": 700,
-        "dietType": "Gluten-Free",
+        "price": 2900,
+        "dietType": "Paleo",
         "nutritionalContent": [
             "Calories",
-            "Saturated Fat",
-            "Vitamin A",
-            "Protein",
-            "Fat",
-            "Sugars"
+            "Carbohydrates",
+            "Phosphorus",
+            "Niacin (Vitamin B3)",
+            "Vitamin D",
+            "Zinc"
         ],
-        "waitTime": 36
+        "waitTime": 4,
+        "special": "none"
     },
     {
         "name": "Refuel Max Rice Beans Meal",
         "restaurantId": "65fefdb589f8405883839253",
-        "price": 8700,
-        "dietType": "Gluten-Free",
+        "price": 3000,
+        "dietType": "Meat",
         "nutritionalContent": [
-            "Iron",
-            "Fat",
-            "Added Sugars"
+            "Vitamin C",
+            "Calcium",
+            "Biotin"
         ],
-        "waitTime": 32
+        "waitTime": 4,
+        "special": "none"
     },
     {
         "name": "Refuel Max Spaghetti Meal",
         "restaurantId": "65fefdb589f8405883839254",
-        "price": 2000,
+        "price": 900,
         "dietType": "Meat",
         "nutritionalContent": [
-            "Vitamin K",
-            "Magnesium",
-            "Calcium"
+            "Vitamin E",
+            "Vitamin A",
+            "Riboflavin (Vitamin B2)",
+            "Folate (Vitamin B9)"
         ],
-        "waitTime": 16
+        "waitTime": 1,
+        "special": "none"
     },
     {
         "name": "Refuel Rice Beans Meal",
         "restaurantId": "65fefdb589f8405883839250",
-        "price": 9200,
-        "dietType": "Paleo",
+        "price": 9100,
+        "dietType": "Meat",
         "nutritionalContent": [
-            "Fat",
-            "Vitamin C",
-            "Sodium",
-            "Iron"
+            "Protein",
+            "Vitamin D",
+            "Biotin",
+            "Calories",
+            "Vitamin A"
         ],
-        "waitTime": 59
+        "waitTime": 1,
+        "special": "none"
     },
     {
         "name": "Refuel Spaghetti Meal With Sauce",
         "restaurantId": "65fefdb589f8405883839251",
-        "price": 6700,
-        "dietType": "Meat",
+        "price": 6600,
+        "dietType": "Paleo",
         "nutritionalContent": [
-            "Iron",
-            "Cholesterol",
-            "Trans Fat",
-            "Vitamin C"
+            "Vitamin B6",
+            "Saturated Fat",
+            "Riboflavin (Vitamin B2)"
         ],
-        "waitTime": 24
+        "waitTime": 3,
+        "special": "none"
     },
     {
         "name": "Refuel Spicy Rice Meal",
         "restaurantId": "65fefdb589f8405883839252",
-        "price": 5300,
-        "dietType": "Flexitarian",
+        "price": 3000,
+        "dietType": "Gluten-Free",
         "nutritionalContent": [
-            "Vitamin B12",
-            "Fat",
-            "Calories",
-            "Folate (Vitamin B9)",
-            "Vitamin K",
-            "Vitamin B6"
+            "Magnesium",
+            "Zinc",
+            "Trans Fat",
+            "Dietary Fiber"
         ],
-        "waitTime": 58
+        "waitTime": 4,
+        "special": "none"
     },
     {
         "name": "Rice Beans",
         "restaurantId": "65fefdb589f8405883839253",
-        "price": 6100,
-        "dietType": "Ketogenic",
+        "price": 9700,
+        "dietType": "Paleo",
         "nutritionalContent": [
-            "Phosphorus",
-            "Niacin (Vitamin B3)",
-            "Calcium",
-            "Potassium",
+            "Vitamin E",
+            "Protein",
+            "Added Sugars",
+            "Sugars",
             "Dietary Fiber",
-            "Biotin"
+            "Thiamin (Vitamin B1)"
         ],
-        "waitTime": 38
+        "waitTime": 3,
+        "special": "none"
     },
     {
         "name": "Spaghetti",
         "restaurantId": "65fefdb589f8405883839254",
-        "price": 3200,
-        "dietType": "Ketogenic",
+        "price": 9100,
+        "dietType": "Flexitarian",
         "nutritionalContent": [
-            "Potassium",
+            "Niacin (Vitamin B3)",
             "Cholesterol",
-            "Vitamin B12",
-            "Iron"
+            "Vitamin C",
+            "Vitamin D",
+            "Saturated Fat"
         ],
-        "waitTime": 37
+        "waitTime": 1,
+        "special": "none"
     },
     {
         "name": "Spicy Yam",
         "restaurantId": "65fefdb589f8405883839250",
-        "price": 4400,
+        "price": 5100,
         "dietType": "Gluten-Free",
         "nutritionalContent": [
-            "Vitamin C",
-            "Vitamin D",
-            "Sodium",
-            "Pantothenic Acid",
-            "Thiamin (Vitamin B1)"
+            "Biotin",
+            "Phosphorus",
+            "Saturated Fat",
+            "Vitamin B6",
+            "Zinc",
+            "Protein"
         ],
-        "waitTime": 44
+        "waitTime": 5,
+        "special": "none"
     },
     {
         "name": "Spicy Yam Meal",
         "restaurantId": "65fefdb589f8405883839251",
-        "price": 5600,
-        "dietType": "Meat",
+        "price": 1600,
+        "dietType": "Gluten-Free",
         "nutritionalContent": [
+            "Dietary Fiber",
+            "Zinc",
+            "Calories",
             "Vitamin C",
-            "Vitamin B12",
-            "Vitamin B6"
+            "Calcium"
         ],
-        "waitTime": 56
-    },
-    {
-        "name": "White Rice And Sauce 1",
-        "restaurantId": "65fefdb589f8405883839252",
-        "price": 8100,
-        "dietType": "Ketogenic",
-        "nutritionalContent": [
-            "Phosphorus",
-            "Vitamin A",
-            "Carbohydrates",
-            "Folate (Vitamin B9)",
-            "Vitamin K"
-        ],
-        "waitTime": 26
+        "waitTime": 4,
+        "special": "none"
     },
     {
         "name": "Wrapstar Meal",
-        "restaurantId": "65fefdb589f8405883839253",
-        "price": 6500,
-        "dietType": "Paleo",
+        "restaurantId": "65fefdb589f8405883839252",
+        "price": 5600,
+        "dietType": "Ketogenic",
         "nutritionalContent": [
-            "Vitamin A",
+            "Vitamin B12",
+            "Calcium",
+            "Protein",
             "Saturated Fat",
-            "Biotin",
-            "Riboflavin (Vitamin B2)",
-            "Magnesium",
-            "Cholesterol"
+            "Pantothenic Acid",
+            "Carbohydrates"
         ],
-        "waitTime": 31
+        "waitTime": 3,
+        "special": "none"
     },
     {
         "name": "Wrapstar Stand Alone",
-        "restaurantId": "65fefdb589f8405883839254",
-        "price": 4600,
+        "restaurantId": "65fefdb589f8405883839253",
+        "price": 2600,
         "dietType": "Ketogenic",
         "nutritionalContent": [
-            "Trans Fat",
-            "Protein",
-            "Potassium",
-            "Sodium",
-            "Iron",
-            "Vitamin B12"
+            "Vitamin B12",
+            "Cholesterol",
+            "Biotin",
+            "Vitamin D",
+            "Calcium"
         ],
-        "waitTime": 7
+        "waitTime": 5,
+        "special": "none"
+    },
+    {
+        "name": "Grilled Salmon Salad Supreme",
+        "restaurantId": "65fefdb589f8405883839250",
+        "price": 9600,
+        "dietType": "Low Glycemic Index",
+        "nutritionalContent": [
+            "Omega-3 Fatty Acids",
+            "Vitamin D",
+            "Selenium"
+        ],
+        "waitTime": 1,
+        "special": "diabetes"
+    },
+    {
+        "name": "Vegetable Stir-Fry with Tofu",
+        "restaurantId": "65fefdb589f8405883839251",
+        "price": 6100,
+        "dietType": "High Fiber",
+        "nutritionalContent": [
+            "Vitamin C",
+            "Vitamin K",
+            "Iron"
+        ],
+        "waitTime": 5,
+        "special": "diabetes"
+    },
+    {
+        "name": "Turkey and Quinoa Stuffed Bell Peppers",
+        "restaurantId": "65fefdb589f8405883839252",
+        "price": 9400,
+        "dietType": "Balanced Macronutrients",
+        "nutritionalContent": [
+            "Vitamin A",
+            "Vitamin C",
+            "Potassium"
+        ],
+        "waitTime": 5,
+        "special": "diabetes"
+    },
+    {
+        "name": "Zucchini Noodles with Chicken Alfredo",
+        "restaurantId": "65fefdb589f8405883839253",
+        "price": 6500,
+        "dietType": "Low Carbohydrate",
+        "nutritionalContent": [
+            "Calcium",
+            "Vitamin B12",
+            "Zinc"
+        ],
+        "waitTime": 2,
+        "special": "diabetes"
+    },
+    {
+        "name": "Mediterranean Grilled Veggie Platter",
+        "restaurantId": "65fefdb589f8405883839254",
+        "price": 8800,
+        "dietType": "Antioxidant-Rich",
+        "nutritionalContent": [
+            "Fiber",
+            "Vitamin-E",
+            "Potassium"
+        ],
+        "waitTime": 1,
+        "special": "diabetes"
+    },
+    {
+        "name": "Coconut Curry Tofu",
+        "restaurantId": "65fefdb589f8405883839250",
+        "price": 9200,
+        "dietType": "Dairy-Free",
+        "nutritionalContent": [
+            "Iron",
+            "Calcium (from tofu)",
+            "Vitamin C"
+        ],
+        "waitTime": 4,
+        "special": "lactose intolerance"
+    },
+    {
+        "name": "Quinoa Salad with Citrus Vinaigrette",
+        "restaurantId": "65fefdb589f8405883839251",
+        "price": 8500,
+        "dietType": "Lactose-Free",
+        "nutritionalContent": [
+            "Protein",
+            "Fiber",
+            "Vitamin A",
+            "Vitamin C"
+        ],
+        "waitTime": 2,
+        "special": "lactose intolerance"
+    },
+    {
+        "name": "Chickpea and Spinach Curry",
+        "restaurantId": "65fefdb589f8405883839252",
+        "price": 2700,
+        "dietType": "Vegan",
+        "nutritionalContent": [
+            "Folate",
+            "Iron",
+            "Magnesium"
+        ],
+        "waitTime": 5,
+        "special": "lactose intolerance"
+    },
+    {
+        "name": "Grilled Portobello Mushroom Burgers",
+        "restaurantId": "65fefdb589f8405883839253",
+        "price": 4100,
+        "dietType": "Dairy-Free",
+        "nutritionalContent": [
+            "Protein",
+            "Fiber",
+            "Vitamin D"
+        ],
+        "waitTime": 4,
+        "special": "lactose intolerance"
+    },
+    {
+        "name": "Vegetable Coconut Curry Soup",
+        "restaurantId": "65fefdb589f8405883839254",
+        "price": 3800,
+        "dietType": "Lactose-Free",
+        "nutritionalContent": [
+            "Vitamin A",
+            "Vitamin-C",
+            "Fiber"
+        ],
+        "waitTime": 3,
+        "special": "lactose intolerance"
+    },
+    {
+        "name": "Grilled Chicken and Vegetable Skewers",
+        "restaurantId": "65fefdb589f8405883839250",
+        "price": 7800,
+        "dietType": "Low Calorie",
+        "nutritionalContent": [
+            "Protein",
+            "Fiber",
+            "Vitamin C"
+        ],
+        "waitTime": 4,
+        "special": "obesity"
+    },
+    {
+        "name": "Quinoa and Black Bean Salad",
+        "restaurantId": "65fefdb589f8405883839251",
+        "price": 6100,
+        "dietType": "High Fiber",
+        "nutritionalContent": [
+            "Protein",
+            "Iron",
+            "Folate"
+        ],
+        "waitTime": 4,
+        "special": "obesity"
+    },
+    {
+        "name": "Stuffed Bell Peppers with Lean Turkey",
+        "restaurantId": "65fefdb589f8405883839252",
+        "price": 900,
+        "dietType": "Balanced Macronutrients",
+        "nutritionalContent": [
+            "Vitamin A",
+            "Vitamin C",
+            "Potassium"
+        ],
+        "waitTime": 1,
+        "special": "obesity"
+    },
+    {
+        "name": "Vegetable and Lentil Soup",
+        "restaurantId": "65fefdb589f8405883839253",
+        "price": 2300,
+        "dietType": "Low Calorie",
+        "nutritionalContent": [
+            "Fiber",
+            "Protein",
+            "Vitamin K"
+        ],
+        "waitTime": 2,
+        "special": "obesity"
+    },
+    {
+        "name": "Salmon and Asparagus Foil Packets",
+        "restaurantId": "65fefdb589f8405883839254",
+        "price": 8100,
+        "dietType": "Omega-3 Fatty Acids",
+        "nutritionalContent": [
+            "Protein",
+            "Fiber",
+            "Vitamin-K"
+        ],
+        "waitTime": 4,
+        "special": "obesity"
     }
 ]

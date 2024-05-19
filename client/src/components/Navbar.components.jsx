@@ -73,7 +73,7 @@ function Navbar() {
 
                     <p className="site-title"
                         data-mobile-font-size="{&quot;desktop&quot;:&quot;&quot;,&quot;mobile&quot;:&quot;1.4em&quot;}"
-                       ><a href rel="home">Windar</a></p>
+                       ><a href rel="home">NUTRIEASE</a></p>
                 </div>
 
             </div>}

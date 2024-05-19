@@ -56,7 +56,7 @@ for i, name in enumerate(food_items):
             "price": random.choice(range(1, 101)) * 100,
             "dietType": random.choice(["Paleo", "Ketogenic", "Gluten-Free", "Meat", "Flexitarian"]),
             "nutritionalContent": random.sample(nutritional_contents, random.choice(range(3, 7))),
-            "waitTime": random.randint(1, 6),
+            "waitTime": random.randint(1, 5),
             "special": "none"
         }
     )

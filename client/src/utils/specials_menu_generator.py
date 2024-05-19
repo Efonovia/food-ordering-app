@@ -75,13 +75,13 @@ for j, special in enumerate(itrs):
         print(el)
         ind = el.split("\n")
         obj = {
-                "restaurantId": restaurant_ids[i],
                 "name": ind[0], 
+                "restaurantId": restaurant_ids[i],
+                "price": random.choice(range(1, 101)) * 100,
                 "dietType": ind[1], 
                 "nutritionalContent": ind[2].split(", "), 
+                "waitTime": random.randint(1, 5),
                 "special": itrs_names[j],
-                "price": random.choice(range(1, 101)) * 100,
-                "waitTime": random.randint(1, 6)
             }
         specials_menu_item_data.append(obj)
 
