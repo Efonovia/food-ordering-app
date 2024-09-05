@@ -39,7 +39,7 @@ function MenuCard(props) {
                     <a href>
                         <img
                             data-testid="product-image" alt="Vegan Burger"
-                            src={`http://localhost:8000/menuitems/pic/${props.picturePath}`}
+                            src={`https://nutriease-api.vercel.app/uploads/menus/${props.picturePath}`}
                             sizes="(max-width: 800px) 100vw, 800px"
                             style={{objectFit: 'cover'}}/>
                     </a>

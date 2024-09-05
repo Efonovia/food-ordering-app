@@ -60,7 +60,7 @@ function AdminAllOrders() {
     <div style={{ display: "block" }} className="page-title standard">
         <header className="entry-header">
             <div style={{...centerStyle, flexDirection:"column"}} className="entry-header-wrap">
-                <img alt="" width={120} height={120} src={`http://localhost:8000/restaurants/pic/${restaurantInfo.picturePath}`}></img>
+                <img alt="" width={120} height={120} src={`https://nutriease-api.vercel.app/uploads/restaurants/${restaurantInfo.picturePath}`}></img>
                 <h1 className="entry-title">All Orders for <span style={{color: "#ea2251"}}>{restaurantName}</span></h1>
             </div>
         </header>

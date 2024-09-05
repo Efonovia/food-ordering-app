@@ -76,7 +76,7 @@ function Cart() {
                         <img
                             width="300" height="225"
                             style={{ width: "48px" }}
-                            src={`http://localhost:8000/menuitems/pic/${item.picturePath}`}
+                            src={`https://nutriease-api.vercel.app/uploads/menus/${item.picturePath}`}
                             className="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                             alt="" decoding="async" fetchpriority="high"
                             sizes="(max-width: 300px) 100vw, 300px"

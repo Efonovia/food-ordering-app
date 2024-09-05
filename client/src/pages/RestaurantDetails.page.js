@@ -66,7 +66,7 @@ function RestaurantDetails() {
                             </div>
 
 
-                            <img alt="" src={`http://localhost:8000/restaurants/pic/${restaurant?.picturePath}`} height={200} width={200}></img>
+                            <img alt="" src={`https://nutriease-api.vercel.app/uploads/restaurants/${restaurant?.picturePath}`} height={200} width={200}></img>
                             <h1 style={{fontWeight: 700, fontSize: "64px"}} className="has-huge-font-size wp-block-heading">{restaurant?.name}</h1>
                             <div>{starsHTML}</div>
                             <div>Email: {restaurant?.email}</div>

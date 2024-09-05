@@ -12,7 +12,7 @@ function RestaurantCard(props) {
                 <div className="wc-block-grid__product-image">
                     <img
                             fetchpriority="high" width="300" height="225"
-                            src={`http://localhost:8000/restaurants/pic/${props.picturePath}`}
+                            src={`https://nutriease-api.vercel.app/uploads/restaurants/${props.picturePath}`}
                             className="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                             alt="Asia Fresh Salad" decoding="async"
                             sizes="(max-width: 300px) 100vw, 300px"/>

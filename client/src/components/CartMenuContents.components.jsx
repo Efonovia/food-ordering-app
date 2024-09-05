@@ -14,8 +14,7 @@ function CartMenuContents(props) {
             <li key={item._id} className="woocommerce-mini-cart-item mini_cart_item">
                 <a onClick={() => dispatch(removeFromCart({id: item._id}))} style={{cursor: "pointer"}} href className="remove remove_from_cart_button" data-product_id="162" data-cart_item_key="82aa4b0af34c2313a562076992e50aa3" data-product_sku="">×</a> 
                 <a href>
-                    <img width="300" height="225"
-                        src={`http://localhost:8000/menuitems/pic/${item.picturePath}`}
+                    <img widthhttps://nutriease-api.vercel.app/uploads/menus/${item.picturePath}`}
                         className="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async"
                         loading="lazy"
                         sizes="(max-width: 300px) 100vw, 300px"/>{item.name}
