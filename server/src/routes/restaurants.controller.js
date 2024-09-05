@@ -125,7 +125,7 @@ export const addReviewToRestaurant = async (req, res) => {
 export const getRestaurantPic = async (req, res) => {
     try {
         const { picturePath } = req.params
-        return res.sendFile(path.join(getDirname(), "../src/public/uploads/restaurants", picturePath))
+        return res.sendFile(path.join(getDirname(), "../public/uploads/restaurants", picturePath))
     } catch (error) {
         return res.status(404).json({error: error.message})
     }

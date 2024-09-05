@@ -148,7 +148,7 @@ export const addReviewToMenuItem = async (req, res) => {
 export const getMenuPic = async (req, res) => {
     try {
         const { picturePath } = req.params
-        return res.sendFile(path.join(getDirname(), "../src/public/uploads/menus", picturePath))
+        return res.sendFile(path.join(getDirname(), "../public/uploads/menus", picturePath))
     } catch (error) {
         return res.status(404).json({error: error.message})
     }
