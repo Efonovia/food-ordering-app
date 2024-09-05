@@ -25,6 +25,7 @@ app.use(cors())
 
 
 //ROUTES
+app.use(express.static('public'));
 app.get("/", (req, res) => {
     res.send("Welcome to NutriEase...")
 })
