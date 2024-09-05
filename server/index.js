@@ -9,6 +9,7 @@ import usersRouter from "./src/routes/users.routes.js";
 import restaurantsRouter from "./src/routes/restaurants.routes.js";
 import ordersRouter from "./src/routes/orders.routes.js";
 import menuItemsRouter from "./src/routes/menuItem.routes.js";
+import path from "path"
 
 
 // CONFIGURATION
@@ -25,7 +26,7 @@ app.use(cors())
 
 
 //ROUTES
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, "public")));
 app.get("/", (req, res) => {
     res.send("Welcome to NutriEase...")
 })
