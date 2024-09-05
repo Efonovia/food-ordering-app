@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:7000"
+const API_URL = "https://nutriease-api.vercel.app"
 const limit = 10
 
 

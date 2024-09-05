@@ -69,7 +69,7 @@ function SignIn() {
     <div style={{ display: "block" }} className="page-title standard">
         <header className="entry-header">
             <div className="entry-header-wrap">
-                <h1 className="entry-title">Sign In to Ridwan's App</h1>
+                <h1 className="entry-title">Sign In to NUTRIEASE</h1>
             </div>
         </header>
     </div>
