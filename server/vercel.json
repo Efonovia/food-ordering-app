@@ -6,19 +6,11 @@
       "use": "@vercel/node",
       "config": { "includeFiles": ["dist/**"] }
      },
-     {
-        "src": "public/**",
-        "use": "@vercel/static"
-    }
     ],
     "routes": [
      {
       "src": "/(.*)",
       "dest": "index.js"
-     },
-     {
-        "src": "/(.+)",
-        "dest": "public/$1"
-    }
+     }
     ]
    }
