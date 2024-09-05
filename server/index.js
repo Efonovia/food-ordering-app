@@ -25,7 +25,9 @@ app.use(cors())
 
 
 //ROUTES
-app.get("/", (req, res) => res.send("hello"))
+app.get("/", (req, res) => {
+    res.send("Welcome to NutriEase...")
+})
 app.use("/users", usersRouter)
 app.use("/restaurants", restaurantsRouter)
 app.use("/orders", ordersRouter)
