@@ -35,7 +35,6 @@ app.use("/menuitems", menuItemsRouter)
 
 //MONGOOSE SETUP
 const PORT = process.env.PORT || 6001
-console.log(process.env.MONGO_URL)
 mongoose.connect(process.env.MONGO_URL).then(() => app.listen(PORT, () => {
     console.log("Connected to mongo database")
     console.log('Server running at PORT: '+PORT)
