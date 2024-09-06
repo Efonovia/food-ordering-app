@@ -30,7 +30,7 @@ function Navbar() {
     function logout() {
         console.log("dfsdgfhg")
 		dispatch(setUser({ user: null }))
-		navigate("/")
+		handleNavClick("/")
 	}
 
     function openCartMenu() {
@@ -40,6 +40,11 @@ function Navbar() {
     function openMenu(bool) {
         setShowMenu(bool)
         setCurrentBodyClassName(bool ? mobileMenuOpened : mobileDefault)
+    }
+
+    function handleNavClick(route) {
+        openMenu(false)
+        navigate(route)
     }
 
     React.useEffect(() => {
@@ -77,7 +82,7 @@ function Navbar() {
                 </div>
 
             </div>}
-            {(isLoggedIn && userType === "admin") && <h3 onClick={() => navigate("/admin/allorders")} id="admin-title">Admin Dashboard</h3>
+            {(isLoggedIn && userType === "admin") && <h3 onClick={() => handleNavClick("/admin/allorders")} id="admin-title">Admin Dashboard</h3>
 }
 
             <nav id="site-navigation" className="main-navigation" data-availablespace="748" data-burgerspace="55">
@@ -85,31 +90,31 @@ function Navbar() {
                     <span onClick={() => openMenu(false)} className="responsive-close-button"></span>
                     <ul style={{background: "white"}} id="main-menu" className="citadela-menu" data-liwidth="642">
                         {!isMobile && <>
-                            {(!isLoggedIn || userType === "student") && <><li onClick={() => navigate("/")} id="menu-item-25"
+                            {(!isLoggedIn || userType === "student") && <><li onClick={() => handleNavClick("/")} id="menu-item-25"
                             className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-21 menu-item-has-children menu-item-25 menu-item-position-0 top-level-menu-item"
                             data-width="99"><a id={`${location.pathname === "/" ? "custom-active-page": ""}`} href aria-current="page">Home</a>
                             </li>
-                            <li onClick={() => navigate("/browse")} id="menu-item-366"
+                            <li onClick={() => handleNavClick("/browse")} id="menu-item-366"
                                 className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-366 menu-item-position-1 top-level-menu-item"
                                 data-width="91"><a id={`${location.pathname === "/browse" ? "custom-active-page": ""}`} href>Browse</a>
                             </li>
-                            <li onClick={() => navigate("/restaurants")} id="menu-item-146"
+                            <li onClick={() => handleNavClick("/restaurants")} id="menu-item-146"
                                 className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-146 menu-item-position-2 top-level-menu-item"
                                 data-width="99"><a id={`${location.pathname === "/restaurants" ? "custom-active-page": ""}`} href>Restaurants</a>
                             </li></>}
-                            {(isLoggedIn && userType === "student") && <li onClick={() => navigate("/orderhistory")} id="menu-item-343"
+                            {(isLoggedIn && userType === "student") && <li onClick={() => handleNavClick("/orderhistory")} id="menu-item-343"
                                 className="menu-item menu-item-type-post_type menu-item-object-page menu-item-343 menu-item-position-3 top-level-menu-item"
                                 data-width="82"><a id={`${location.pathname === "/orderhistory" ? "custom-active-page": ""}`} href>Order History</a>
                             </li>}
-                            {(isLoggedIn && userType === "student") && <li onClick={() => navigate("/trackorder")} id="menu-item-343"
+                            {(isLoggedIn && userType === "student") && <li onClick={() => handleNavClick("/trackorder")} id="menu-item-343"
                                 className="menu-item menu-item-type-post_type menu-item-object-page menu-item-343 menu-item-position-3 top-level-menu-item"
                                 data-width="82"><a id={`${location.pathname === "/trackorder" ? "custom-active-page": ""}`} href>Track Order</a>
                             </li>}
-                            {!isLoggedIn && <><li onClick={() => navigate("/auth/signup")} id="menu-item-343"
+                            {!isLoggedIn && <><li onClick={() => handleNavClick("/auth/signup")} id="menu-item-343"
                                 className="menu-item menu-item-type-post_type menu-item-object-page menu-item-343 menu-item-position-3 top-level-menu-item"
                                 data-width="82"><a style={{color: "red"}} href>Sign Up</a>
                             </li>
-                            <li onClick={() => navigate("/auth/login")} id="menu-item-343"
+                            <li onClick={() => handleNavClick("/auth/login")} id="menu-item-343"
                                 className="menu-item menu-item-type-post_type menu-item-object-page menu-item-343 menu-item-position-3 top-level-menu-item"
                                 data-width="82"><a style={{color: "red"}} href>Sign In</a>
                             </li></>}
@@ -121,29 +126,29 @@ function Navbar() {
                         {(isMobile && (userType !== "admin")) && <li className="menu-item-wrapper menu-item-has-children sub-menu-right-position top-level-menu-item">
                             {!showMenu && <a onClick={() => openMenu(true)} href><i className="fa fa-bars"></i></a>}
                             {showMenu && <ul className="sub-menu">
-                                {!isLoggedIn && <><li onClick={() => navigate("auth/signup")} id="menu-item-343"
+                                {!isLoggedIn && <><li onClick={() => handleNavClick("auth/signup")} id="menu-item-343"
                                     className="menu-item menu-item-type-post_type menu-item-object-page menu-item-343 menu-item-position-3 menu-item-cloned"
                                     data-width="82"><a href>Sign Up</a></li>
-                                <li onClick={() => navigate("auth/login")} id="menu-item-343"
+                                <li onClick={() => handleNavClick("auth/login")} id="menu-item-343"
                                     className="menu-item menu-item-type-post_type menu-item-object-page menu-item-343 menu-item-position-3 menu-item-cloned"
                                     data-width="82"><a href>Log In</a></li></>}
-                                <li onClick={() => navigate("/")} id="menu-item-25"
+                                <li onClick={() => handleNavClick("/")} id="menu-item-25"
                                     className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-21 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-25 menu-item-position-0 menu-item-cloned"
                                     data-width="99"><a href
                                         aria-current="page">Home</a>
                                 </li>
-                                <li onClick={() => navigate("/browse")} id="menu-item-366"
+                                <li onClick={() => handleNavClick("/browse")} id="menu-item-366"
                                     className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-366 menu-item-position-1 menu-item-cloned"
                                     data-width="91"><a href>Browse</a>
                                 </li>
-                                <li onClick={() => navigate("/restaurants")} id="menu-item-146"
+                                <li onClick={() => handleNavClick("/restaurants")} id="menu-item-146"
                                     className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-146 menu-item-position-2 menu-item-cloned"
                                     data-width="99"><a href>Restaurants</a>
                                 </li>
-                                {(isLoggedIn && userType === "student") && <li onClick={() => navigate("/orderhistory")} id="menu-item-343"
+                                {(isLoggedIn && userType === "student") && <li onClick={() => handleNavClick("/orderhistory")} id="menu-item-343"
                                     className="menu-item menu-item-type-post_type menu-item-object-page menu-item-343 menu-item-position-3 menu-item-cloned"
                                     data-width="82"><a href>Order History</a></li>}
-                                {(isLoggedIn && userType === "student") && <li onClick={() => navigate("/trackorder")} id="menu-item-343"
+                                {(isLoggedIn && userType === "student") && <li onClick={() => handleNavClick("/trackorder")} id="menu-item-343"
                                     className="menu-item menu-item-type-post_type menu-item-object-page menu-item-343 menu-item-position-3 menu-item-cloned"
                                     data-width="82"><a href>Track Order</a></li>}
                                 {isLoggedIn && <li id="menu-item-343"
