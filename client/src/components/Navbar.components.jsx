@@ -151,6 +151,9 @@ function Navbar() {
                                 {(isLoggedIn && userType === "student") && <li onClick={() => handleNavClick("/trackorder")} id="menu-item-343"
                                     className="menu-item menu-item-type-post_type menu-item-object-page menu-item-343 menu-item-position-3 menu-item-cloned"
                                     data-width="82"><a href>Track Order</a></li>}
+                                {(isLoggedIn && userType === "student") && <li onClick={() => handleNavClick("/cart")} id="menu-item-343"
+                                    className="menu-item menu-item-type-post_type menu-item-object-page menu-item-343 menu-item-position-3 menu-item-cloned"
+                                    data-width="82"><a href>My Cart</a></li>}
                                 {isLoggedIn && <li id="menu-item-343"
                                     className="menu-item menu-item-type-post_type menu-item-object-page menu-item-343 menu-item-position-3 menu-item-cloned"
                                     data-width="82"><a onClick={logout} href>Log Out</a></li>}
